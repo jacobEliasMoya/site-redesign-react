@@ -52,10 +52,29 @@ $keywords : #ef5da8;
     // base color for all text!
     color: white;
     .keyword{
-        color: $keywords;
+        transition: all ease 1s;
+        color: white;
     }
     .bigtext{
         font-size: 4rem;
+    }
+
+    .light.bubble{
+        @include absCentered();
+        border-radius: 50%;
+        z-index: 3;
+    }
+    .dark.bubble{
+        @include absCentered();
+        border-radius: 50%;
+        z-index: 3;
+    }
+    .bubble{
+        border: 1px solid white;
+        padding: 0px !important;
+        height: 0rem;
+        width: 0rem;
+        transition: all ease .25s;
     }
 }
 
@@ -92,6 +111,7 @@ $keywords : #ef5da8;
                 }
             }
             .welcome_text{
+                position: relative;
                 margin-top: -1rem;
                 h1{ 
                     line-height: 1;
@@ -105,6 +125,7 @@ $keywords : #ef5da8;
             }
             .welcome_intro{
                 div{
+                    position: relative;
                     padding: .75rem 1rem;
                     background-color: $secondarydpurple;
                     h1{
@@ -113,6 +134,8 @@ $keywords : #ef5da8;
                 }
 
                 div:not(.greeting){
+                    position: relative;
+                    z-index: 1;
                     background-color: $tertiarydpurple;
                     padding: 1.5rem 1rem;
                     h1{
@@ -124,3 +147,4 @@ $keywords : #ef5da8;
         }
     }
 }
+

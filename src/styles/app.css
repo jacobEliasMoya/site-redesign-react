@@ -8,11 +8,42 @@
 }
 
 * .keyword {
-  color: #ef5da8;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  color: white;
 }
 
 * .bigtext {
   font-size: 4rem;
+}
+
+* .light.bubble {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+* .dark.bubble {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+* .bubble {
+  border: 1px solid white;
+  padding: 0px !important;
+  height: 0rem;
+  width: 0rem;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
 }
 
 #root {
@@ -112,6 +143,7 @@
 }
 
 #root .App .welcome_section .welcome_text {
+  position: relative;
   margin-top: -1rem;
 }
 
@@ -127,6 +159,7 @@
 }
 
 #root .App .welcome_section .welcome_intro div {
+  position: relative;
   padding: .75rem 1rem;
   background-color: #110042;
 }
@@ -136,6 +169,8 @@
 }
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) {
+  position: relative;
+  z-index: 1;
   background-color: #2B00A4;
   padding: 1.5rem 1rem;
 }

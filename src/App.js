@@ -2,8 +2,55 @@
 import Logo from './images/logo.png';
 import './styles/app.css';
 
+import {useEffect} from 'react';
 
-function App() {
+
+const App = () => {
+
+  const colorKeywords = () =>{
+    setTimeout(()=>{
+      let keys = document.querySelectorAll('.keyword');
+      keys.forEach(key=>{
+        key.style.color='#ef5da8';
+      })
+    },500)
+
+  }
+
+  const randomSizer = (bub) =>{
+    const dims = ['1rem',"2rem","3rem","4rem"];
+    let selectedDim = dims[Math.floor(Math.random() * dims.length)]
+    bub.style.width = selectedDim;
+    bub.style.height = selectedDim;
+  }
+
+  const lightbubbler = () =>{
+    setInterval(() => {
+      let bubble = document.createElement("DIV");
+      bubble.classList.add('bubble','light');
+      bubble.style.position='absolute';
+      randomSizer(bubble);
+      document.querySelector('.welcome_intro .message').appendChild(bubble);
+    }, 1000);
+  }
+
+  const darkbubbler = () =>{
+    setInterval(() => {
+      let bubble = document.createElement("DIV");
+      bubble.classList.add('bubble','dark');
+      bubble.style.position='absolute';
+      bubble.style.backgroundColor='#110042';
+      randomSizer(bubble);
+      document.querySelector('.welcome_intro .greeting').appendChild(bubble);
+    }, 1000);
+  }
+  
+  useEffect(() => {
+    lightbubbler();
+    colorKeywords();
+    darkbubbler();
+  }, [])
+
   return (
     <div className="App">
       <section className='welcome_section'>
@@ -39,7 +86,6 @@ function App() {
         </section>
 
       </section>
-
     </div>
   );
 }
