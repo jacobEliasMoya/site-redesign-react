@@ -44,6 +44,16 @@
   width: 0rem;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
+  margin-bottom: 0vh;
+  opacity: .2;
+  -webkit-animation: goup;
+          animation: goup;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #root {
@@ -177,5 +187,25 @@
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) h1 {
   font-size: 1.5rem;
+}
+
+@-webkit-keyframes goup {
+  0% {
+    margin-bottom: 0vh;
+  }
+  100% {
+    margin-bottom: 100vh;
+    display: none;
+  }
+}
+
+@keyframes goup {
+  0% {
+    margin-bottom: 0vh;
+  }
+  100% {
+    margin-bottom: 100vh;
+    display: none;
+  }
 }
 /*# sourceMappingURL=app.css.map */

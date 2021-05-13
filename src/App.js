@@ -19,9 +19,12 @@ const App = () => {
 
   const randomSizer = (bub) =>{
     const dims = ['1rem',"2rem","3rem","4rem"];
-    let selectedDim = dims[Math.floor(Math.random() * dims.length)]
+    const location = ['0%',"10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"]
+    let selectedDim = dims[Math.floor(Math.random() * dims.length)];
+    let selectedLocation = location[Math.floor(Math.random() * location.length)];
     bub.style.width = selectedDim;
     bub.style.height = selectedDim;
+    bub.style.left = selectedLocation;
   }
 
   const lightbubbler = () =>{

@@ -75,6 +75,12 @@ $keywords : #ef5da8;
         height: 0rem;
         width: 0rem;
         transition: all ease .25s;
+        margin-bottom: 0vh;
+        opacity: .2;
+        animation: goup;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -148,3 +154,12 @@ $keywords : #ef5da8;
     }
 }
 
+@keyframes goup {
+    0%{
+        margin-bottom: 0vh;
+    }
+    100%{
+        margin-bottom: 100vh;
+        display: none;
+    }
+}
