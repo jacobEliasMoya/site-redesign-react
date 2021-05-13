@@ -1,0 +1,146 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+* .keyword {
+  color: #ef5da8;
+}
+
+* .bigtext {
+  font-size: 4rem;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  -items: flex-start;
+  overflow: hidden;
+  background-color: #0A0028;
+}
+
+#root .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: inherit;
+}
+
+#root .App .welcome_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root .App .welcome_section nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+#root .App .welcome_section nav img {
+  width: 10%;
+}
+
+#root .App .welcome_section nav i {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+#root .App .welcome_section nav i:hover {
+  color: #ef5da8;
+  cursor: pointer;
+}
+
+#root .App .welcome_section .welcome_text {
+  margin-top: -1rem;
+}
+
+#root .App .welcome_section .welcome_text h1 {
+  line-height: 1;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#root .App .welcome_section .welcome_text h1:not(.welcome_description) {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#root .App .welcome_section .welcome_intro div {
+  padding: .75rem 1rem;
+  background-color: #110042;
+}
+
+#root .App .welcome_section .welcome_intro div h1 {
+  font-size: 1.5rem;
+}
+
+#root .App .welcome_section .welcome_intro div:not(.greeting) {
+  background-color: #2B00A4;
+  padding: 1.5rem 1rem;
+}
+
+#root .App .welcome_section .welcome_intro div:not(.greeting) h1 {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=app.css.map */
