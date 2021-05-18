@@ -32,7 +32,7 @@ export default function WelcomeSec() {
           bubble.style.position='absolute';
           randomSizer(bubble);
           document.querySelector('.welcome_intro').appendChild(bubble);
-        }, 3000);
+        }, 2000);
         setTimeout(()=>{
           clearInterval(int)
         },10000)
