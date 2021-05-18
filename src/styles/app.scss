@@ -41,7 +41,7 @@
 
 $darkpurple: #0A0028;
 $secondarydpurple:#110042;
-$tertiarydpurple:#2B00A4;
+$tertiarydpurple:#3b16a3;
 $keywords : #ef5da8;
 
 *{
@@ -56,31 +56,17 @@ $keywords : #ef5da8;
         color: white;
     }
     .bigtext{
-        font-size: 4rem;
+        font-size: 7rem;
     }
 
-    .light.bubble{
-        @include absCentered();
-        border-radius: 50%;
-        z-index: 3;
-    }
-    .dark.bubble{
-        @include absCentered();
-        border-radius: 50%;
-        z-index: 3;
-    }
+
     .bubble{
-        border: 1px solid white;
         padding: 0px !important;
         height: 0rem;
         width: 0rem;
         transition: all ease .25s;
         margin-bottom: 0vh;
-        opacity: .2;
-        animation: goup;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
+        opacity: 1;
     }
 }
 
@@ -93,6 +79,7 @@ $keywords : #ef5da8;
     .App{
         @include flexCol();
         width: inherit;
+        overflow: hidden !important;
         .welcome_section{
             @include flexCol();
             justify-content: space-between;
@@ -104,7 +91,7 @@ $keywords : #ef5da8;
                 width: 100%;
                 padding: 1rem 1rem 0rem 1rem;
                 img{
-                    width: 10%;
+                    width: 5rem;
                 }
                 i{
                     font-size: 2.5rem;
@@ -117,36 +104,62 @@ $keywords : #ef5da8;
                 }
             }
             .welcome_text{
+                z-index: 3;
                 position: relative;
-                margin-top: -1rem;
                 h1{ 
                     line-height: 1;
-                    font-size: 1.5rem;
+                    font-size: 2.5rem;
                     text-align: center;
                 }
                 h1:not(.welcome_description){
-                    font-size: 2rem;
+                    font-size: 4rem;
                     margin-bottom: 2rem;
                 }
             }
             .welcome_intro{
+                width: 100%;
                 div{
-                    position: relative;
-                    padding: .75rem 1rem;
+                    padding: 1.5rem 1rem;
                     background-color: $secondarydpurple;
                     h1{
-                        font-size: 1.5rem;
+                        font-size: 3rem;
+                        position: relative;
                     }
                 }
 
                 div:not(.greeting){
-                    position: relative;
                     z-index: 1;
                     background-color: $tertiarydpurple;
-                    padding: 1.5rem 1rem;
-                    h1{
-                        font-size: 1.5rem;
+                    padding: 3rem 1rem;
+                    p{
+                        font-size: 2rem;
                     }
+                }
+                .greeting{
+                    // display: none;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 0;
+
+                }
+                .message{
+                    // display: none;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 100;
+                }
+                .bubble{
+                    margin-bottom: -5vh;
+                    animation: goup 15s infinite forwards;
+                }
+                .light.bubble{
+                    border-radius: 50%;
+                    z-index: 0;
+                }
+                .dark.bubble{
+                    z-index: 0;
+                    border-radius: 50%;
+                    animation-duration: 10s !important;
                 }
 
             }
@@ -156,10 +169,53 @@ $keywords : #ef5da8;
 
 @keyframes goup {
     0%{
-        margin-bottom: 0vh;
+        bottom: 5vh;
+
+    }
+    98%{
+        opacity: 0;
+
     }
     100%{
-        margin-bottom: 100vh;
-        display: none;
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bigtext{
+        font-size: 4rem;
+    }
+    .welcome_text{
+        
+        h1{ 
+            font-size: 1.5rem !important;
+
+        }
+        h1:not(.welcome_description){
+            font-size: 3.5rem !important;
+
+        }
+        .welcome_description{
+            padding: 1rem;
+        }
+    }
+    .welcome_intro{
+        div{
+
+            h1{
+                font-size: 2rem !important;
+                position: relative;
+            }
+        }
+
+        div:not(.greeting){
+
+            p{
+                font-size: 1.5rem !important;
+            }
+        }
+
+
     }
 }

@@ -14,46 +14,17 @@
 }
 
 * .bigtext {
-  font-size: 4rem;
-}
-
-* .light.bubble {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 3;
-}
-
-* .dark.bubble {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 3;
+  font-size: 7rem;
 }
 
 * .bubble {
-  border: 1px solid white;
   padding: 0px !important;
   height: 0rem;
   width: 0rem;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   margin-bottom: 0vh;
-  opacity: .2;
-  -webkit-animation: goup;
-          animation: goup;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  opacity: 1;
 }
 
 #root {
@@ -92,6 +63,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: inherit;
+  overflow: hidden !important;
 }
 
 #root .App .welcome_section {
@@ -137,7 +109,7 @@
 }
 
 #root .App .welcome_section nav img {
-  width: 10%;
+  width: 5rem;
 }
 
 #root .App .welcome_section nav i {
@@ -153,59 +125,120 @@
 }
 
 #root .App .welcome_section .welcome_text {
+  z-index: 3;
   position: relative;
-  margin-top: -1rem;
 }
 
 #root .App .welcome_section .welcome_text h1 {
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
 #root .App .welcome_section .welcome_text h1:not(.welcome_description) {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
 }
 
+#root .App .welcome_section .welcome_intro {
+  width: 100%;
+}
+
 #root .App .welcome_section .welcome_intro div {
-  position: relative;
-  padding: .75rem 1rem;
+  padding: 1.5rem 1rem;
   background-color: #110042;
 }
 
 #root .App .welcome_section .welcome_intro div h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  position: relative;
 }
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) {
-  position: relative;
   z-index: 1;
-  background-color: #2B00A4;
-  padding: 1.5rem 1rem;
+  background-color: #3b16a3;
+  padding: 3rem 1rem;
 }
 
-#root .App .welcome_section .welcome_intro div:not(.greeting) h1 {
-  font-size: 1.5rem;
+#root .App .welcome_section .welcome_intro div:not(.greeting) p {
+  font-size: 2rem;
+}
+
+#root .App .welcome_section .welcome_intro .greeting {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+#root .App .welcome_section .welcome_intro .message {
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+
+#root .App .welcome_section .welcome_intro .bubble {
+  margin-bottom: -5vh;
+  -webkit-animation: goup 15s infinite forwards;
+          animation: goup 15s infinite forwards;
+}
+
+#root .App .welcome_section .welcome_intro .light.bubble {
+  border-radius: 50%;
+  z-index: 0;
+}
+
+#root .App .welcome_section .welcome_intro .dark.bubble {
+  z-index: 0;
+  border-radius: 50%;
+  -webkit-animation-duration: 10s !important;
+          animation-duration: 10s !important;
 }
 
 @-webkit-keyframes goup {
   0% {
-    margin-bottom: 0vh;
+    bottom: 5vh;
+  }
+  98% {
+    opacity: 0;
   }
   100% {
-    margin-bottom: 100vh;
-    display: none;
+    bottom: 100vh;
+    opacity: 0;
   }
 }
 
 @keyframes goup {
   0% {
-    margin-bottom: 0vh;
+    bottom: 5vh;
+  }
+  98% {
+    opacity: 0;
   }
   100% {
-    margin-bottom: 100vh;
-    display: none;
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bigtext {
+    font-size: 4rem;
+  }
+  .welcome_text h1 {
+    font-size: 1.5rem !important;
+  }
+  .welcome_text h1:not(.welcome_description) {
+    font-size: 3.5rem !important;
+  }
+  .welcome_text .welcome_description {
+    padding: 1rem;
+  }
+  .welcome_intro div h1 {
+    font-size: 2rem !important;
+    position: relative;
+  }
+  .welcome_intro div:not(.greeting) p {
+    font-size: 1.5rem !important;
   }
 }
 /*# sourceMappingURL=app.css.map */
