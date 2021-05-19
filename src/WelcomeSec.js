@@ -25,8 +25,8 @@ export default function WelcomeSec() {
       }
     
       const lightbubbler = () =>{
-        const bubble = document.createElement("DIV");
         let int = setInterval(() => {
+          let bubble = document.createElement("DIV");
           bubble.classList.add('bubble','light');
           bubble.style.position='absolute';
           randomSizer(bubble);
@@ -38,8 +38,8 @@ export default function WelcomeSec() {
       }
     
       const darkbubbler = () =>{
-        const bubble = document.createElement("DIV");
         let int = setInterval(() => {
+          let bubble = document.createElement("DIV");
           bubble.classList.add('bubble','dark');
           bubble.style.position='absolute';
           bubble.style.backgroundColor='#110042';
