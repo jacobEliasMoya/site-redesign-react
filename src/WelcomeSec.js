@@ -1,7 +1,7 @@
 import React from 'react'
-// mainlogo for header
-import Logo from './images/logo.png';
 import {useEffect} from 'react';
+import Mainnav from './Mainnav';
+
 
 export default function WelcomeSec() {
 
@@ -60,12 +60,8 @@ export default function WelcomeSec() {
 
     return (
     <section className='welcome_section'>
-        <nav>
-          <img src={Logo} alt="jmoya_logo"/>
-          <div>
-            <i className="fa fa-bars"></i>
-          </div>
-        </nav>
+        <Mainnav/>        
+
         <section className='welcome_text'>
           <h1>
             <span className='bigtext'>Hey</span>, I am <span className='keyword changing_text'>Jacob Moya</span>!
