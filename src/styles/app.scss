@@ -38,22 +38,25 @@
     top: 50%;
     transform: translate(-50%,-50%);
 }
-$opaquePurple : #2c00a4b4;
+
+$opaquePurple : #2c00a4e7;
 $darkpurple: #0A0028;
 $secondarydpurple:#110042;
 $tertiarydpurple:#3b16a3;
 $keywords : #ef5da8;
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     // base color for all text!
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
     .keyword{
         transition: all ease 1s;
         color: white;
+        font-family: 'Pattaya', sans-serif;
+
     }
     .bigtext{
         font-size: 7rem;
@@ -70,44 +73,7 @@ $keywords : #ef5da8;
     }
 }
 
-.toggle_navigation{
-    z-index: 300;
-    @include fullScreener();
-    background-color: $opaquePurple;
-    @include flexCol();
-    justify-content: flex-start;
-    position: absolute;
-    font-size: 2.5rem;
-    overflow: hidden;
-    a{
-        transition: all ease .5s;
-        margin-bottom: 5rem;
-        &:hover{
-            color: $keywords;
-        }
-    }
 
-    nav{
-        @include flexRow();
-        justify-content: space-between;
-        width: 100%;
-        padding: 1rem 1rem 0rem 1rem;
-        margin-bottom: 5rem;
-
-        img{
-            width: 5rem;
-        }
-        i{
-            font-size: 2.5rem;
-            font-weight: lighter;
-            transition: all ease .25s;
-            color: $keywords;
-            cursor:pointer;
-
-        }
-    }
-
-}
 
 #root{
     @include flexCol();
@@ -116,20 +82,35 @@ $keywords : #ef5da8;
     overflow: hidden;
     background-color: $darkpurple;
     .App{
-        @include flexCol();
-        width: inherit;
-        overflow: hidden !important;
-        position: relative;
-        .welcome_section{
+        .toggle_navigation{
+            transition: all ease 1s;
+            z-index: 300;
+            height: 0vh;
+            width: 0vw;
+            background-color: $opaquePurple;
             @include flexCol();
-            justify-content: space-between;
-            width: 100%;
-            min-height: 100vh;
+            position: absolute;
+            font-size: 2rem;
+            overflow: hidden;
+            border-radius: 100%;
+            opacity: 0;
+            a{
+                transition: all ease .5s;
+                margin-bottom: 5rem;
+
+                &:hover{
+                    
+                    color: $keywords;
+                }
+            }
+        
             nav{
                 @include flexRow();
                 justify-content: space-between;
                 width: 100%;
-                padding: 1rem 1rem 0rem 1rem;
+                padding: .7rem 1rem 0rem 1rem;
+                margin-bottom: 5rem;
+        
                 img{
                     width: 5rem;
                 }
@@ -137,11 +118,46 @@ $keywords : #ef5da8;
                     font-size: 2.5rem;
                     font-weight: lighter;
                     transition: all ease .25s;
-                    &:hover{
-                        color: $keywords;
-                        cursor: pointer;
-                    }
+                    color: $keywords;
+                    cursor:pointer;
+        
                 }
+            }
+        
+        }
+        @include flexCol();
+        width: inherit;
+        overflow: hidden !important;
+        position: relative;
+        .mainnav{
+            @include flexRow();
+            justify-content: space-between;
+            position: fixed;
+            z-index: 1000 !important;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            img{
+                width: 5rem;
+            }
+            i{
+                font-size: 2.5rem;
+                font-weight: lighter;
+                transition: all ease .25s;
+                &:hover{
+                    color: $keywords;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .welcome_section{
+            @include flexCol();
+            justify-content: space-between;
+            width: 100%;
+            min-height: 100vh;
+            nav{
+                position: relative;
             }
             .welcome_text{
                 z-index: 3;
@@ -226,6 +242,9 @@ $keywords : #ef5da8;
     .bigtext{
         font-size: 4rem;
     }
+    .welcome_section nav{
+        height: 10vh;
+    }
     .welcome_text{
         
         h1{ 
@@ -244,15 +263,16 @@ $keywords : #ef5da8;
         div{
 
             h1{
-                font-size: 2rem !important;
+                font-size: 2.5rem !important;
                 position: relative;
+                text-align: center;
             }
         }
 
         div:not(.greeting){
 
             p{
-                font-size: 1.5rem !important;
+                font-size: 1rem !important;
             }
         }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import {useEffect} from 'react';
-import Mainnav from './Mainnav';
 
 
 export default function WelcomeSec() {
@@ -26,8 +25,8 @@ export default function WelcomeSec() {
       }
     
       const lightbubbler = () =>{
+        const bubble = document.createElement("DIV");
         let int = setInterval(() => {
-          let bubble = document.createElement("DIV");
           bubble.classList.add('bubble','light');
           bubble.style.position='absolute';
           randomSizer(bubble);
@@ -39,8 +38,8 @@ export default function WelcomeSec() {
       }
     
       const darkbubbler = () =>{
+        const bubble = document.createElement("DIV");
         let int = setInterval(() => {
-          let bubble = document.createElement("DIV");
           bubble.classList.add('bubble','dark');
           bubble.style.position='absolute';
           bubble.style.backgroundColor='#110042';
@@ -60,8 +59,7 @@ export default function WelcomeSec() {
 
     return (
     <section className='welcome_section'>
-        <Mainnav/>        
-
+        <nav></nav>
         <section className='welcome_text'>
           <h1>
             <span className='bigtext'>Hey</span>, I am <span className='keyword changing_text'>Jacob Moya</span>!
@@ -72,7 +70,7 @@ export default function WelcomeSec() {
         </section>
         <section className='welcome_intro'>
           <div className='greeting'>
-            <h1>
+            <h1 className="keyword">
               Nice to meet you.
             </h1>
           </div>
