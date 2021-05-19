@@ -45,7 +45,6 @@
   height: 100vh;
   width: 100vw;
   -items: flex-start;
-  overflow: hidden;
   background-color: #0A0028;
 }
 
@@ -89,20 +88,28 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  font-size: 2rem;
+  font-size: 2vw;
   overflow: hidden;
   border-radius: 100%;
   opacity: 0;
 }
 
 #root .App .toggle_navigation a {
+  min-width: 50%;
+  text-align: center;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   margin-bottom: 5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: inset 0 0 0rem #3b16a3;
+          box-shadow: inset 0 0 0rem #3b16a3;
 }
 
 #root .App .toggle_navigation a:hover {
   color: #ef5da8;
+  -webkit-box-shadow: inset 0 -1rem 3rem #0A0028 !important;
+          box-shadow: inset 0 -1rem 3rem #0A0028 !important;
 }
 
 #root .App .toggle_navigation nav {
@@ -302,6 +309,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .toggle_navigation {
+    font-size: 3.5vw !important;
+  }
   .bigtext {
     font-size: 4rem;
   }

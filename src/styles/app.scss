@@ -79,7 +79,6 @@ $keywords : #ef5da8;
     @include flexCol();
     @include fullScreener();
     -items: flex-start;
-    overflow: hidden;
     background-color: $darkpurple;
     .App{
         .toggle_navigation{
@@ -90,17 +89,21 @@ $keywords : #ef5da8;
             background-color: $opaquePurple;
             @include flexCol();
             position: absolute;
-            font-size: 2rem;
+            font-size: 2vw;
             overflow: hidden;
             border-radius: 100%;
             opacity: 0;
             a{
+                min-width: 50%;
+                text-align: center;
                 transition: all ease .5s;
                 margin-bottom: 5rem;
-
+                padding: 1rem ;
+                border-radius: 1rem;
+                box-shadow: inset 0 0 0rem $tertiarydpurple;
                 &:hover{
-                    
                     color: $keywords;
+                    box-shadow:inset 0 -1rem 3rem $darkpurple !important;
                 }
             }
         
@@ -239,6 +242,9 @@ $keywords : #ef5da8;
 }
 
 @media screen and (max-width: 800px) {
+    .toggle_navigation{
+        font-size: 3.5vw !important;
+    }
     .bigtext{
         font-size: 4rem;
     }
