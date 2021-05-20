@@ -44,6 +44,18 @@ export default function SkillsSection() {
 
             <div className="section_split two">
                 <h1>How I use it</h1>
+                <div className="select_skill_container">
+                    <div className="toggle_area">
+                        <i className="fas fa-caret-left"></i>
+                        <div className="p6 container">
+                            <ImgSelector desc="html_img_logo_white" skill={skill6}/>
+                        </div>
+                        <i className="fas fa-caret-right"></i>
+                    </div>
+                    <div className="skill_descr">
+
+                    </div>
+                </div>
             </div>
         </section>
     )

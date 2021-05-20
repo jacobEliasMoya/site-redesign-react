@@ -290,6 +290,40 @@ $keywords : #ef5da8;
                         }
                     }
                 }
+                .select_skill_container{
+                    @include flexCol();
+                    .toggle_area{
+                        @include flexRow();
+                        justify-content: space-evenly;
+                        i{
+                            @include flexCol();
+                            transition: all ease .5s;
+                            font-size: 5rem;
+                            cursor: pointer;
+                            &:hover{
+                                color: $keywords;
+                            }
+                        }
+                        div{
+                            width: 33.33%;
+                            @include flexCol();
+                            border-radius: 50%;
+                            padding: none !important;
+                            background-color: $tertiarydpurple;
+                            box-shadow: 0 1rem 1rem black;
+
+                            img{
+                                width: 100%;
+                                
+                            }
+                            &:hover{
+                                cursor: pointer;
+                                transition: all ease .75s;
+
+                            }
+                        }
+                    }
+                }
             }
         }
     }
