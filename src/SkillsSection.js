@@ -18,25 +18,25 @@ export default function SkillsSection() {
                 <div className="project_container">
                     <div className="row one">
                         <div className="p1 container">
-                            <ImgSelector skill={skill1}/>
+                            <ImgSelector desc="wordpress_img_logo_white" skill={skill1}/>
                         </div>
                         <div className="p2 container">
-                            <ImgSelector skill={skill2}/>
+                            <ImgSelector desc="javascript_img_logo_white" skill={skill2}/>
                         </div>
                         <div className="p3 container">
-                            <ImgSelector skill={skill3}/>
+                            <ImgSelector desc="react_img_logo_white" skill={skill3}/>
                         </div>
                     </div>
 
                     <div className="row two">
                         <div className="p4 container">
-                            <ImgSelector skill={skill4}/>
+                            <ImgSelector desc="css_img_logo_white" skill={skill4}/>
                         </div>
                         <div className="p5 container">
-                            <ImgSelector skill={skill5}/>
+                            <ImgSelector desc="scss_img_logo_white" skill={skill5}/>
                         </div>
                         <div className="p6 container">
-                            <ImgSelector skill={skill6}/>
+                            <ImgSelector desc="html_img_logo_white" skill={skill6}/>
                         </div>
                     </div>
                 </div>
