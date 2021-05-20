@@ -5,12 +5,12 @@ export default function Navmenu() {
     return (
         <nav className='toggle_navigation'>
             <Misclink 
-                link='#'  
+                link='#welcome_section'  
                 title='HOME'
                 
             />
             <Misclink 
-                link='#'  
+                link='#my_skills'  
                 title='SKILLS'
             />
             <Misclink 

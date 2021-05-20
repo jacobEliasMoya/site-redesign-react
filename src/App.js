@@ -1,9 +1,8 @@
 import './styles/app.css';
 import WelcomeSec from './WelcomeSec';
-import Navmenu from './Navmenu';
 import MainNav from './Mainnav';
-// import SkillsSection from './SkillsSection';
-
+import SkillsSection from './SkillsSection';
+// import Spacer from './Spacer';
 import {React} from 'react';
 
 
@@ -12,7 +11,7 @@ const App = () => {
     <div className="App">
       <MainNav />
       <WelcomeSec />
-      <Navmenu />
+      <SkillsSection />
     </div>
   );
 }

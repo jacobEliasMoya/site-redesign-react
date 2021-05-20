@@ -58,7 +58,7 @@ export default function WelcomeSec() {
       })
 
     return (
-    <section className='welcome_section'>
+    <section className='welcome_section' id="welcome_section">
         <nav></nav>
         <section className='welcome_text'>
           <h1>

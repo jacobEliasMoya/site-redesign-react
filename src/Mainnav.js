@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 // mainlogo for header
 import Logo from './images/logo.png';
 
-export default function Mainnav(props) {
+export default function Mainnav() {
 
   const [isToggled,setToggle] = useState(false);
 
@@ -11,14 +11,14 @@ export default function Mainnav(props) {
     if(!isToggled){
       navelm.style.width='100vw';
       navelm.style.height='100vh';
-      navelm.style.borderRadius='0%';
+      navelm.style.borderBottomLeft='0% !important';
       navelm.style.opacity='1';
       setToggle(isToggled=>true);
     } else {
       navelm.style.opacity='0';
       navelm.style.width='0vw';
       navelm.style.height='0vh';
-      navelm.style.borderRadius='50%';
+      navelm.style.borderBottomLeft='50% !important';
       // changing state to 
       setToggle(isToggled=>false);
 
