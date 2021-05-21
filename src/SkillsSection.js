@@ -12,6 +12,9 @@ import skill6 from './images/html.png';
 
 
 export default function SkillsSection() {
+
+    const htmlInfo = ["Video & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
+
     return (
         <section className="my_skills" id="my_skills">
             <div className="section_split one">
@@ -55,7 +58,7 @@ export default function SkillsSection() {
                         <Iconcontainer 
                             iconclass="fa fa-caret-left"
                         />
-                        <div className="p6 container">
+                        <div className="p6 container current">
                             <ImgSelector 
                                 desc="html_img_logo_white" 
                                 skill={skill6}
@@ -69,14 +72,9 @@ export default function SkillsSection() {
                         HTML 5
                     </div>
                     <div className="skill_subskills">
-                        <Subskills skilldesc='Video & Audio Support'/>
-                        <Subskills skilldesc='Forms and Validation'/>
-                        <Subskills skilldesc='Semantic HTML'/>
-                        <Subskills skilldesc='Email Inputs'/>
-                        <Subskills skilldesc='Placeholders'/>
-                        <Subskills skilldesc='Downloads'/>
-                        <Subskills skilldesc='Emdedding'/>
-                        <Subskills skilldesc='Tables'/>
+                        {htmlInfo.map((desc)=>{
+                            return (<Subskills skilldesc={desc} />)
+                        })}
                     </div>
                 </div>
             </div>

@@ -418,9 +418,6 @@
 }
 
 #root .App .my_skills .section_split .project_container {
-  background-color: #5D5FEF;
-  border-radius: 1rem;
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,6 +431,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #5D5FEF;
+  border-radius: 1rem;
+  padding: 1rem;
   -webkit-box-shadow: 0 -1.5rem #7879F1;
           box-shadow: 0 -1.5rem #7879F1;
 }
@@ -454,6 +454,10 @@
           flex-direction: row;
   -webkit-transition: all ease .75s;
   transition: all ease .75s;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #root .App .my_skills .section_split .project_container .row .container {
@@ -473,8 +477,8 @@
   margin: .5rem;
   border-radius: 50%;
   overflow: hidden;
-  height: 10vw;
-  width: 10vw;
+  height: 8rem;
+  width: 8rem;
   background-color: black;
   -webkit-transition: all ease .75s;
   transition: all ease .75s;
@@ -623,7 +627,6 @@
           justify-content: space-between;
   width: 100%;
   font-size: 1.25rem;
-  text-decoration: underline;
   margin: .75rem 0rem;
   text-align: left;
   -webkit-transition: all ease .25s;
@@ -636,15 +639,18 @@
   margin-left: 1rem;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#root .App .my_skills .section_split .select_skill_container .skill_subskills p i:hover {
+  color: #ef5da8;
 }
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills p:hover {
-  cursor: pointer;
   color: #ef5da8;
-}
-
-#root .App .my_skills .section_split .select_skill_container .skill_subskills p:hover i {
-  color: #ef5da8;
+  text-decoration: underline;
 }
 
 @-webkit-keyframes goup {
@@ -713,8 +719,8 @@
   }
   .my_skills .section_split h1 {
     font-size: 2.5rem !important;
-    margin: 2rem 0rem !important;
-    margin-bottom: 3rem !important;
+    margin: 0rem 0rem !important;
+    margin-bottom: 1.5rem !important;
   }
   .my_skills .section_split .select_skill_container div {
     width: 100%;
@@ -743,6 +749,16 @@
   .my_skills .section_split .project_container_outer .project_container .row .container {
     width: 5rem !important;
     height: 5rem !important;
+  }
+  .my_skills .section_split.one {
+    margin-bottom: 7vh !important;
+  }
+  .my_skills .section_split.one h1 {
+    margin: 0rem 0rem !important;
+    margin-bottom: 10vh !important;
+  }
+  .my_skills .section_split.two h1 {
+    margin-bottom: 0rem !important;
   }
 }
 /*# sourceMappingURL=app.css.map */
