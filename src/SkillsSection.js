@@ -12,7 +12,6 @@ import skill6 from './images/html.png';
 
 
 export default function SkillsSection() {
-    const html5Skills = []
     return (
         <section className="my_skills" id="my_skills">
             <div className="section_split one">
