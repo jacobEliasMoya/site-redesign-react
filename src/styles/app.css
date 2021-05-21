@@ -356,8 +356,8 @@
 }
 
 #root .App .my_skills {
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -699,6 +699,50 @@
   }
   .welcome_intro div:not(.greeting) p {
     font-size: 1rem !important;
+  }
+  .my_skills {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .my_skills .section_split {
+    width: 100% !important;
+    text-align: center;
+    height: auto !important;
+  }
+  .my_skills .section_split h1 {
+    font-size: 2.5rem !important;
+    margin: 2rem 0rem !important;
+    margin-bottom: 3rem !important;
+  }
+  .my_skills .section_split .select_skill_container div {
+    width: 100%;
+  }
+  .my_skills .section_split .select_skill_container div p {
+    font-size: 1rem !important;
+    padding: 0rem 5%;
+  }
+  .my_skills .section_split .select_skill_container div div img {
+    width: 200% !important;
+  }
+  .my_skills .section_split .select_skill_container .toggle_area {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  .my_skills .section_split div {
+    min-height: 0vh !important;
+  }
+  .my_skills .section_split .project_container_outer {
+    width: 100% !important;
+  }
+  .my_skills .section_split .project_container_outer .project_container {
+    width: 80% !important;
+  }
+  .my_skills .section_split .project_container_outer .project_container .row .container {
+    width: 5rem !important;
+    height: 5rem !important;
   }
 }
 /*# sourceMappingURL=app.css.map */
