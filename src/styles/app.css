@@ -485,7 +485,7 @@
 }
 
 #root .App .my_skills .section_split .project_container .row .container img {
-  width: 80%;
+  width: 100%;
 }
 
 #root .App .my_skills .section_split .project_container .row .container:hover {
@@ -495,14 +495,6 @@
   transition: all ease .75s;
   -webkit-box-shadow: 0 1rem 1rem black;
           box-shadow: 0 1rem 1rem black;
-}
-
-#root .App .my_skills .section_split .project_container .row .p6 img, #root .App .my_skills .section_split .project_container .row .p1 img {
-  width: 120%;
-}
-
-#root .App .my_skills .section_split .project_container .row .p4 img {
-  width: 90%;
 }
 
 #root .App .my_skills .section_split .select_skill_container {
@@ -524,6 +516,7 @@
           justify-content: space-evenly;
   min-height: 70vh;
   padding: 1rem;
+  width: 100%;
 }
 
 #root .App .my_skills .section_split .select_skill_container .name {
@@ -550,6 +543,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 80%;
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area i {
@@ -578,7 +572,7 @@
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area div {
-  width: 20%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,7 +592,7 @@
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area div img {
-  width: 125%;
+  width: 50%;
   cursor: default;
 }
 
@@ -730,7 +724,7 @@
     padding: 0rem 5%;
   }
   .my_skills .section_split .select_skill_container div div img {
-    width: 200% !important;
+    width: 100% !important;
   }
   .my_skills .section_split .select_skill_container .toggle_area {
     -webkit-box-pack: justify !important;
