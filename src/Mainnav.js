@@ -13,12 +13,15 @@ export default function Mainnav() {
       navelm.style.height='100vh';
       navelm.style.borderBottomLeft='0% !important';
       navelm.style.opacity='1';
+      navelm.style.fontSize='2vw';
+
       setToggle(isToggled=>true);
     } else {
       navelm.style.opacity='0';
       navelm.style.width='0vw';
       navelm.style.height='0vh';
       navelm.style.borderBottomLeft='50% !important';
+      navelm.style.fontSize='0vw';
       // changing state to 
       setToggle(isToggled=>false);
 

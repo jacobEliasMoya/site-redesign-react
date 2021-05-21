@@ -47,28 +47,48 @@ $keywords : #ef5da8;
 
 // scroll bars stylings
 /* width */
-::-webkit-scrollbar {
+.nonactive::-webkit-scrollbar {
     width: 1rem;
   }
+.active::-webkit-scrollbar {
+    width: 1rem;
+}
   
   /* Track */
-  ::-webkit-scrollbar-track {
+.nonactive::-webkit-scrollbar-track {
     background: $darkpurple;
     transition: all ease .5s !important;
 
-  }
+}
+.active::-webkit-scrollbar-track {
+    background: $darkpurple;
+    transition: all ease .5s !important;
+}
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+/* Handle */
+.nonactive::-webkit-scrollbar-thumb {
     background: $tertiarydpurple;
     transition: all ease .5s !important;
+}
 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+/* Handle */
+.active::-webkit-scrollbar-thumb {
     background: $keywords;
-  }
+    transition: all ease .5s !important;
+}
+  
+/* Handle on hover */
+.nonactive::-webkit-scrollbar-thumb:hover {
+background: $keywords;
+cursor: pointer;
+
+}
+
+.active::-webkit-scrollbar-thumb:hover {
+background: $keywords;
+cursor: pointer;
+
+}
 
 *{
     margin: 0 ;
@@ -121,12 +141,13 @@ $keywords : #ef5da8;
         position: fixed;
         top: 0;
         right: 0;
-        font-size: 2vw;
+        font-size: 0vw;
         opacity: 0;
+        overflow: hidden;
         a{
             min-width: 50%;
             text-align: center;
-            transition: all ease .5s;
+            transition: all ease .25s;
             margin-bottom: 5rem;
             padding: 1rem ;
             border-radius: 1rem;
@@ -188,7 +209,6 @@ $keywords : #ef5da8;
                 }
             }
         }
-
         .welcome_section{
             @include flexCol();
             position: relative;
@@ -264,21 +284,29 @@ $keywords : #ef5da8;
         .my_skills{
             @include fullScreener();
             @include flexRow();
+
             background-color: $tertiarydpurple;
             .section_split{
                 h1{
                     font-size: 3rem;
+                    margin: 3rem 0px;
+
                 }
                 @include flexCol();
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 width: 50%;
                 height: 100vh;
+                .project_container_outer{
+                    min-height: 70vh;
+                    @include flexCol();
+                }
                 .project_container{
                     background-color: #5D5FEF;
                     border-radius: 1rem;
                     padding: 1rem;
                     @include flexCol();
                     box-shadow: 0 -1.5rem #7879F1;
+
                     .row{
                         @include flexRow();
                         transition: all ease .75s;
@@ -317,34 +345,71 @@ $keywords : #ef5da8;
                 }
                 .select_skill_container{
                     @include flexCol();
+                    justify-content: space-evenly;
+                    min-height: 70vh;
+                    padding: 1rem;
+
+                    .name{
+                        font-family: 'Pattaya', sans-serif;
+                        color: $keywords;
+                        font-size: 3rem;
+                        margin: 1rem 0rem;
+                    }
                     .toggle_area{
                         @include flexRow();
                         justify-content: space-evenly;
                         i{
                             @include flexCol();
-                            transition: all ease .5s;
+                            transition: all ease .25s;
                             font-size: 5rem;
                             cursor: pointer;
+                            color: #5D5FEF;
                             &:hover{
                                 color: $keywords;
                             }
                         }
                         div{
-                            width: 33.33%;
+                            width:20%;
                             @include flexCol();
                             border-radius: 50%;
                             padding: none !important;
                             background-color: $tertiarydpurple;
-                            box-shadow: 0 1rem 1rem black;
 
                             img{
-                                width: 100%;
+                                width: 125%;
+                                cursor: default;
                                 
                             }
                             &:hover{
                                 cursor: pointer;
                                 transition: all ease .75s;
 
+                            }
+                        }
+                    }
+                    .skill_subskills{
+                        p{
+                            @include flexRow();
+                            justify-content: space-between;
+                            width: 100%;
+                            font-size: 1.25rem;
+                            text-decoration: underline;
+                            margin: .75rem 0rem ;
+                            text-align: left;                     
+                            transition: all ease .25s;
+                            i{
+                                color: #5D5FEF;
+                                float: right;
+                                margin-left: 1rem;
+                                transition: all ease .25s;
+                            }
+                            &:hover{
+                                cursor: pointer;
+                                color: $keywords;
+
+                                i{
+                                    color: $keywords;
+                                }
                             }
                         }
                     }

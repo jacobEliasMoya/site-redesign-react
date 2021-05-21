@@ -1,25 +1,48 @@
 /* width */
-::-webkit-scrollbar {
+.nonactive::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.active::-webkit-scrollbar {
   width: 1rem;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.nonactive::-webkit-scrollbar-track {
+  background: #0A0028;
+  -webkit-transition: all ease .5s !important;
+  transition: all ease .5s !important;
+}
+
+.active::-webkit-scrollbar-track {
   background: #0A0028;
   -webkit-transition: all ease .5s !important;
   transition: all ease .5s !important;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.nonactive::-webkit-scrollbar-thumb {
   background: #3b16a3;
   -webkit-transition: all ease .5s !important;
   transition: all ease .5s !important;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* Handle */
+.active::-webkit-scrollbar-thumb {
   background: #ef5da8;
+  -webkit-transition: all ease .5s !important;
+  transition: all ease .5s !important;
+}
+
+/* Handle on hover */
+.nonactive::-webkit-scrollbar-thumb:hover {
+  background: #ef5da8;
+  cursor: pointer;
+}
+
+.active::-webkit-scrollbar-thumb:hover {
+  background: #ef5da8;
+  cursor: pointer;
 }
 
 * {
@@ -118,15 +141,16 @@
   position: fixed;
   top: 0;
   right: 0;
-  font-size: 2vw;
+  font-size: 0vw;
   opacity: 0;
+  overflow: hidden;
 }
 
 #root .toggle_navigation a {
   min-width: 50%;
   text-align: center;
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
   margin-bottom: 5rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -364,15 +388,33 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 50%;
   height: 100vh;
 }
 
 #root .App .my_skills .section_split h1 {
   font-size: 3rem;
+  margin: 3rem 0px;
+}
+
+#root .App .my_skills .section_split .project_container_outer {
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #root .App .my_skills .section_split .project_container {
@@ -473,6 +515,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 70vh;
+  padding: 1rem;
+}
+
+#root .App .my_skills .section_split .select_skill_container .name {
+  font-family: 'Pattaya', sans-serif;
+  color: #ef5da8;
+  font-size: 3rem;
+  margin: 1rem 0rem;
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area {
@@ -508,10 +562,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
   font-size: 5rem;
   cursor: pointer;
+  color: #5D5FEF;
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area i:hover {
@@ -519,7 +574,7 @@
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area div {
-  width: 33.33%;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,18 +591,60 @@
   border-radius: 50%;
   padding: none !important;
   background-color: #3b16a3;
-  -webkit-box-shadow: 0 1rem 1rem black;
-          box-shadow: 0 1rem 1rem black;
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area div img {
-  width: 100%;
+  width: 125%;
+  cursor: default;
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area div:hover {
   cursor: pointer;
   -webkit-transition: all ease .75s;
   transition: all ease .75s;
+}
+
+#root .App .my_skills .section_split .select_skill_container .skill_subskills p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 1.25rem;
+  text-decoration: underline;
+  margin: .75rem 0rem;
+  text-align: left;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+#root .App .my_skills .section_split .select_skill_container .skill_subskills p i {
+  color: #5D5FEF;
+  float: right;
+  margin-left: 1rem;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+#root .App .my_skills .section_split .select_skill_container .skill_subskills p:hover {
+  cursor: pointer;
+  color: #ef5da8;
+}
+
+#root .App .my_skills .section_split .select_skill_container .skill_subskills p:hover i {
+  color: #ef5da8;
 }
 
 @-webkit-keyframes goup {
