@@ -22,7 +22,7 @@
 // DONT TOUCH
 @mixin fullScreener {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 // DONT TOUCH
 @mixin animationInfo{
@@ -44,6 +44,27 @@ $darkpurple: #0A0028;
 $secondarydpurple:#110042;
 $tertiarydpurple:#3b16a3;
 $keywords : #ef5da8;
+
+// scroll bars stylings
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $darkpurple;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $tertiarydpurple;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $keywords;
+  }
 
 *{
     margin: 0 ;
