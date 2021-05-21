@@ -4,22 +4,20 @@
 let gcount = false;
 
 const scrollBarchange = () =>{
-    // scroll works using the body element
     const bodyelm = document.querySelector("body");
     if(bodyelm.classList.contains('nonactive')){
         bodyelm.classList.remove('nonactive')
         bodyelm.classList.add('active');
-
-    }
-    if(gcount){
-        setTimeout(()=>{
-            bodyelm.classList.add('nonactive');
-            bodyelm.classList.remove('active');
-        },350)
+        if(gcount){
+            setTimeout(()=>{
+                bodyelm.classList.add('nonactive')
+                bodyelm.classList.remove('active')
+            },350)
+        }
     }
 }
 
 window.addEventListener("scroll",()=>{
-    gcount=true;
+    gcount++;
     scrollBarchange();
 });
