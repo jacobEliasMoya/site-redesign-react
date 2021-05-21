@@ -54,11 +54,15 @@ $keywords : #ef5da8;
   /* Track */
   ::-webkit-scrollbar-track {
     background: $darkpurple;
+    transition: all ease .5s !important;
+
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: $tertiarydpurple;
+    transition: all ease .5s !important;
+
   }
   
   /* Handle on hover */

@@ -6,11 +6,15 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #0A0028;
+  -webkit-transition: all ease .5s !important;
+  transition: all ease .5s !important;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #3b16a3;
+  -webkit-transition: all ease .5s !important;
+  transition: all ease .5s !important;
 }
 
 /* Handle on hover */

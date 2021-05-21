@@ -11,7 +11,6 @@ const App = () => {
     <div className="App">
       <MainNav />
       <WelcomeSec />
-      <SkillsSection />
     </div>
   );
 }
