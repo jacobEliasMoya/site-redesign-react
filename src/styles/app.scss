@@ -325,13 +325,13 @@ cursor: pointer;
                             img{
                                 width: 100%;
                             }
-                            &:hover{
-                                border: .25rem solid $keywords;
-                                cursor: pointer;
-                                transition: all ease .75s;
-                                box-shadow: 0 1rem 1rem black;
 
-                            }
+                        }
+                        .currentlyActive{
+                            border: .25rem solid $keywords;
+                            cursor: pointer;
+                            transition: all ease .75s;
+                            box-shadow: 0 1rem 1rem black;
                         }
 
                     }
@@ -342,12 +342,14 @@ cursor: pointer;
                     min-height: 70vh;
                     padding: 1rem;
                     width: 100%;
+                    overflow: hidden;
 
                     .name{
                         font-family: 'Pattaya', sans-serif;
                         color: $keywords;
                         font-size: 3rem;
                         margin: 1rem 0rem;
+                        transition: all ease .5s;   
                     }
                     .toggle_area{
                         @include flexRow();

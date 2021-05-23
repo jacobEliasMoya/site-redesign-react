@@ -41,6 +41,13 @@ export default function SkillsSection() {
         },250)
     }
 
+    const opaqeNout = () => {
+        const spinimg = document.querySelector('.select_skill_container .name');
+        spinimg.style.transform='rotateY(180deg)';
+        setTimeout(()=>{
+            spinimg.style.transform='rotateY(0deg)';
+        },250)
+    }
 
     const incremementSkillInd = () => {
         if(currentSkillInd < skillsArr.length-1){
@@ -49,6 +56,7 @@ export default function SkillsSection() {
             setCurrentSkill(ind => ind= 0);
         }
         spinImg();
+        opaqeNout();
     }
 
     const decrementSkillInd = () => {
@@ -58,27 +66,70 @@ export default function SkillsSection() {
             setCurrentSkill(ind => ind = skillsArr.length-1);
         }
         spinImg();
+        opaqeNout();
     }
 
     const assignNewArray = () => {
+        const activeDisplayer = [document.querySelector('.p1select'),document.querySelector('.p2select'),document.querySelector('.p3select'),document.querySelector('.p4select'),document.querySelector('.p5select'),document.querySelector('.p6select')];
+
         switch(currentSkillInd){
             case 0:
                 setSkillArray(skill => skill = wpInfo);
+                activeDisplayer[currentSkillInd].classList.add('currentlyActive')
+                activeDisplayer[1].classList.remove('currentlyActive');
+                activeDisplayer[2].classList.remove('currentlyActive');
+                activeDisplayer[3].classList.remove('currentlyActive');
+                activeDisplayer[4].classList.remove('currentlyActive');
+                activeDisplayer[5].classList.remove('currentlyActive');
                 break;
             case 1:
                 setSkillArray(skill => skill = jsInfo);
+                activeDisplayer[currentSkillInd].classList.add('currentlyActive')
+                activeDisplayer[0].classList.remove('currentlyActive');
+                activeDisplayer[2].classList.remove('currentlyActive');
+                activeDisplayer[3].classList.remove('currentlyActive');
+                activeDisplayer[4].classList.remove('currentlyActive');
+                activeDisplayer[5].classList.remove('currentlyActive');
+
                 break;
             case 2:
                 setSkillArray(skill => skill = reactInfo);
+                activeDisplayer[currentSkillInd].classList.add('currentlyActive')
+                activeDisplayer[1].classList.remove('currentlyActive');
+                activeDisplayer[0].classList.remove('currentlyActive');
+                activeDisplayer[3].classList.remove('currentlyActive');
+                activeDisplayer[4].classList.remove('currentlyActive');
+                activeDisplayer[5].classList.remove('currentlyActive');
+
                 break;
             case 3:
                 setSkillArray(skill => skill = cssInfo);
+                activeDisplayer[currentSkillInd].classList.add('currentlyActive')
+                activeDisplayer[1].classList.remove('currentlyActive');
+                activeDisplayer[2].classList.remove('currentlyActive');
+                activeDisplayer[0].classList.remove('currentlyActive');
+                activeDisplayer[4].classList.remove('currentlyActive');
+                activeDisplayer[5].classList.remove('currentlyActive');
+
                 break;
             case 4:
                 setSkillArray(skill => skill = scssInfo);
+                activeDisplayer[currentSkillInd].classList.add('currentlyActive')
+                activeDisplayer[1].classList.remove('currentlyActive');
+                activeDisplayer[2].classList.remove('currentlyActive');
+                activeDisplayer[3].classList.remove('currentlyActive');
+                activeDisplayer[0].classList.remove('currentlyActive');
+                activeDisplayer[5].classList.remove('currentlyActive');
                 break;
             case 5:
                 setSkillArray(skill => skill = htmlInfo);
+                activeDisplayer[currentSkillInd].classList.add('currentlyActive')
+                activeDisplayer[1].classList.remove('currentlyActive');
+                activeDisplayer[2].classList.remove('currentlyActive');
+                activeDisplayer[3].classList.remove('currentlyActive');
+                activeDisplayer[4].classList.remove('currentlyActive');
+                activeDisplayer[0].classList.remove('currentlyActive');
+
                 break;
             default:
                 return;
@@ -100,25 +151,25 @@ export default function SkillsSection() {
                 <div className="project_container_outer">
                     <div className="project_container">
                         <div className="row one">
-                            <div className="p1 container">
+                            <div className="p1select container">
                                 <ImgSelector desc="wordpress_img_logo_white" skill={skill1}/>
                             </div>
-                            <div className="p2 container">
+                            <div className="p2select container">
                                 <ImgSelector desc="javascript_img_logo_white" skill={skill2}/>
                             </div>
-                            <div className="p3 container">
+                            <div className="p3select container">
                                 <ImgSelector desc="react_img_logo_white" skill={skill3}/>
                             </div>
                         </div>
 
                         <div className="row two">
-                            <div className="p4 container">
+                            <div className="p4select container">
                                 <ImgSelector desc="css_img_logo_white" skill={skill4}/>
                             </div>
-                            <div className="p5 container">
+                            <div className="p5select container">
                                 <ImgSelector desc="scss_img_logo_white" skill={skill5}/>
                             </div>
-                            <div className="p6 container">
+                            <div className="p6select container">
                                 <ImgSelector desc="html_img_logo_white" skill={skill6}/>
                             </div>
                         </div>

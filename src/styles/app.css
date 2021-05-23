@@ -488,7 +488,7 @@
   width: 100%;
 }
 
-#root .App .my_skills .section_split .project_container .row .container:hover {
+#root .App .my_skills .section_split .project_container .row .currentlyActive {
   border: 0.25rem solid #ef5da8;
   cursor: pointer;
   -webkit-transition: all ease .75s;
@@ -517,6 +517,7 @@
   min-height: 70vh;
   padding: 1rem;
   width: 100%;
+  overflow: hidden;
 }
 
 #root .App .my_skills .section_split .select_skill_container .name {
@@ -524,6 +525,8 @@
   color: #ef5da8;
   font-size: 3rem;
   margin: 1rem 0rem;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area {
