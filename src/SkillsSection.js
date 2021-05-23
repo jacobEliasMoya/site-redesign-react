@@ -14,6 +14,10 @@ let keyMain = 0;
 
 export default function SkillsSection() {
 
+    const skillImgs = [skill1,skill2,skill3,skill4,skill5,skill6];
+    const skillAltDesc = ["wordpress_img_logo_white","JavaScript_img_logo_white","React_img_logo_white","css_img_logo_white","scss_img_logo_white","html_img_logo_white"];
+
+
     const wpInfo = ["WPVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
     const jsInfo = ["JSVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
     const reactInfo = ["REACTVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
@@ -24,7 +28,7 @@ export default function SkillsSection() {
     const skillsArr = ["WordPress","JavaScript","ReactJS","CSS3","SCSS","HTML5"];
 
     const [currentSkillInd,setCurrentSkill] = useState(0);
-    const [currentSkillArray,setSkillArray] = useState(wpInfo)
+    const [currentSkillArray,setSkillArray] = useState(wpInfo);
 
     const incremementSkillInd = () =>{
         if(currentSkillInd < skillsArr.length-1){
@@ -39,7 +43,6 @@ export default function SkillsSection() {
             setCurrentSkill(ind => ind - 1);
         } else{
             setCurrentSkill(ind => ind = skillsArr.length-1);
-            
         }
     }
 
@@ -120,8 +123,8 @@ export default function SkillsSection() {
                         />
                         <div className="p6 container current">
                             <ImgSelector 
-                                desc="html_img_logo_white" 
-                                skill={skill6}
+                                desc={skillAltDesc[currentSkillInd]} 
+                                skill={skillImgs[currentSkillInd]}
                             />
                         </div>
                         <Iconcontainer 
