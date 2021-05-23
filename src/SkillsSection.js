@@ -14,6 +14,7 @@ let keyMain = 0;
 
 export default function SkillsSection() {
 
+    // refactor to an object? food for thought
     const skillImgs = [skill1,skill2,skill3,skill4,skill5,skill6];
     const skillAltDesc = ["wordpress_img_logo_white","JavaScript_img_logo_white","React_img_logo_white","css_img_logo_white","scss_img_logo_white","html_img_logo_white"];
 
@@ -30,20 +31,33 @@ export default function SkillsSection() {
     const [currentSkillInd,setCurrentSkill] = useState(0);
     const [currentSkillArray,setSkillArray] = useState(wpInfo);
 
-    const incremementSkillInd = () =>{
+    const spinImg = () => {
+        const spinimg = document.querySelector('.container.current img');
+        spinimg.style.opacity='0';
+        spinimg.style.transform='rotateY(180deg)';
+        setTimeout(()=>{
+            spinimg.style.opacity='1';
+            spinimg.style.transform='rotateY(0deg)';
+        },250)
+    }
+
+
+    const incremementSkillInd = () => {
         if(currentSkillInd < skillsArr.length-1){
             setCurrentSkill(ind => ind + 1);
         } else {
             setCurrentSkill(ind => ind= 0);
         }
+        spinImg();
     }
 
-    const decrementSkillInd = () =>{
+    const decrementSkillInd = () => {
         if(currentSkillInd > 0){
             setCurrentSkill(ind => ind - 1);
         } else{
             setCurrentSkill(ind => ind = skillsArr.length-1);
         }
+        spinImg();
     }
 
     const assignNewArray = () => {
@@ -71,6 +85,7 @@ export default function SkillsSection() {
             
         }
     }
+
 
     useEffect(() => {
         assignNewArray();

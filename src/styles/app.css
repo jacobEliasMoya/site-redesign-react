@@ -594,6 +594,10 @@
 #root .App .my_skills .section_split .select_skill_container .toggle_area div img {
   width: 50%;
   cursor: default;
+  -webkit-transition: all ease .5s !important;
+  transition: all ease .5s !important;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 #root .App .my_skills .section_split .select_skill_container .toggle_area div:hover {

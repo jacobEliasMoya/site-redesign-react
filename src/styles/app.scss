@@ -373,6 +373,8 @@ cursor: pointer;
                             img{
                                 width: 50%;
                                 cursor: default;
+                                transition: all ease .5s !important;
+                                transform: rotateY(0deg);
                                 
                             }
                             &:hover{
