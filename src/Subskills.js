@@ -4,7 +4,7 @@ export default function Subskills(props) {
     return (
         <p>
             {props.skilldesc}
-            <i class="fa fa-info-circle"></i>
+            <i className="fa fa-info-circle"></i>
         </p>
     )
 }

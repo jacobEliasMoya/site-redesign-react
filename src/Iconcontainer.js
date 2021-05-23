@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Iconcontainer(props) {
     return (
-        <i className={props.iconclass}>
+        <i onClick={props.onClick} className={props.iconclass}>
             
         </i>
     )

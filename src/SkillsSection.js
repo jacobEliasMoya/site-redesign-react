@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import ImgSelector from './ImgSelector';
 import Iconcontainer from './Iconcontainer';
 import Subskills from './Subskills';
+
 import skill1 from './images/wp.png';
 import skill2 from './images/js.png';
 import skill3 from './images/rjs.png';
@@ -9,11 +10,69 @@ import skill4 from './images/css.png';
 import skill5 from './images/scss.png';
 import skill6 from './images/html.png';
 
-
+let keyMain = 0;
 
 export default function SkillsSection() {
 
+    const wpInfo = ["WPVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
+    const jsInfo = ["JSVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
+    const reactInfo = ["REACTVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
+    const cssInfo = ["CSSVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
+    const scssInfo = ["SCSSVideo & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
     const htmlInfo = ["Video & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
+
+    const skillsArr = ["WordPress","JavaScript","ReactJS","CSS3","SCSS","HTML5"];
+
+    const [currentSkillInd,setCurrentSkill] = useState(0);
+    const [currentSkillArray,setSkillArray] = useState(wpInfo)
+
+    const incremementSkillInd = () =>{
+        if(currentSkillInd < skillsArr.length-1){
+            setCurrentSkill(ind => ind + 1);
+        } else {
+            setCurrentSkill(ind => ind= 0);
+        }
+    }
+
+    const decrementSkillInd = () =>{
+        if(currentSkillInd > 0){
+            setCurrentSkill(ind => ind - 1);
+        } else{
+            setCurrentSkill(ind => ind = skillsArr.length-1);
+            
+        }
+    }
+
+    const assignNewArray = () => {
+        switch(currentSkillInd){
+            case 0:
+                setSkillArray(skill => skill = wpInfo);
+                break;
+            case 1:
+                setSkillArray(skill => skill = jsInfo);
+                break;
+            case 2:
+                setSkillArray(skill => skill = reactInfo);
+                break;
+            case 3:
+                setSkillArray(skill => skill = cssInfo);
+                break;
+            case 4:
+                setSkillArray(skill => skill = scssInfo);
+                break;
+            case 5:
+                setSkillArray(skill => skill = htmlInfo);
+                break;
+            default:
+                return;
+            
+        }
+    }
+
+    useEffect(() => {
+        assignNewArray();
+    },[currentSkillInd])
+
 
     return (
         <section className="my_skills" id="my_skills">
@@ -57,6 +116,7 @@ export default function SkillsSection() {
                     <div className="toggle_area">
                         <Iconcontainer 
                             iconclass="fa fa-caret-left"
+                            onClick={decrementSkillInd}
                         />
                         <div className="p6 container current">
                             <ImgSelector 
@@ -65,15 +125,17 @@ export default function SkillsSection() {
                             />
                         </div>
                         <Iconcontainer 
+                            onClick={incremementSkillInd}
                             iconclass="fa fa-caret-right"
                         />
                     </div>
                     <div className="name">
-                        HTML 5
+                        {skillsArr[currentSkillInd]}
                     </div>
                     <div className="skill_subskills">
-                        {htmlInfo.map((desc)=>{
-                            return (<Subskills skilldesc={desc} />)
+                        {currentSkillArray.map((desc)=>{
+                            keyMain++
+                            return (<Subskills key={keyMain} skilldesc={desc} />)
                         })}
                     </div>
                 </div>

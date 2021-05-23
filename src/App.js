@@ -3,13 +3,11 @@ import WelcomeSec from './WelcomeSec';
 import MainNav from './Mainnav';
 import SkillsSection from './SkillsSection';
 // import Spacer from './Spacer';
-import {React} from 'react';
+import React from 'react';
 
 
 const App = () => {
-  
-
-
+ 
   return (
     <div className="App">
       <MainNav />
