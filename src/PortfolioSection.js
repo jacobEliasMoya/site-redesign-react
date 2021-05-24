@@ -20,6 +20,8 @@ export default function PortfolioSection() {
             case "PHOTOSITE":
                 return "Personal Project";
                 break;
+            default:
+                return;
         }
     }
 
@@ -37,6 +39,8 @@ export default function PortfolioSection() {
             case "PHOTOSITE":
                 return "Asteroid Shooter";
                 break;
+            default:
+                return;
         }
     }
 
