@@ -7,40 +7,26 @@ export default function PortfolioSection() {
     const previews = ["VAREP","CONFERENCE","JAKESPACE", "PHOTOSITE"];
 
     const assignType = txt => {
-        switch(txt){
-            case "VAREP":
-                return "VAREP";
-                break;
-            case "CONFERENCE":
-                return "VAREP";
-                break;
-            case "JAKESPACE":
-                return "Personal Site";
-                break;
-            case "PHOTOSITE":
-                return "Personal Project";
-                break;
-            default:
-                return;
+        if(txt==="VAREP"){
+            return "VAREP";
+        } else if(txt==="CONFERENCE"){
+            return "VAREP";
+        }else if(txt==="JAKESPACE"){
+            return "Personal Site";
+        } else {
+            return "Personal Project";
         }
     }
 
     const assignDesc = txt => {
-        switch(txt){
-            case "VAREP":
-                return "Business Page";
-                break;
-            case "CONFERENCE":
-                return "Conference Page";
-                break;
-            case "JAKESPACE":
-                return "Fully Interactive";
-                break;
-            case "PHOTOSITE":
-                return "Asteroid Shooter";
-                break;
-            default:
-                return;
+        if(txt==="VAREP"){
+            return "Business Page";
+        } else if(txt==="CONFERENCE"){
+            return "Conference Page";
+        }else if(txt==="JAKESPACE"){
+            return "Conference Page";
+        } else {
+            return "Fully Interactive";
         }
     }
 
