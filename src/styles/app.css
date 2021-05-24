@@ -978,7 +978,7 @@
     margin: 2.5vh;
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container {
-    width: 60% !important;
+    width: 50% !important;
     min-height: 25vh !important;
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container .project_preview, .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
