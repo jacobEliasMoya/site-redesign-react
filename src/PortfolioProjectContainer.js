@@ -3,6 +3,10 @@ import Iconcontainer from './Iconcontainer';
 
 export default function PortfolioProjectContainer(props) {
 
+    // const illuminateElms = (e) => {
+    //     e.target.style = " ";
+    // }
+
     return (
        
         <div className="project_container_outer">
