@@ -974,6 +974,9 @@
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
+  .portfolio_project_selector .top_row h1 {
+    margin: 1rem 0rem !important;
+  }
   .portfolio_project_selector .top_row .project_container_outer {
     margin: 2.5vh;
   }

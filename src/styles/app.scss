@@ -661,6 +661,9 @@ cursor: pointer;
     .portfolio_project_selector{
         .top_row{
             flex-direction: column !important;
+            h1{
+                margin: 1rem 0rem !important;
+            }
             .project_container_outer{
                 margin: 2.5vh;
                 .project_container{
@@ -680,4 +683,5 @@ cursor: pointer;
             }
         }
     }
+
 }
