@@ -398,7 +398,7 @@ cursor: pointer;
                             @include flexRow();
                             justify-content: space-between;
                             width: 100%;
-                            font-size: 1.25rem;
+                            font-size: 1.5rem;
                             margin: .5rem 0rem ;
                             text-align: left;                     
                             transition: all ease .25s;
@@ -432,6 +432,53 @@ cursor: pointer;
             background-image: url('../images/portfolioBk.png');
             background-size: cover;
             background-color: #230089;
+            position: relative;
+            .iframe_container{
+                width: 0%;
+                height: 0vh;
+                position: absolute;
+                border-radius: 2rem;
+                background-color: #7878f1f3;
+                border: none;
+                @include flexCol();
+                justify-content: flex-start;
+                padding-top: 2.5%;
+                box-shadow: 0 0 1rem black;
+                overflow: hidden;
+                transition: all ease .5s;
+                opacity: 0;
+                h1{
+                    @include flexRow();
+                    line-height: 0;
+                    width: 100%;
+                    .floater_close{
+                        position: absolute;
+                        right: 5%;
+                        color: pink;
+                        text-shadow: 0 0 .5rem black;
+                        cursor: pointer;
+                        transition: all ease .25s;
+                        &:hover{
+                            color: red;
+                            text-shadow: 0 0 1.5rem black;
+                        }
+                    }
+                }
+                iframe{
+                    transition: all ease .5s;
+                    border-radius: inherit;
+                    width: 95%;
+                    height: 85%;
+                    border: .5rem solid $tertiarydpurple;
+                    background-color: #222222;
+                    background-image: url('../images/loadingsrc.gif');
+                    background-size: 10rem 10rem;
+                    background-repeat: no-repeat;
+                    background-position:center;
+                    box-shadow: inset 0 0 5rem black;
+                }
+            }
+
             h1{
                 font-size: 3rem;
                 margin: 3rem 0px;
@@ -453,7 +500,7 @@ cursor: pointer;
                             background-color: #7879F1;
                             border-radius: 2rem;
                             box-shadow: 0 -1rem #A5A6F6;
-                            .project_preview,.project_view,.project_info{
+                            #project_preview,.project_view,.project_info{
                                 min-height: 20vh;
                                 width: 80%;
                                 background-color: black;
@@ -467,28 +514,31 @@ cursor: pointer;
                                 background-color: #5D5FEF;
                                 transition: all ease .25s;
                                 cursor: pointer;
+                                border-radius: 1rem;
+                                border: none;
                                 &:hover{
                                     background-color: #3537c2;
                                     color: $keywords;
+                                    text-shadow: 0 0 1rem black;
                                 }
                             }
-                            .project_preview{
-                                background-image: url('../images/preview1.png') !important;
+                            #project_preview{
+                                background-image: url('../images/preview1.png');
                                 background-size: 125% 100%;
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 box-shadow: inset 0 0 1rem black;
                             }
-                            #VAREP{
+                            .VAREP{
                                 background-image: url('../images/preview1.png') !important;
                             }
-                            #CONFERENCE{
+                            .CONFERENCE{
                                 background-image: url('../images/preview3.png') !important;
                             }
-                            #JAKESPACE{
+                            .JAKESPACE{
                                 background-image: url('../images/preview2.png') !important;
                             }
-                            #PHOTOSITE{
+                            .PHOTOSITE{
                                 background-image: url('../images/preview4.png') !important;
                             }
                         }
@@ -528,7 +578,6 @@ cursor: pointer;
                                 }
                             }
                         }
-
                     }
                 }
             }
@@ -539,11 +588,9 @@ cursor: pointer;
 @keyframes goup {
     0%{
         bottom: 13vh;
-
     }
     98%{
         opacity: 0;
-
     }
     100%{
         bottom: 100vh;
@@ -564,14 +611,11 @@ cursor: pointer;
         }
     }
     .welcome_text{
-        
         h1{ 
             font-size: 1.5rem !important;
-
         }
         h1:not(.welcome_description){
             font-size: 3.5rem !important;
-
         }
         .welcome_description{
             padding: 1rem;
@@ -579,7 +623,6 @@ cursor: pointer;
     }
     .welcome_intro{
         div{
-
             h1{
                 font-size: 2.5rem !important;
                 position: relative;
@@ -588,7 +631,6 @@ cursor: pointer;
         }
 
         div:not(.greeting){
-
             p{
                 font-size: 1rem !important;
             }
@@ -606,7 +648,6 @@ cursor: pointer;
                 font-size: 2.5rem !important;
                 margin:0rem 0rem !important;
                 margin-bottom: 1.5rem !important;
-
             }
             .select_skill_container{
                 div{
@@ -669,6 +710,7 @@ cursor: pointer;
                 .project_container{
                     width: 50% !important;
                     min-height: 25vh !important;
+                    box-shadow: 0 -.5rem #A5A6F6 !important;
                     .project_preview,.project_view,.project_info{
                         min-height: 10vh !important;
                         border-radius: 1rem !important;

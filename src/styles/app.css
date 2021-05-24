@@ -639,7 +639,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: .5rem 0rem;
   text-align: left;
   -webkit-transition: all ease .25s;
@@ -688,6 +688,88 @@
   background-image: url("../images/portfolioBk.png");
   background-size: cover;
   background-color: #230089;
+  position: relative;
+}
+
+#root .App .portfolio_section .iframe_container {
+  width: 0%;
+  height: 0vh;
+  position: absolute;
+  border-radius: 2rem;
+  background-color: #7878f1f3;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 2.5%;
+  -webkit-box-shadow: 0 0 1rem black;
+          box-shadow: 0 0 1rem black;
+  overflow: hidden;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  opacity: 0;
+}
+
+#root .App .portfolio_section .iframe_container h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 0;
+  width: 100%;
+}
+
+#root .App .portfolio_section .iframe_container h1 .floater_close {
+  position: absolute;
+  right: 5%;
+  color: pink;
+  text-shadow: 0 0 .5rem black;
+  cursor: pointer;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+#root .App .portfolio_section .iframe_container h1 .floater_close:hover {
+  color: red;
+  text-shadow: 0 0 1.5rem black;
+}
+
+#root .App .portfolio_section .iframe_container iframe {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border-radius: inherit;
+  width: 95%;
+  height: 85%;
+  border: 0.5rem solid #230089;
+  background-color: #222222;
+  background-image: url("../images/loadingsrc.gif");
+  background-size: 10rem 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: inset 0 0 5rem black;
+          box-shadow: inset 0 0 5rem black;
 }
 
 #root .App .portfolio_section h1 {
@@ -761,7 +843,7 @@
           box-shadow: 0 -1rem #A5A6F6;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_preview, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
   min-height: 20vh;
   width: 80%;
   background-color: black;
@@ -789,15 +871,18 @@
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   cursor: pointer;
+  border-radius: 1rem;
+  border: none;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_view:hover, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_info:hover {
   background-color: #3537c2;
   color: #ef5da8;
+  text-shadow: 0 0 1rem black;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_preview {
-  background-image: url("../images/preview1.png") !important;
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview {
+  background-image: url("../images/preview1.png");
   background-size: 125% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -805,19 +890,19 @@
           box-shadow: inset 0 0 1rem black;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #VAREP {
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .VAREP {
   background-image: url("../images/preview1.png") !important;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #CONFERENCE {
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .CONFERENCE {
   background-image: url("../images/preview3.png") !important;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #JAKESPACE {
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .JAKESPACE {
   background-image: url("../images/preview2.png") !important;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #PHOTOSITE {
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .PHOTOSITE {
   background-image: url("../images/preview4.png") !important;
 }
 
@@ -983,6 +1068,8 @@
   .portfolio_project_selector .top_row .project_container_outer .project_container {
     width: 50% !important;
     min-height: 25vh !important;
+    -webkit-box-shadow: 0 -.5rem #A5A6F6 !important;
+            box-shadow: 0 -.5rem #A5A6F6 !important;
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container .project_preview, .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
     min-height: 10vh !important;
