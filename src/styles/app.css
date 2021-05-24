@@ -371,6 +371,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-top: 2rem;
   background-color: #3b16a3;
 }
 
@@ -520,6 +521,10 @@
   overflow: hidden;
 }
 
+#root .App .my_skills .section_split .select_skill_container * {
+  overflow: visible;
+}
+
 #root .App .my_skills .section_split .select_skill_container .name {
   font-family: 'Pattaya', sans-serif;
   color: #ef5da8;
@@ -611,6 +616,8 @@
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills {
   width: 50%;
+  overflow: visible;
+  min-height: 35vh;
 }
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills p {
@@ -632,7 +639,7 @@
           justify-content: space-between;
   width: 100%;
   font-size: 1.25rem;
-  margin: .75rem 0rem;
+  margin: .25rem 0rem;
   text-align: left;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
