@@ -14,7 +14,7 @@ export default function Navmenu() {
                 title='SKILLS'
             />
             <Misclink 
-                link='#'  
+                link='#my_portfolio'  
                 title='PORTFOLIO'
             />
             <Misclink 

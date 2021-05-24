@@ -42,7 +42,7 @@
 $opaquePurple : #2c00a4f1;
 $darkpurple: #0A0028;
 $secondarydpurple:#110042;
-$tertiarydpurple:#3b16a3;
+$tertiarydpurple:#230089;
 $keywords : #ef5da8;
 
 // scroll bars stylings
@@ -168,6 +168,7 @@ cursor: pointer;
             img{
                 width: 5rem;
             }
+
             i{
                 font-size: 2.5rem;
                 font-weight: lighter;
@@ -284,8 +285,9 @@ cursor: pointer;
         .my_skills{
             @include fullScreener();
             @include flexRow();
+            min-height: 75vh;
             padding-top: 2rem;
-            background-color: $tertiarydpurple;
+            background:  $tertiarydpurple ;
             .section_split{
                 h1{
                     font-size: 3rem;
@@ -397,7 +399,7 @@ cursor: pointer;
                             justify-content: space-between;
                             width: 100%;
                             font-size: 1.25rem;
-                            margin: .25rem 0rem ;
+                            margin: .5rem 0rem ;
                             text-align: left;                     
                             transition: all ease .25s;
                             i{
@@ -418,6 +420,79 @@ cursor: pointer;
 
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        .portfolio_section{
+            @include fullScreener();
+            @include flexCol();
+            justify-content: space-evenly;
+            background-image: url('../images/portfolioBk.png');
+            background-size: cover;
+            background-color: #230089;
+            h1{
+                font-size: 3rem;
+                margin: 3rem 0px;
+            }
+            .portfolio_project_selector{
+                width: 100%;
+                .top_row{
+                    @include flexRow();
+                    justify-content: space-evenly;
+                    width: 100%;
+                    .project_container_outer{
+                        width: 100%;
+                        @include flexCol();
+                        .project_container{
+                            @include flexCol();
+                            justify-content: space-evenly;
+                            min-height: 45vh;
+                            width: 70%;
+                            background-color: #7879F1;
+                            border-radius: 2rem;
+                            box-shadow: 0 -1rem #A5A6F6;
+                            .project_preview,.project_view,.project_info{
+                                min-height: 20vh;
+                                width: 80%;
+                                background-color: black;
+                                border-radius: 2rem;
+                                @include flexCol();
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                            }
+                            .project_view,.project_info{
+                                min-height: 5vh;
+                                background-color: #5D5FEF;
+                                transition: all ease .25s;
+                                cursor: pointer;
+                                &:hover{
+                                    background-color: #3537c2;
+                                    color: $keywords;
+                                }
+                            }
+                            .project_preview{
+                                background-image: url('../images/preview1.png') !important;
+                                background-size: 125% 100%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                box-shadow: inset 0 0 1rem black;
+                            }
+                            #VAREP{
+                                background-image: url('../images/preview1.png') !important;
+                            }
+                            #CONFERENCE{
+                                background-image: url('../images/preview3.png') !important;
+                            }
+                            #JAKESPACE{
+                                background-image: url('../images/preview2.png') !important;
+                            }
+                            #PHOTOSITE{
+                                background-image: url('../images/preview4.png') !important;
+                            }
+                        }
+
                     }
                 }
             }
@@ -544,6 +619,28 @@ cursor: pointer;
         .section_split.two{
             h1{
                 margin-bottom: 0rem !important;
+            }
+        }
+    }
+    .portfolio_project_selector{
+        .top_row{
+            flex-direction: column !important;
+            .project_container_outer{
+                margin: 2.5vh;
+                .project_container{
+                    width: 60% !important;
+                    min-height: 25vh !important;
+                    .project_preview,.project_view,.project_info{
+                        min-height: 10vh !important;
+                        border-radius: 1rem !important;
+                    }
+                    .project_view,.project_info{
+                        min-height: 3vh !important;
+                        font-size: 1rem !important;
+                    }
+
+                }
+                
             }
         }
     }

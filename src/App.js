@@ -1,5 +1,6 @@
 import './styles/app.css';
 import WelcomeSec from './WelcomeSec';
+import PortfolioSection from './PortfolioSection';
 import MainNav from './Mainnav';
 import SkillsSection from './SkillsSection';
 // import Spacer from './Spacer';
@@ -13,6 +14,7 @@ const App = () => {
       <MainNav />
       <WelcomeSec />
       <SkillsSection />
+      <PortfolioSection />
     </div>
   );
 }
