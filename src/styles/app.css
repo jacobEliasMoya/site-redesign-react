@@ -609,6 +609,10 @@
   transition: all ease .75s;
 }
 
+#root .App .my_skills .section_split .select_skill_container .skill_subskills {
+  width: 60%;
+}
+
 #root .App .my_skills .section_split .select_skill_container .skill_subskills p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -731,6 +735,9 @@
     padding: 0rem 5%;
   }
   .my_skills .section_split .select_skill_container div div img {
+    width: 100% !important;
+  }
+  .my_skills .section_split .select_skill_container .skill_subskills {
     width: 100% !important;
   }
   .my_skills .section_split .select_skill_container .toggle_area {

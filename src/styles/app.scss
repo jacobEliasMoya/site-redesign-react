@@ -387,6 +387,7 @@ cursor: pointer;
                         }
                     }
                     .skill_subskills{
+                        width: 60%;
                         p{
                             @include flexRow();
                             justify-content: space-between;
@@ -504,6 +505,9 @@ cursor: pointer;
                             width: 100% !important;
                         }
                     }
+                }
+                .skill_subskills{
+                    width: 100% !important;
                 }
                 .toggle_area{
                     justify-content: space-between !important;
