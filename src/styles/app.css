@@ -610,7 +610,7 @@
 }
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills {
-  width: 60%;
+  width: 50%;
 }
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills p {
