@@ -492,6 +492,42 @@ cursor: pointer;
                                 background-image: url('../images/preview4.png') !important;
                             }
                         }
+                        h1{
+                            font-size: 1.75rem;
+                            width: 100%;
+                            text-align: center;
+
+                            .main_desc{
+                                *{
+                                    text-decoration: none;
+                                }
+                            }
+                            .main_title{
+                                letter-spacing: 2.5px;
+                                font-family: 'Pattaya', sans-serif !important;
+                                color: $keywords;
+                                text-decoration: underline;
+                                i{
+                                    margin-left: 1rem;
+                                    color: #5D5FEF;
+                                    transition: all ease .1s;
+                                    text-decoration: none !important;
+                                    font-size: 1.5rem;
+
+                                }
+                                &:hover{
+                                    i{
+                                        color: $keywords;
+                                        cursor: pointer;
+                                        &:hover{
+                                            color: white;
+                                            font-size: 2rem;
+                                            margin-left: .6rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
 
                     }
                 }

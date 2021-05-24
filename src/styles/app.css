@@ -821,6 +821,43 @@
   background-image: url("../images/preview4.png") !important;
 }
 
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 {
+  font-size: 1.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_desc * {
+  text-decoration: none;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title {
+  letter-spacing: 2.5px;
+  font-family: 'Pattaya', sans-serif !important;
+  color: #ef5da8;
+  text-decoration: underline;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title i {
+  margin-left: 1rem;
+  color: #5D5FEF;
+  -webkit-transition: all ease .1s;
+  transition: all ease .1s;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title:hover i {
+  color: #ef5da8;
+  cursor: pointer;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title:hover i:hover {
+  color: white;
+  font-size: 2rem;
+  margin-left: .6rem;
+}
+
 @-webkit-keyframes goup {
   0% {
     bottom: 13vh;
