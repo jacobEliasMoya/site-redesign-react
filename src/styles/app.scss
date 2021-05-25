@@ -711,13 +711,16 @@ cursor: pointer;
                     width: 50% !important;
                     min-height: 25vh !important;
                     box-shadow: 0 -.5rem #A5A6F6 !important;
-                    .project_preview,.project_view,.project_info{
+                    .project_view,.project_info{
                         min-height: 10vh !important;
                         border-radius: 1rem !important;
                     }
                     .project_view,.project_info{
                         min-height: 3vh !important;
                         font-size: 1rem !important;
+                    }
+                    #project_preview{
+                        min-height: 10vh !important;
                     }
 
                 }

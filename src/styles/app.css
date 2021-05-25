@@ -1071,13 +1071,16 @@
     -webkit-box-shadow: 0 -.5rem #A5A6F6 !important;
             box-shadow: 0 -.5rem #A5A6F6 !important;
   }
-  .portfolio_project_selector .top_row .project_container_outer .project_container .project_preview, .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
+  .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
     min-height: 10vh !important;
     border-radius: 1rem !important;
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
     min-height: 3vh !important;
     font-size: 1rem !important;
+  }
+  .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview {
+    min-height: 10vh !important;
   }
 }
 /*# sourceMappingURL=app.css.map */
