@@ -844,7 +844,7 @@
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
-  min-height: 10vh;
+  min-height: 20vh;
   width: 80%;
   background-color: black;
   border-radius: 1rem;
