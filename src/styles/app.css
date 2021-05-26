@@ -647,7 +647,6 @@
 }
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills p i {
-  color: #5D5FEF;
   float: right;
   margin-left: 1rem;
   -webkit-transition: all ease .25s;
@@ -663,7 +662,6 @@
 
 #root .App .my_skills .section_split .select_skill_container .skill_subskills p:hover {
   color: #ef5da8;
-  text-decoration: underline;
 }
 
 #root .App .portfolio_section {
@@ -721,6 +719,7 @@
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   opacity: 0;
+  z-index: 3;
 }
 
 #root .App .portfolio_section .iframe_container h1 {
@@ -818,6 +817,11 @@
           flex-direction: column;
 }
 
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer:hover .project_container {
+  -webkit-box-shadow: 0 0 3rem #02033d;
+          box-shadow: 0 0 3rem #02033d;
+}
+
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -839,8 +843,9 @@
   width: 70%;
   background-color: #7879F1;
   border-radius: 2rem;
-  -webkit-box-shadow: 0 -1rem #A5A6F6;
-          box-shadow: 0 -1rem #A5A6F6;
+  border-top: .5rem solid #A5A6F6;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_view, #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .project_info {
@@ -910,31 +915,10 @@
   font-size: 1.75rem;
   width: 100%;
   text-align: center;
-}
-
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_desc * {
-  text-decoration: none;
-}
-
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title {
-  letter-spacing: 2.5px;
-  font-family: 'Pattaya', sans-serif !important;
-  color: #ef5da8;
-  text-decoration: underline;
   position: relative;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title i {
-  margin-left: 1rem;
-  color: #5D5FEF;
-  -webkit-transition: all ease .1s;
-  transition: all ease .1s;
-  text-decoration: none !important;
-  font-size: 1.5rem;
-}
-
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title .infobubble {
-  position: absolute;
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .infobubble {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -948,14 +932,57 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  position: absolute;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
   width: 0rem;
-  height: 0rem;
-  background-color: white;
-  border-radius: 1rem;
-  color: #ef5da8;
-  right: 3%;
-  bottom: 25%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.952);
+  border-radius: 2rem;
   overflow: hidden;
+  -webkit-transform: translate(-50%, -65%);
+          transform: translate(-50%, -65%);
+  font-size: 0rem;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .infobubble p {
+  color: black;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .infobubble p span {
+  overflow: visible !important;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_desc * {
+  text-decoration: none;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title {
+  letter-spacing: 2.5px;
+  font-family: 'Pattaya', sans-serif !important;
+  color: #ef5da8;
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+}
+
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title i {
+  margin-left: 1rem;
+  color: #5D5FEF;
+  -webkit-transition: all ease .1s;
+  transition: all ease .1s;
+  text-decoration: none !important;
+  font-size: 1.5rem;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_title:hover i {

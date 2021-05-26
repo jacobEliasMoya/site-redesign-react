@@ -403,7 +403,6 @@ cursor: pointer;
                             text-align: left;                     
                             transition: all ease .25s;
                             i{
-                                color: #5D5FEF;
                                 float: right;
                                 margin-left: 1rem;
                                 transition: all ease .25s;
@@ -416,7 +415,6 @@ cursor: pointer;
                             }
                             &:hover{
                                 color: $keywords;
-                                text-decoration: underline;
 
                             }
                         }
@@ -447,6 +445,7 @@ cursor: pointer;
                 overflow: hidden;
                 transition: all ease .5s;
                 opacity: 0;
+                z-index: 3;
                 h1{
                     @include flexRow();
                     line-height: 0;
@@ -492,6 +491,11 @@ cursor: pointer;
                     .project_container_outer{
                         width: 100%;
                         @include flexCol();
+                        &:hover{
+                           .project_container{
+                                box-shadow: 0 0 3rem #02033d;
+                           } 
+                        }
                         .project_container{
                             @include flexCol();
                             justify-content: space-evenly;
@@ -499,7 +503,8 @@ cursor: pointer;
                             width: 70%;
                             background-color: #7879F1;
                             border-radius: 2rem;
-                            box-shadow: 0 -1rem #A5A6F6;
+                            border-top: .5rem solid #A5A6F6;
+                            transition: all ease .5s;
                             #project_preview,.project_view,.project_info{
                                 min-height: 20vh;
                                 width: 80%;
@@ -541,12 +546,35 @@ cursor: pointer;
                             .PHOTOSITE{
                                 background-image: url('../images/preview4.png') !important;
                             }
+
                         }
                         h1{
                             font-size: 1.75rem;
                             width: 100%;
                             text-align: center;
-
+                            position: relative;
+                            .infobubble{
+                                @include flexCol();
+                                align-items: flex-start;
+                                text-align: left;
+                                @include absCentered();
+                                z-index: 10;
+                                position:  absolute;
+                                transition:  all ease .25s;
+                                width: 0rem;
+                                height: auto;
+                                background-color: rgba(255, 255, 255, 0.952);
+                                border-radius: 2rem;
+                                overflow: hidden;
+                                transform: translate(-50%,-65%);
+                                font-size: 0rem;
+                                p{
+                                    color: black;
+                                    span{
+                                        overflow:visible !important;
+                                    }
+                                }
+                            }
                             .main_desc{
                                 *{
                                     text-decoration: none;
@@ -558,6 +586,7 @@ cursor: pointer;
                                 color: $keywords;
                                 text-decoration: underline;
                                 position: relative;
+                                z-index: 2;
                                 i{
                                     margin-left: 1rem;
                                     color: #5D5FEF;
@@ -566,18 +595,7 @@ cursor: pointer;
                                     font-size: 1.5rem;
 
                                 }
-                                .infobubble{
-                                    position:  absolute;
-                                    @include flexCol();
-                                    width: 0rem;
-                                    height: 0rem;
-                                    background-color: white;
-                                    border-radius: 1rem;
-                                    color: $keywords;
-                                    right: 3%;
-                                    bottom:25%;
-                                    overflow: hidden;
-                                }
+
                                 &:hover{
                                     i{
                                         color: $keywords;

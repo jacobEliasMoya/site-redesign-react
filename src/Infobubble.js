@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Infobubble(props) {
     return (
-        <div className='infobubble'>
+        <div onMouseLeave={props.onleave} className='infobubble'>
             {props.description}
         </div>
     )
