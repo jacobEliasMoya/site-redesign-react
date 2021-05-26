@@ -1067,7 +1067,7 @@
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container {
     width: 50% !important;
-    min-height: 25vh !important;
+    min-height: 30vh !important;
     -webkit-box-shadow: 0 -.5rem #A5A6F6 !important;
             box-shadow: 0 -.5rem #A5A6F6 !important;
   }
@@ -1080,7 +1080,7 @@
     font-size: 1rem !important;
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview {
-    min-height: 10vh !important;
+    min-height: 13vh !important;
   }
 }
 /*# sourceMappingURL=app.css.map */
