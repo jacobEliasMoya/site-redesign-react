@@ -1,11 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Iconcontainer from './Iconcontainer';
+import Infobubble from './Infobubble';
+
 
 export default function PortfolioProjectContainer(props) {
 
-    // const illuminateElms = (e) => {
-    //     e.target.style = " ";
-    // }
+    
+
+
+    const displayInfo = () =>{
+        console.log('working');
+        return (<Infobubble description='bubble'/>)
+    }
 
     return (
        
@@ -19,8 +25,9 @@ export default function PortfolioProjectContainer(props) {
 
             <h1>
                 <span className='main_title'>
+                 <Infobubble description='bubble'/>
                     {props.maintitle}
-                    <Iconcontainer iconclass="fa fa-info-circle"/>
+                    <Iconcontainer hoverOver={displayInfo} iconclass="fa fa-info-circle"/>
                 </span>
                 <br/>
                 <span className="main_desc">

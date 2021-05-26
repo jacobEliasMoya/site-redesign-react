@@ -557,6 +557,7 @@ cursor: pointer;
                                 font-family: 'Pattaya', sans-serif !important;
                                 color: $keywords;
                                 text-decoration: underline;
+                                position: relative;
                                 i{
                                     margin-left: 1rem;
                                     color: #5D5FEF;
@@ -564,6 +565,18 @@ cursor: pointer;
                                     text-decoration: none !important;
                                     font-size: 1.5rem;
 
+                                }
+                                .infobubble{
+                                    position:  absolute;
+                                    @include flexCol();
+                                    width: 0rem;
+                                    height: 0rem;
+                                    background-color: white;
+                                    border-radius: 1rem;
+                                    color: $keywords;
+                                    right: 3%;
+                                    bottom:25%;
+                                    overflow: hidden;
                                 }
                                 &:hover{
                                     i{
