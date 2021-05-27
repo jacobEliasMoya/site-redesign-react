@@ -450,6 +450,13 @@ cursor: pointer;
                     @include flexRow();
                     line-height: 0;
                     width: 100%;
+                    .siteTitle{
+                        transition: all ease .25s;
+                        font-family: 'Pattaya', sans-serif;
+                        color: $keywords;
+                        text-shadow: 0 0 .5rem $tertiarydpurple;
+                        font-size: 0rem;
+                    }
                     .floater_close{
                         position: absolute;
                         right: 5%;
@@ -543,7 +550,7 @@ cursor: pointer;
                             .JAKESPACE{
                                 background-image: url('../images/preview2.png') !important;
                             }
-                            .PHOTOSITE{
+                            .PROJECT{
                                 background-image: url('../images/preview4.png') !important;
                             }
 

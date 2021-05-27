@@ -32,11 +32,9 @@ export default function SkillsSection() {
 
     const spinImg = () => {
         const spinimg = document.querySelector('.container.current img');
-        spinimg.style.opacity='0';
-        spinimg.style.transform='rotateY(180deg)';
+        spinimg.style='opacity:0;transform: rotateY(180deg);';
         setTimeout(()=>{
-            spinimg.style.opacity='1';
-            spinimg.style.transform='rotateY(0deg)';
+            spinimg.style='opacity:1;transform: rotateY(0deg) ;';
         },250)
     }
 
@@ -131,8 +129,7 @@ export default function SkillsSection() {
 
                 break;
             default:
-                return;
-            
+            return;
         }
     }
 

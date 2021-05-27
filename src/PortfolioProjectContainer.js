@@ -9,7 +9,7 @@ export default function PortfolioProjectContainer(props) {
 
 
     const displayInfo = (retTxt,elm) => {
-        if(retTxt.classList.contains("PHOTOSITE")){
+        if(retTxt.classList.contains("PROJECT")){
             elm.innerHTML = 'This was developed to practice asynchronous programming, and to have fun while doing it!'
         }
         if(retTxt.classList.contains("JAKESPACE")){

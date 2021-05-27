@@ -740,6 +740,15 @@
   width: 100%;
 }
 
+#root .App .portfolio_section .iframe_container h1 .siteTitle {
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  font-family: 'Pattaya', sans-serif;
+  color: #ef5da8;
+  text-shadow: 0 0 0.5rem #230089;
+  font-size: 0rem;
+}
+
 #root .App .portfolio_section .iframe_container h1 .floater_close {
   position: absolute;
   right: 5%;
@@ -907,7 +916,7 @@
   background-image: url("../images/preview2.png") !important;
 }
 
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .PHOTOSITE {
+#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .PROJECT {
   background-image: url("../images/preview4.png") !important;
 }
 

@@ -6,9 +6,10 @@ export default function CustomEmbed(props) {
             <iframe className="iframe_inner" title='iframe' src='' width="300" height="200">
             </iframe>
             <h1>
-                {props.projectName}
+                <span className="siteTitle"></span>
                 <span onClick={props.onClick} className="floater_close">X</span>
             </h1>
         </div>
     )
 }
+
