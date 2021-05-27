@@ -554,10 +554,11 @@ cursor: pointer;
                             text-align: center;
                             position: relative;
                             .infobubble{
+                                @include absCentered();
                                 @include flexCol();
+                                cursor: pointer;
                                 align-items: flex-start;
                                 text-align: left;
-                                @include absCentered();
                                 z-index: 10;
                                 position:  absolute;
                                 transition:  all ease .25s;
@@ -568,12 +569,8 @@ cursor: pointer;
                                 overflow: hidden;
                                 transform: translate(-50%,-65%);
                                 font-size: 0rem;
-                                p{
-                                    color: black;
-                                    span{
-                                        overflow:visible !important;
-                                    }
-                                }
+                                color: black;
+
                             }
                             .main_desc{
                                 *{

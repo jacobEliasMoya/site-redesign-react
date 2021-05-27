@@ -919,6 +919,11 @@
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .infobubble {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -932,15 +937,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   text-align: left;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   z-index: 10;
   position: absolute;
   -webkit-transition: all ease .25s;
@@ -953,14 +954,7 @@
   -webkit-transform: translate(-50%, -65%);
           transform: translate(-50%, -65%);
   font-size: 0rem;
-}
-
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .infobubble p {
   color: black;
-}
-
-#root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .infobubble p span {
-  overflow: visible !important;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_desc * {

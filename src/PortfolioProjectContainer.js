@@ -10,28 +10,29 @@ export default function PortfolioProjectContainer(props) {
 
     const displayInfo = (retTxt,elm) => {
         if(retTxt.classList.contains("PHOTOSITE")){
-            elm.innerHTML = '<p>This was developed to practice <span style="color:rgb(239, 93, 168)">asynchronous</span> programming, and to have fun while doing it!<p>'
+            elm.innerHTML = 'This was developed to practice asynchronous programming, and to have fun while doing it!'
         }
         if(retTxt.classList.contains("JAKESPACE")){
-            elm.innerHTML = '<p>This was developed using my vision of a website and game all in one for <span style="color:rgb(239, 93, 168)">interactivity</span>!</p>'
+            elm.innerHTML = 'This was developed using my vision of a website and game all in one for interactivity!'
         }
         if(retTxt.classList.contains("CONFERENCE")){
-            elm.innerHTML = '<p>This was developed for a conference hosted yearly by my current employer <span style="color:rgb(239, 93, 168)">VAREP</span>, a veteran focused non-profit.</p>'
+            elm.innerHTML = 'This was developed for a conference hosted yearly by my current employer VAREP, a veteran focused non-profit.'
         }
         if(retTxt.classList.contains("VAREP")){
-            elm.innerHTML = '<p>This was developed as a complete top to bottom redesign for my current employer <span style="color:rgb(239, 93, 168)">VAREP</span>, a veteran focused non-profit.</p>'
+            elm.innerHTML = 'This was developed as a complete top to bottom redesign for my current employer VAREP, a veteran focused non-profit.'
         }
     }
 
     const displayBubble = (e) =>{
         
+        let bubble = e.target.parentElement.parentElement.firstChild;
+
         if(!bubbleToggled){
             setToggle(prevToggle=>prevToggle = true)
-            let bubble = e.target.parentElement.parentElement.firstChild;
             bubble.style='min-height:7rem;width:80%;padding:1rem;font-size:1rem';
             let retdiv = e.target.parentElement.parentElement.parentElement.children[0].children[0];
             displayInfo(retdiv,bubble);
-        }
+        } 
     }
 
     const unDisplayBubble = (e) =>{
@@ -54,7 +55,7 @@ export default function PortfolioProjectContainer(props) {
             </div>
 
             <h1 >
-                <Infobubble onleave={unDisplayBubble} description/>
+                <Infobubble onClick={unDisplayBubble} onleave={unDisplayBubble} description/>
                 <span className='main_title'>
                     {props.maintitle}
                     <Iconcontainer onClick={displayBubble} iconclass="fa fa-info-circle"/>
