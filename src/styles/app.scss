@@ -439,7 +439,7 @@ cursor: pointer;
                 background-color: #7878f1f3;
                 border: none;
                 @include flexCol();
-                justify-content: flex-start;
+                justify-content: space-evenly;
                 padding-top: 2.5%;
                 box-shadow: 0 0 1rem black;
                 overflow: hidden;

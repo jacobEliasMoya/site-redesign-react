@@ -14,13 +14,13 @@ let keyMain = 0;
 
 export default function SkillsSection() {
 
-    // refactor to an object? food for thought
+    // refactor to an object? food for thought nom nom nom
     const skillImgs = [skill1,skill2,skill3,skill4,skill5,skill6];
     const skillAltDesc = ["wordpress_img_logo_white","JavaScript_img_logo_white","React_img_logo_white","css_img_logo_white","scss_img_logo_white","html_img_logo_white"];
 
     const wpInfo = ["Theme Customization","Custom HTML & CSS","Site Building Tools","SEO Knowledge","HTTP redirects","Site Migrations","Plugin Expert"];
     const jsInfo = ["Object Oriented Programming","Functional Programming","Cross Browser Code","Version Control","Command Line","ES6 Scripting","Modular Code","REST API","DRY Code"];
-    const reactInfo = ["Class Based Components","Functional Components","Modular Code","ES6 Scripting","React Hooks","REST API","DRY Code"];
+    const reactInfo = ["Class Based Components","Functional Components","Modular Code","ES6 Scripting","React Hooks","REST API","DRY Code","Redux"];
     const cssInfo = ["Cross Browser Compatibility","Cross Platform Compatibility","Keyframe Animations","Mobile First Design","Psuedo Classes","Media Queries","FlexBox","Grid",];
     const scssInfo = ["Variables For DRY Code","Importing Stylesheets","Nesting Styles","Mixin Usage"];
     const htmlInfo = ["Video & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
