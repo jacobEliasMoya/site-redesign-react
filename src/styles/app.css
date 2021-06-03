@@ -713,8 +713,8 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding-top: 2.5%;
-  -webkit-box-shadow: 0 0 1rem black;
-          box-shadow: 0 0 1rem black;
+  -webkit-box-shadow: 0 0 10rem black;
+          box-shadow: 0 0 10rem black;
   overflow: hidden;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
@@ -741,8 +741,8 @@
 }
 
 #root .App .portfolio_section .iframe_container h1 .siteTitle, #root .App .portfolio_section .info_container h1 .siteTitle {
-  -webkit-transition: all ease .25s;
-  transition: all ease .25s;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
   font-family: 'Pattaya', sans-serif;
   color: #ef5da8;
   text-shadow: 0 0 0.5rem #230089;
@@ -784,10 +784,12 @@
 #root .App .portfolio_section .info_container p {
   margin-top: 2.5vw;
   font-size: 1.5vw;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 #root .App .portfolio_section .info_container .top_row {
-  width: 90%;
+  width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,13 +825,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
   min-height: 50vh;
   border-radius: 2rem;
   width: 50%;
   background-color: black;
-  border: .25rem solid #2B00A4;
+  border: .5rem solid #2B00A4;
   font-size: 3vw;
   font-weight: bold;
+  background-size: 0% 0%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information {
@@ -854,23 +861,32 @@
           align-items: flex-start;
   min-height: 50vh;
   margin-right: 5%;
+  width: 35%;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information h1 {
   margin-bottom: 10vh;
+  font-family: 'Pattaya', sans-serif;
+  letter-spacing: 2px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0vw;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_information .header_li {
+  text-shadow: 0 0 0.5rem #110042;
+  color: #ef5da8;
+  font-weight: bolder;
+  font-size: 2.5vw;
+  margin: 4vh 0vh !important;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information ul {
   font-weight: bold;
   list-style: none;
-}
-
-#root .App .portfolio_section .info_container .top_row .proj_information ul .header_li {
-  color: #ef5da8;
-  text-decoration: underline;
-  font-weight: bolder;
-  font-size: 2vw;
-  margin-bottom: 5vh;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information ul li {
@@ -879,7 +895,7 @@
 }
 
 #root .App .portfolio_section .info_container p {
-  width: 90%;
+  width: 94%;
 }
 
 #root .App .portfolio_section h1 {
@@ -1128,6 +1144,70 @@
 }
 
 @media screen and (max-width: 800px) {
+  .iframe_container h1 .siteTitle {
+    font-size: 8vw !important;
+  }
+  .info_container {
+    padding-top: 5% !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  .info_container .top_row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    min-height: 35vh;
+  }
+  .info_container .top_row .proj_img {
+    width: 100% !important;
+    min-height: 25vh !important;
+    margin-bottom: 1vh !important;
+  }
+  .info_container .top_row .proj_information {
+    min-height: auto !important;
+    margin-right: 0% !important;
+  }
+  .info_container .top_row .proj_information h1 {
+    font-size: 4vh !important;
+    margin: 2.5rem 0rem !important;
+  }
+  .info_container .top_row .proj_information .header_li {
+    font-size: 6vw !important;
+    text-shadow: 0 0 0.5rem #110042;
+    width: 100% !important;
+    text-align: center;
+  }
+  .info_container .top_row .proj_information ul {
+    position: relative;
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .info_container .top_row .proj_information ul li {
+    font-size: 1rem !important;
+    margin-top: 0vh !important;
+    padding: 2vw;
+  }
+  .info_container p {
+    font-size: 2vh !important;
+    text-align: center !important;
+  }
   .toggle_navigation {
     font-size: 3.5vw !important;
   }

@@ -441,7 +441,7 @@ cursor: pointer;
                 @include flexCol();
                 justify-content: space-evenly;
                 padding-top: 2.5%;
-                box-shadow: 0 0 1rem black;
+                box-shadow: 0 0 10rem black;
                 overflow: hidden;
                 transition: all ease .5s;
                 opacity: 0;
@@ -451,7 +451,7 @@ cursor: pointer;
                     line-height: 0;
                     width: 100%;
                     .siteTitle{
-                        transition: all ease .25s;
+                        transition: all ease .5s;
                         font-family: 'Pattaya', sans-serif;
                         color: $keywords;
                         text-shadow: 0 0 .5rem $tertiarydpurple;
@@ -490,21 +490,26 @@ cursor: pointer;
                 p{
                     margin-top: 2.5vw;
                     font-size: 1.5vw;
+                    transition: all ease .5s;
                 }
                 .top_row{
-                    width: 90%;
+                    width: 94%;
                     @include flexRow();
                     justify-content: space-between;
                     align-items: flex-start;
                     .proj_img{
                         @include flexRow();
+                        transition: all ease .5s;
                         min-height: 50vh;
                         border-radius: 2rem;
                         width: 50%;
                         background-color: black;
-                        border: .25rem solid #2B00A4;
+                        border: .5rem solid #2B00A4;
                         font-size: 3vw;
                         font-weight: bold;
+                        background-size: 0% 0%;
+                        background-repeat: no-repeat;
+                        background-position:center;
                     }
                     .proj_information{
                         @include flexCol();
@@ -512,21 +517,28 @@ cursor: pointer;
                         align-items: flex-start;
                         min-height: 50vh;
                         margin-right: 5%;
+                        width: 35%;
                         
                         h1{
                             margin-bottom: 10vh;
+                            font-family: 'Pattaya', sans-serif;
+                            letter-spacing: 2px;
+                            justify-content: space-between;
+                            font-size: 0vw;
+                            transition: all ease .5s;
+                        }
+
+                        .header_li{
+                            text-shadow: 0 0 .5rem $secondarydpurple;
+                            color: $keywords;
+                            font-weight: bolder;
+                            font-size: 2.5vw;
+                            margin: 4vh 0vh !important;
                         }
 
                         ul{
                             font-weight: bold;
                             list-style: none;
-                            .header_li{
-                                color: $keywords;
-                                text-decoration: underline;
-                                font-weight: bolder;
-                                font-size: 2vw;
-                                margin-bottom: 5vh;
-                            }
                             li{
                                 font-size: 1.5vw;
                                 margin-bottom: 1vh;
@@ -535,7 +547,7 @@ cursor: pointer;
                     }
                 }
                 p{
-                    width: 90%;
+                    width: 94%;
                 }
             }
 
@@ -688,6 +700,59 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
+    .iframe_container{
+        h1{
+            .siteTitle{
+                font-size: 8vw !important;
+            }
+        }
+    }
+    .info_container{
+        padding-top: 5% !important;
+        justify-content: space-between !important;
+        .top_row{
+            flex-direction: column !important;
+            align-items: center !important;
+            min-height: 35vh;
+            .proj_img{
+                width: 100% !important;
+                min-height: 25vh !important;
+                margin-bottom: 1vh !important;
+            }
+            .proj_information{
+                min-height: auto !important;
+                margin-right: 0% !important;
+                h1{
+                    font-size: 4vh !important;
+                    margin: 2.5rem 0rem !important;
+                }
+                .header_li{
+                    font-size: 6vw !important;
+                    text-shadow: 0 0 .5rem $secondarydpurple;
+                    width: 100% !important;
+                    text-align: center;
+
+                }
+
+                ul{
+                    position: relative;
+                    width: 100% !important;
+                    @include flexRow();
+                    li{
+                        font-size: 1rem !important;
+                        margin-top: 0vh !important;
+                        padding: 2vw;
+                    }
+
+
+                }
+            }
+        }
+        p{
+            font-size: 2vh !important;
+            text-align: center !important;
+        }
+    }
     .toggle_navigation{
         font-size: 3.5vw !important;
     }

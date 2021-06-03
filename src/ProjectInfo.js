@@ -6,16 +6,12 @@ export default function ProjectInfo(props) {
 
             <div className="top_row">
                 <div className="proj_img">
-                    Preview Image
                 </div>
                 <div className="proj_information">
-                    <h1>Project/ site name</h1>
+                    <h1>{props.projectName}</h1>
+                    <h2 className="header_li">Technology Used</h2>
                     <ul>
-                        <li className="header_li">Technology Used</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SCSS</li>
-                        <li>Vanilla JavaScript</li>
+                        
                     </ul>
                 </div>
             </div>
