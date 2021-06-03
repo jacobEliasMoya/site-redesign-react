@@ -7,7 +7,7 @@ export default function CustomEmbed(props) {
             </iframe>
             <h1>
                 <span className="siteTitle"></span>
-                <span onClick={props.onClick} className="floater_close">X</span>
+                <span onClick={props.untriglb} className="floater_close">X</span>
             </h1>
         </div>
     )

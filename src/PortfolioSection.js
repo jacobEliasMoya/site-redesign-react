@@ -1,6 +1,8 @@
 import React from 'react';
 import PortfolioProjectContainer from './PortfolioProjectContainer';
 import CustomEmbed from './CustomEmbed';
+import ProjectInfo from './ProjectInfo';
+
 
 export default function PortfolioSection() {
 
@@ -103,16 +105,32 @@ export default function PortfolioSection() {
         lb.style="width: 0%;height: 0vh;opacity:0";
     }
 
+    const triggerInfo = (e) =>{
+        let lb = document.querySelector('.info_container');
+        lb.style="width: 90%;height: 90vh;opacity:1";
+        // changeLBInfo(lbsrc,e.target.parentElement.firstChild);
+    }
+
+    const untriggerInfo = () => {
+        document.querySelector('.info_container h1 .siteTitle').style.fontSize='0vw';
+        let lb = document.querySelector('.info_container');
+        lb.style="width: 0%;height: 0vh;opacity:0";
+    }
+
+
+
     return (
         <section id="my_portfolio" className="portfolio_section">
-            <CustomEmbed projectName={"projectname"} onClick={untriggerLB} />
+            <CustomEmbed projectName={"projectname"} untriglb={untriggerLB} />
+            <ProjectInfo projectName={"projectname"} onClick={untriggerInfo} />
+
             <h1>
                 Portfolio
             </h1>
             <div className="portfolio_project_selector">
                 <div className="top_row">
                     {previews.map(key=>{
-                        return (<PortfolioProjectContainer onClick={triggerLB} description={assignDesc(key)} maintitle={assignType(key)} newclass={key} key={key}/>)
+                        return (<PortfolioProjectContainer infotrig={triggerInfo} lbtrig={triggerLB} description={assignDesc(key)} maintitle={assignType(key)} newclass={key} key={key}/>)
                     })}
                 </div>
             </div>

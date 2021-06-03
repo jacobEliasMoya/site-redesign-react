@@ -431,7 +431,7 @@ cursor: pointer;
             background-size: cover;
             background-color: #230089;
             position: relative;
-            .iframe_container{
+            .iframe_container,.info_container{
                 width: 0%;
                 height: 0vh;
                 position: absolute;
@@ -464,6 +464,7 @@ cursor: pointer;
                         text-shadow: 0 0 .5rem black;
                         cursor: pointer;
                         transition: all ease .25s;
+                        font-weight: bolder;
                         &:hover{
                             color: red;
                             text-shadow: 0 0 1.5rem black;
@@ -482,6 +483,59 @@ cursor: pointer;
                     background-repeat: no-repeat;
                     background-position:center;
                     box-shadow: inset 0 0 1rem black;
+                }
+            }
+
+            .info_container{
+                p{
+                    margin-top: 2.5vw;
+                    font-size: 1.5vw;
+                }
+                .top_row{
+                    width: 90%;
+                    @include flexRow();
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    .proj_img{
+                        @include flexRow();
+                        min-height: 50vh;
+                        border-radius: 2rem;
+                        width: 50%;
+                        background-color: black;
+                        border: .25rem solid #2B00A4;
+                        font-size: 3vw;
+                        font-weight: bold;
+                    }
+                    .proj_information{
+                        @include flexCol();
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        min-height: 50vh;
+                        margin-right: 5%;
+                        
+                        h1{
+                            margin-bottom: 10vh;
+                        }
+
+                        ul{
+                            font-weight: bold;
+                            list-style: none;
+                            .header_li{
+                                color: $keywords;
+                                text-decoration: underline;
+                                font-weight: bolder;
+                                font-size: 2vw;
+                                margin-bottom: 5vh;
+                            }
+                            li{
+                                font-size: 1.5vw;
+                                margin-bottom: 1vh;
+                            }
+                        }
+                    }
+                }
+                p{
+                    width: 90%;
                 }
             }
 

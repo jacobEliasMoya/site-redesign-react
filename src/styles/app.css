@@ -683,13 +683,13 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-image: url("../images/portfolioBk.png");
+  background-image: url("../images/portfolioBk.webp");
   background-size: cover;
   background-color: #230089;
   position: relative;
 }
 
-#root .App .portfolio_section .iframe_container {
+#root .App .portfolio_section .iframe_container, #root .App .portfolio_section .info_container {
   width: 0%;
   height: 0vh;
   position: absolute;
@@ -722,7 +722,7 @@
   z-index: 3;
 }
 
-#root .App .portfolio_section .iframe_container h1 {
+#root .App .portfolio_section .iframe_container h1, #root .App .portfolio_section .info_container h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,7 +740,7 @@
   width: 100%;
 }
 
-#root .App .portfolio_section .iframe_container h1 .siteTitle {
+#root .App .portfolio_section .iframe_container h1 .siteTitle, #root .App .portfolio_section .info_container h1 .siteTitle {
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   font-family: 'Pattaya', sans-serif;
@@ -749,7 +749,7 @@
   font-size: 0rem;
 }
 
-#root .App .portfolio_section .iframe_container h1 .floater_close {
+#root .App .portfolio_section .iframe_container h1 .floater_close, #root .App .portfolio_section .info_container h1 .floater_close {
   position: absolute;
   right: 5%;
   color: pink;
@@ -757,14 +757,15 @@
   cursor: pointer;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
+  font-weight: bolder;
 }
 
-#root .App .portfolio_section .iframe_container h1 .floater_close:hover {
+#root .App .portfolio_section .iframe_container h1 .floater_close:hover, #root .App .portfolio_section .info_container h1 .floater_close:hover {
   color: red;
   text-shadow: 0 0 1.5rem black;
 }
 
-#root .App .portfolio_section .iframe_container iframe {
+#root .App .portfolio_section .iframe_container iframe, #root .App .portfolio_section .info_container iframe {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   border-radius: inherit;
@@ -778,6 +779,107 @@
   background-position: center;
   -webkit-box-shadow: inset 0 0 1rem black;
           box-shadow: inset 0 0 1rem black;
+}
+
+#root .App .portfolio_section .info_container p {
+  margin-top: 2.5vw;
+  font-size: 1.5vw;
+}
+
+#root .App .portfolio_section .info_container .top_row {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 50vh;
+  border-radius: 2rem;
+  width: 50%;
+  background-color: black;
+  border: .25rem solid #2B00A4;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 50vh;
+  margin-right: 5%;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_information h1 {
+  margin-bottom: 10vh;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_information ul {
+  font-weight: bold;
+  list-style: none;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_information ul .header_li {
+  color: #ef5da8;
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 2vw;
+  margin-bottom: 5vh;
+}
+
+#root .App .portfolio_section .info_container .top_row .proj_information ul li {
+  font-size: 1.5vw;
+  margin-bottom: 1vh;
+}
+
+#root .App .portfolio_section .info_container p {
+  width: 90%;
 }
 
 #root .App .portfolio_section h1 {
@@ -896,7 +998,7 @@
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview {
-  background-image: url("../images/preview1.png");
+  background-image: url("../images/preview1.webp");
   background-size: 125% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -905,19 +1007,19 @@
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .VAREP {
-  background-image: url("../images/preview1.png") !important;
+  background-image: url("../images/preview1.webp") !important;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .CONFERENCE {
-  background-image: url("../images/preview3.png") !important;
+  background-image: url("../images/preview3.webp") !important;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .JAKESPACE {
-  background-image: url("../images/preview2.png") !important;
+  background-image: url("../images/preview2.webp") !important;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container .PROJECT {
-  background-image: url("../images/preview4.png") !important;
+  background-image: url("../images/preview4.webp") !important;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 {

@@ -50,8 +50,8 @@ export default function PortfolioProjectContainer(props) {
 
             <div className="project_container" >
                 <div className={props.newclass} id="project_preview"></div>
-                <button onClick={props.onClick} className="project_view">VIEW PAGE</button>
-                <button className="project_info">MORE INFO</button>
+                <button onClick={props.lbtrig} className="project_view">VIEW PAGE</button>
+                <button onClick={props.infotrig} className="project_info">MORE INFO</button>
             </div>
 
             <h1 >
