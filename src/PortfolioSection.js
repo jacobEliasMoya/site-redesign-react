@@ -127,36 +127,48 @@ export default function PortfolioSection() {
         // clearing src then adding for a clean looking load screen :)
         setTimeout(()=>{
             if(chldclass.classList.contains("VAREP")){
+                document.querySelector('.proj_information h1').innerHTML=projectInfo.varepSite.siteName;
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj1});background-size:100% 100%;`;
-                    document.querySelector('.proj_information h1').innerHTML=projectInfo.varepSite.siteName;
-                    document.querySelector('.proj_information h1').style='font-size:3vw;';
+                    document.querySelector('.proj_information h1').style='opacity:1 !important;';
+                    document.querySelector('.proj_information h2').style='opacity:1 !important;';
+                    document.querySelector('.proj_information ul').style='opacity:1 !important;';
+
                     addDynamicLI(projectInfo.varepSite.siteTools)
                 },10);
             }
             if(chldclass.classList.contains("CONFERENCE")){
+                document.querySelector('.proj_information h1').innerHTML=projectInfo.varepConference.siteName;
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj3});background-size:100% 100%;`;
-                    document.querySelector('.proj_information h1').innerHTML=projectInfo.varepConference.siteName;
-                    document.querySelector('.proj_information h1').style='font-size:3vw;';
+                    document.querySelector('.proj_information h1').style='opacity:1 !important;';
+                    document.querySelector('.proj_information h2').style='opacity:1 !important;';
+                    document.querySelector('.proj_information ul').style='opacity:1 !important;';
+
                     addDynamicLI(projectInfo.varepConference.siteTools)
                 },10);
 
             }
             if(chldclass.classList.contains("JAKESPACE")){
+                document.querySelector('.proj_information h1').innerHTML=projectInfo.funpersonalSite.siteName;
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj2});background-size:100% 100%;`;
-                    document.querySelector('.proj_information h1').innerHTML=projectInfo.funpersonalSite.siteName;
-                    document.querySelector('.proj_information h1').style='font-size:3vw;';
+                    document.querySelector('.proj_information h1').style='opacity:1 !important;';
+                    document.querySelector('.proj_information h2').style='opacity:1 !important;';
+                    document.querySelector('.proj_information ul').style='opacity:1 !important;';
+
                     addDynamicLI(projectInfo.funpersonalSite.siteTools)
                 },10);
 
             }
             if(chldclass.classList.contains("PROJECT")){
+                document.querySelector('.proj_information h1').innerHTML=projectInfo.personalProj.siteName;
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj4});background-size:100% 100%;`;
-                    document.querySelector('.proj_information h1').innerHTML=projectInfo.personalProj.siteName;
-                    document.querySelector('.proj_information h1').style='font-size:3vw;';
+                    document.querySelector('.proj_information h1').style='opacity:1 !important;';
+                    document.querySelector('.proj_information h2').style='opacity:1 !important;';
+                    document.querySelector('.proj_information ul').style='opacity:1 !important;';
+
                     addDynamicLI(projectInfo.personalProj.siteTools)
                 },10);
             }
@@ -201,14 +213,16 @@ export default function PortfolioSection() {
         let lbAll = document.querySelector('.info_container p');
         lbAll.style='font-size:0vw !important';
 
-        document.querySelector('.proj_information h1').style='font-size:intial;';
+        document.querySelector('.proj_information h2').style='opacity:0 !important;';
+        document.querySelector('.proj_information h1').style='opacity:0 !important;';
+        document.querySelector('.proj_information ul').style='opacity:0 !important;';
 
     }
 
     return (
         <section id="my_portfolio" className="portfolio_section">
             <CustomEmbed projectName={"projectname"} untriglb={untriggerLB} />
-            <ProjectInfo projectName={"Project/ Site Name"} onClick={untriggerInfo} />
+            <ProjectInfo onClick={untriggerInfo} />
             <h1>
                 Portfolio
             </h1>

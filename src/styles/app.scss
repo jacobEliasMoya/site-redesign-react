@@ -518,14 +518,22 @@ cursor: pointer;
                         min-height: 50vh;
                         margin-right: 5%;
                         width: 35%;
+
+                        h2{
+                            transition: all ease .5s;
+                            opacity: 0;
+                            transition-delay: .5s;
+                        }
                         
                         h1{
                             margin-bottom: 10vh;
                             font-family: 'Pattaya', sans-serif;
-                            letter-spacing: 2px;
+                            letter-spacing: 4px;
                             justify-content: space-between;
-                            font-size: 0vw;
+                            font-size: 3vw;
+                            opacity: 0;
                             transition: all ease .5s;
+            
                         }
 
                         .header_li{
@@ -533,13 +541,17 @@ cursor: pointer;
                             color: $keywords;
                             font-weight: bolder;
                             font-size: 2.5vw;
-                            margin: 4vh 0vh !important;
+                            margin-bottom: 4vh;
                         }
 
                         ul{
                             font-weight: bold;
                             list-style: none;
+                            transition: all ease .5s;
+                            opacity: 0;
+                            transition-delay: 1s;
                             li{
+                                transition: all ease .5s;
                                 font-size: 1.5vw;
                                 margin-bottom: 1vh;
                             }
@@ -715,23 +727,28 @@ cursor: pointer;
             align-items: center !important;
             min-height: 35vh;
             .proj_img{
-                width: 100% !important;
+                width: 95% !important;
                 min-height: 25vh !important;
                 margin-bottom: 1vh !important;
             }
             .proj_information{
                 min-height: auto !important;
                 margin-right: 0% !important;
+                width:100% !important;
+
                 h1{
                     font-size: 4vh !important;
                     margin: 2.5rem 0rem !important;
+                    width:100% !important;
+                    justify-content: center !important;
                 }
+
                 .header_li{
                     font-size: 6vw !important;
                     text-shadow: 0 0 .5rem $secondarydpurple;
                     width: 100% !important;
                     text-align: center;
-
+                    margin: 2vh 0vh !important;
                 }
 
                 ul{
@@ -743,8 +760,6 @@ cursor: pointer;
                         margin-top: 0vh !important;
                         padding: 2vw;
                     }
-
-
                 }
             }
         }

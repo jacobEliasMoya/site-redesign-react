@@ -864,14 +864,23 @@
   width: 35%;
 }
 
+#root .App .portfolio_section .info_container .top_row .proj_information h2 {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  opacity: 0;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
 #root .App .portfolio_section .info_container .top_row .proj_information h1 {
   margin-bottom: 10vh;
   font-family: 'Pattaya', sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 0vw;
+  font-size: 3vw;
+  opacity: 0;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
 }
@@ -881,15 +890,22 @@
   color: #ef5da8;
   font-weight: bolder;
   font-size: 2.5vw;
-  margin: 4vh 0vh !important;
+  margin-bottom: 4vh;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information ul {
   font-weight: bold;
   list-style: none;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  opacity: 0;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information ul li {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
   font-size: 1.5vw;
   margin-bottom: 1vh;
 }
@@ -1164,23 +1180,29 @@
     min-height: 35vh;
   }
   .info_container .top_row .proj_img {
-    width: 100% !important;
+    width: 95% !important;
     min-height: 25vh !important;
     margin-bottom: 1vh !important;
   }
   .info_container .top_row .proj_information {
     min-height: auto !important;
     margin-right: 0% !important;
+    width: 100% !important;
   }
   .info_container .top_row .proj_information h1 {
     font-size: 4vh !important;
     margin: 2.5rem 0rem !important;
+    width: 100% !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   .info_container .top_row .proj_information .header_li {
     font-size: 6vw !important;
     text-shadow: 0 0 0.5rem #110042;
     width: 100% !important;
     text-align: center;
+    margin: 2vh 0vh !important;
   }
   .info_container .top_row .proj_information ul {
     position: relative;
