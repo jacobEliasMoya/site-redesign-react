@@ -1,40 +1,26 @@
-import React,{useState} from 'react';
+import React from 'react';
 // mainlogo for header
 import Logo from './images/logo.png';
 
 export default function Mainnav() {
 
-  const [isToggled,setToggle] = useState(false);
-
   const triggerNav = () =>{
     const navelm = document.querySelector('.toggle_navigation');
-    if(!isToggled){
-      navelm.style.width='100vw';
-      navelm.style.height='100vh';
-      navelm.style.borderBottomLeft='0% !important';
-      navelm.style.opacity='1';
-      navelm.style.fontSize='2vw';
-
-      setToggle(isToggled=>true);
+    if(navelm.style.width !== '100vw'){
+      navelm.style='width:100vw;height:100vh;border-bottom-left-radius:0% !important;opacity:1;font-size:2vw';
     } else {
-      navelm.style.opacity='0';
-      navelm.style.width='0vw';
-      navelm.style.height='0vh';
-      navelm.style.borderBottomLeft='50% !important';
-      navelm.style.fontSize='0vw';
-      // changing state to 
-      setToggle(isToggled=>false);
-
+      navelm.style='width:0vw;height:0vh;border-bottom-left-radius:50% !important;opacity:0;font-size:0vw';
     }
   }
 
 
-    return (
-        <nav className='mainnav'>
-          <img src={Logo} alt="jmoya_logo"/>
-          <div>
-            <i onClick={triggerNav} className="fa fa-bars triggeroverlay"></i>
-          </div>
-        </nav>
-    )
+
+  return (
+      <nav className='mainnav'>
+        <img src={Logo} alt="jmoya_logo"/>
+        <div>
+          <i onClick={triggerNav} className="fa fa-bars triggeroverlay"></i>
+        </div>
+      </nav>
+  )
 }
