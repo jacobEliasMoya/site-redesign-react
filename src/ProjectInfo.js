@@ -8,7 +8,7 @@ export default function ProjectInfo(props) {
                 <div className="proj_img">
                 </div>
                 <div className="proj_information">
-                    <h1></h1>
+                    <h1>...</h1>
                     <h2 className="header_li">Technology Used</h2>
                     <ul>
                     </ul>
