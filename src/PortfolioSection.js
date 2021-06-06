@@ -18,7 +18,7 @@ export default function PortfolioSection() {
         varepSite:{
             siteName : 'Varep Business',
             siteTools : ['Wordpress','HTML','CSS','JavaScript'],
-            projInformation:'This is information to project one'
+            projInformation: 'This website was built with Wordpress, and was completely redesigned from the ground up.This project uses multiple plugins, each of which was thouroughly researched and compatible with one another. The project was created in a different directory from the homesite, and from there we migrated the site over. This site has a fully functional membership section with a robust networking section for all members! I was able to use my expertise with custom HTML, custom CSS, and custom Javascript to accomplish some of the more complex pages!'
         },
         varepConference:{
             siteName : 'Varep Conference',
@@ -128,8 +128,10 @@ export default function PortfolioSection() {
         setTimeout(()=>{
             if(chldclass.classList.contains("VAREP")){
                 document.querySelector('.proj_information h1').innerHTML=projectInfo.varepSite.siteName;
+                document.querySelector('.info_container p').innerHTML=projectInfo.varepSite.projInformation;
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj1});background-size:100% 100%;`;
+                    document.querySelector('.info_container p').style='opacity:1 !important;';
                     document.querySelector('.proj_information h1').style='opacity:1 !important;';
                     document.querySelector('.proj_information h2').style='opacity:1 !important;';
                     document.querySelector('.proj_information ul').style='opacity:1 !important;';
@@ -213,6 +215,7 @@ export default function PortfolioSection() {
         let lbAll = document.querySelector('.info_container p');
         lbAll.style='font-size:0vw !important';
 
+        document.querySelector('.info_container p').style='opacity:0 !important;';
         document.querySelector('.proj_information h2').style='opacity:0 !important;';
         document.querySelector('.proj_information h1').style='opacity:0 !important;';
         document.querySelector('.proj_information ul').style='opacity:0 !important;';

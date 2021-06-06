@@ -491,6 +491,8 @@ cursor: pointer;
                     margin-top: 2.5vw;
                     font-size: 1.5vw;
                     transition: all ease .5s;
+                    transition-delay: .75s;
+                    opacity: 0;
                 }
                 .top_row{
                     width: 94%;
@@ -513,16 +515,18 @@ cursor: pointer;
                     }
                     .proj_information{
                         @include flexCol();
+                        border-radius: 2rem;
                         justify-content: flex-start;
                         align-items: flex-start;
                         min-height: 50vh;
-                        margin-right: 5%;
-                        width: 35%;
+                        width: 40%;
+                        background-color: $tertiarydpurple;
+                        padding: 0% 5%;
 
                         h2{
                             transition: all ease .5s;
                             opacity: 0;
-                            transition-delay: .5s;
+                            transition-delay: .25s;
                         }
                         
                         h1{
@@ -549,7 +553,7 @@ cursor: pointer;
                             list-style: none;
                             transition: all ease .5s;
                             opacity: 0;
-                            transition-delay: 1s;
+                            transition-delay: .5s;
                             li{
                                 transition: all ease .5s;
                                 font-size: 1.5vw;
@@ -559,8 +563,10 @@ cursor: pointer;
                     }
                 }
                 p{
-                    width: 94%;
+                    width: 90%;
+                    font-size: 1.25vw ;
                 }
+
             }
 
             h1{
@@ -729,16 +735,17 @@ cursor: pointer;
             .proj_img{
                 width: 95% !important;
                 min-height: 25vh !important;
-                margin-bottom: 1vh !important;
+                margin-bottom: 1.75vh !important;
             }
             .proj_information{
                 min-height: auto !important;
                 margin-right: 0% !important;
-                width:100% !important;
+                width:95% !important;
+                margin-top: 1rem;
 
                 h1{
                     font-size: 4vh !important;
-                    margin: 2.5rem 0rem !important;
+                    margin: 1.75rem 0rem !important;
                     width:100% !important;
                     justify-content: center !important;
                 }
@@ -764,9 +771,16 @@ cursor: pointer;
             }
         }
         p{
-            font-size: 2vh !important;
-            text-align: center !important;
+            font-size: 1.75vh !important;
+            text-align: left !important;
+            width:85% !important;
+            margin-top: 7vh !important;
         }
+
+        .info_closer{
+            margin: 2.5rem 0vw !important;
+        }
+
     }
     .toggle_navigation{
         font-size: 3.5vw !important;

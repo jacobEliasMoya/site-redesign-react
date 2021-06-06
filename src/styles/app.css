@@ -786,6 +786,9 @@
   font-size: 1.5vw;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+  opacity: 0;
 }
 
 #root .App .portfolio_section .info_container .top_row {
@@ -853,6 +856,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 2rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -860,16 +864,17 @@
       -ms-flex-align: start;
           align-items: flex-start;
   min-height: 50vh;
-  margin-right: 5%;
-  width: 35%;
+  width: 40%;
+  background-color: #230089;
+  padding: 0% 5%;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information h2 {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   opacity: 0;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information h1 {
@@ -899,8 +904,8 @@
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   opacity: 0;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
 }
 
 #root .App .portfolio_section .info_container .top_row .proj_information ul li {
@@ -911,7 +916,8 @@
 }
 
 #root .App .portfolio_section .info_container p {
-  width: 94%;
+  width: 90%;
+  font-size: 1.25vw;
 }
 
 #root .App .portfolio_section h1 {
@@ -1182,16 +1188,17 @@
   .info_container .top_row .proj_img {
     width: 95% !important;
     min-height: 25vh !important;
-    margin-bottom: 1vh !important;
+    margin-bottom: 1.75vh !important;
   }
   .info_container .top_row .proj_information {
     min-height: auto !important;
     margin-right: 0% !important;
-    width: 100% !important;
+    width: 95% !important;
+    margin-top: 1rem;
   }
   .info_container .top_row .proj_information h1 {
     font-size: 4vh !important;
-    margin: 2.5rem 0rem !important;
+    margin: 1.75rem 0rem !important;
     width: 100% !important;
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
@@ -1227,8 +1234,13 @@
     padding: 2vw;
   }
   .info_container p {
-    font-size: 2vh !important;
-    text-align: center !important;
+    font-size: 1.75vh !important;
+    text-align: left !important;
+    width: 85% !important;
+    margin-top: 7vh !important;
+  }
+  .info_container .info_closer {
+    margin: 2.5rem 0vw !important;
   }
   .toggle_navigation {
     font-size: 3.5vw !important;

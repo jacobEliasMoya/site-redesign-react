@@ -15,7 +15,7 @@ export default function ProjectInfo(props) {
                 </div>
             </div>
             <p></p>
-            <h1>
+            <h1 className="info_closer">
                 <span className="siteTitle">Project/ Site Name</span>
                 <span onClick={props.onClick} className="floater_close">X</span>
             </h1>
