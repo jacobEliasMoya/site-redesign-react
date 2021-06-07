@@ -3,6 +3,8 @@ import WelcomeSec from './WelcomeSec';
 import PortfolioSection from './PortfolioSection';
 import MainNav from './Mainnav';
 import SkillsSection from './SkillsSection';
+import AboutSection from './AboutSection';
+
 // import Spacer from './Spacer';
 import React from 'react';
 
@@ -15,6 +17,7 @@ const App = () => {
       <WelcomeSec />
       <SkillsSection />
       <PortfolioSection />
+      <AboutSection />
     </div>
   );
 }

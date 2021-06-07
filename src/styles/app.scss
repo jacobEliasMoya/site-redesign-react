@@ -304,10 +304,13 @@ cursor: pointer;
                 }
                 .project_container{
                     @include flexCol();
+                    justify-content: space-evenly;
                     background-color: #5D5FEF;
                     border-radius: 1rem;
                     padding: 1rem;
                     box-shadow: 0 -1.5rem #7879F1;
+                    width: 40vw;
+                    min-height: 60vh;
 
                     .row{
                         @include flexRow();
@@ -319,8 +322,8 @@ cursor: pointer;
                             margin: .5rem;
                             border-radius: 50%;
                             overflow: hidden;
-                            height: 8rem;
-                            width: 8rem;
+                            height: 20vh;
+                            width: 20vh;
                             background-color: black;
                             transition: all ease .75s;
 
@@ -415,14 +418,12 @@ cursor: pointer;
                             }
                             &:hover{
                                 color: $keywords;
-
                             }
                         }
                     }
                 }
             }
         }
-
         .portfolio_section{
             @include fullScreener();
             @include flexCol();
@@ -701,8 +702,120 @@ cursor: pointer;
                 }
             }
         }
+        .about_section{
+            @include fullScreener();
+            @include flexRow();
+            position: relative;
+            background: linear-gradient(#4319b4,$tertiarydpurple,$darkpurple);
+            border-bottom: 3vw solid #5D5FEF;
+
+            .section_split{
+                @include flexCol();
+                justify-content: space-evenly;
+                width: 50%;
+                text-align: center;
+                min-height: inherit;
+                h1{
+                    font-size: 3rem;
+                }
+                P{
+                    min-height: 40vh;
+                    width: 80%;
+                    text-align: left;
+                    font-size: 2.1vw;
+                }
+            }
+
+            .section_split.two{
+                form{
+                    @include flexCol();
+                    justify-content: space-between;
+                    background-color: #5D5FEF;
+                    min-height: 45vh;
+                    width: 60%;
+                    border-radius: 2rem;
+                    padding: 2vw;
+                    padding-top: 1.75vw !important;
+                    box-shadow: 0 -1.5rem #7879F1;
+                    
+                    h1{
+                        font-size: 1.25vw;
+                        line-height: 0;
+                        letter-spacing: 3px;
+                        font-weight: bolder !important;
+                    }
+
+                    .backnforth{
+                        @include flexRow();
+                        background: #5D5FEF;
+                        position: absolute;
+                        width: 10vw;
+                        height: 10vh;
+                        border-radius: 100%;
+                        bottom: 0;
+                        transform: translateY(50%);
+                        animation: backnf 10s infinite forwards;
+                        transition: all ease .5s;
+                        z-index: 0;
+                        input,textarea{
+                            transition: all ease .5s;
+                            @include flexCol();
+                            cursor: pointer;
+                            background: white;
+                            opacity: 0;
+                            height: auto;
+                        }
+                    }
+                    input,textarea{
+                        text-align: center;
+                        width: 100%;
+                        background-color: $tertiarydpurple;
+                        padding: .75vw;
+                        border-radius: 1rem;
+                        border: none;
+                        font-weight: bolder;
+                        color: $keywords;
+                        font-size: 1vw;
+                        &::placeholder{
+                            transition: all ease .25s;
+                            font-size: 1vw;
+                            font-weight: bolder;
+                            color: white;
+
+                        }
+                        &:hover{
+                            &::placeholder{
+                                color: $keywords;
+                            }
+                        }
+                    }
+                    span{
+                        @include flexRow();
+                        width: 100%;
+                        justify-content: space-between;
+                        input{
+                            width: 45% !important;
+                        }
+                    }
+
+                }
+            }
+
+        }
     }
 }
+
+// @keyframes backnf {
+//     0%{
+//         left: 0%;
+//     }
+//     50%{
+//         left: 90%;
+//     }
+//     100%{
+//         left: 0%;
+//     }
+// }
 
 @keyframes goup {
     0%{
