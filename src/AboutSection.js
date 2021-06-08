@@ -56,7 +56,7 @@ export default function AboutSection() {
 
             setSubmitted(true);
             e.preventDefault();
-            emailjs.sendForm('gmail', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
+            emailjs.sendForm('service_zjmd6go', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
