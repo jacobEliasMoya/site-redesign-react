@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import emailjs from "emailjs-com";
 
 export default function AboutSection() {
 
@@ -50,9 +51,19 @@ export default function AboutSection() {
         }
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         if(fname !== '' && lname !== '' && emaila !== '' && subj !== '' && messageCont !== ''){
+
             setSubmitted(true);
+            e.preventDefault();
+            emailjs.sendForm('gmail', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset();
+
         } else {
             setSubmitted(false);
         }
@@ -81,13 +92,13 @@ export default function AboutSection() {
                     <h1>Lets Chat!</h1>
 
                     <span>
-                        <input className='fname' onChange={handleChange} placeholder="First Name"></input>
-                        <input className='lname' onChange={handleChange} placeholder="Last Name"></input>
+                        <input className='fname' onChange={handleChange} placeholder="First Name" name='fname'></input>
+                        <input className='lname' onChange={handleChange} placeholder="Last Name" name='lname'></input>
                     </span>
 
-                    <input className='email' onChange={handleChange} placeholder="Email Address"></input>
-                    <input className='subject' onChange={handleChange} placeholder="Subject"></input>
-                    <textarea className='message' onChange={handleChange} placeholder="Message"></textarea>
+                    <input className='email' onChange={handleChange} placeholder="Email Address" name='email'></input>
+                    <input className='subject' onChange={handleChange} placeholder="Subject" name='subject'></input>
+                    <textarea className='message' onChange={handleChange} placeholder="Message" name='message'></textarea>
 
                     <span  className="backnforth">
                         <input type="submit" placeholder="Send it!"></input>
