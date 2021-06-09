@@ -335,8 +335,9 @@
 }
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) p {
-  width: 85% !important;
+  width: 80% !important;
   font-size: 2rem;
+  text-align: center !important;
 }
 
 #root .App .welcome_section .welcome_intro .greeting {
@@ -1599,7 +1600,7 @@
             flex-direction: row;
     position: absolute;
     width: 30% !important;
-    height: 7vh !important;
+    height: auto !important;
     border-radius: 1rem !important;
     bottom: 0;
     -webkit-transform: translateY(50%);

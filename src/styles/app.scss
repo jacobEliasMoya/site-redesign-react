@@ -251,8 +251,9 @@ cursor: pointer;
                     background-color: $tertiarydpurple;
                     padding: 3rem 1rem;
                     p{
-                        width: 85% !important;
+                        width: 80% !important;
                         font-size: 2rem;
+                        text-align: center !important;
                     }
                 }
                 .greeting{
@@ -980,7 +981,7 @@ cursor: pointer;
                     @include flexRow();
                     position: absolute;
                     width: 30% !important;
-                    height: 7vh !important;
+                    height: auto !important;
                     border-radius: 1rem !important;
                     bottom: 0;
                     transform: translateY(50%);
