@@ -792,6 +792,7 @@ cursor: pointer;
             }
 
             .section_split.two{
+                position: relative;
                 form{
                     @include flexCol();
                     justify-content: space-between;
@@ -808,6 +809,7 @@ cursor: pointer;
                         line-height: 0;
                         letter-spacing: 3px;
                         font-weight: bolder !important;
+                        text-shadow: none !important;
                     }
 
                     .backnforth{
@@ -869,6 +871,13 @@ cursor: pointer;
                         input{
                             width: 45% !important;
                         }
+                    }
+                    p{
+                        position: absolute;
+                        @include absCentered();
+                        margin-left: 15%;
+                        color: $keywords;
+                        visibility: hidden;
                     }
 
                 }

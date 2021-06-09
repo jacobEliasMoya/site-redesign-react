@@ -1293,6 +1293,10 @@
   font-size: 2.1vw;
 }
 
+#root .App .about_section .section_split.two {
+  position: relative;
+}
+
 #root .App .about_section .section_split.two form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1325,6 +1329,7 @@
   line-height: 0;
   letter-spacing: 3px;
   font-weight: bolder !important;
+  text-shadow: none !important;
 }
 
 #root .App .about_section .section_split.two form .backnforth {
@@ -1469,6 +1474,18 @@
 
 #root .App .about_section .section_split.two form span input {
   width: 45% !important;
+}
+
+#root .App .about_section .section_split.two form p {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-left: 15%;
+  color: #ef5da8;
+  visibility: hidden;
 }
 
 @-webkit-keyframes goup {

@@ -28,7 +28,7 @@ export default function AboutSection() {
         }
         if(e.target.classList.contains('email')){
             if(e.target.value !== ''){
-                setEmail(true);
+                checkValidEmail();
             } else {
                 setEmail(false);
             }
@@ -75,6 +75,14 @@ export default function AboutSection() {
         }
     }
 
+    const checkValidEmail = () => {
+        let emailVal = document.querySelector('.email');
+        if(emailVal.value.includes('@')){
+            setEmail(true);
+        } else {
+        }
+    }
+
     return (
         <section id="about_section" className="about_section">
             <div className="section_split one">
@@ -105,6 +113,8 @@ export default function AboutSection() {
                     <span  className="backnforth">
                         <input type="submit" placeholder="Send it!"></input>
                     </span>
+
+                    <p>*Please enter a valid email</p>
 
                 </form>
             </div>
