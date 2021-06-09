@@ -408,6 +408,10 @@
   z-index: 0;
 }
 
+#root .App .welcome_section .welcome_intro .greeting .keyword {
+  margin-left: 2%;
+}
+
 #root .App .welcome_section .welcome_intro .message {
   overflow: hidden;
   position: relative;

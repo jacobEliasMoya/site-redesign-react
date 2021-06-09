@@ -308,7 +308,9 @@ cursor: pointer;
                     overflow: hidden;
                     position: relative;
                     z-index: 0;
-
+                    .keyword{
+                        margin-left: 2%;
+                    }
                 }
                 .message{
                     // display: none;
