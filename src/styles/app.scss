@@ -432,6 +432,9 @@ cursor: pointer;
             background-size: cover;
             background-color: #230089;
             position: relative;
+            h1{
+                font-size: 2rem !important;
+            }
             .iframe_container,.info_container{
                 width: 0%;
                 height: 0vh;
@@ -747,11 +750,13 @@ cursor: pointer;
 
                     .backnforth{
                         @include flexRow();
+                        padding-top: .75%;
+                        align-items: flex-start;
                         background: #5D5FEF;
                         position: absolute;
                         width: 10vw;
                         height: 10vh;
-                        border-radius: 100%;
+                        border-radius: 1rem;
                         bottom: 0;
                         transform: translateY(50%);
                         animation: backnf 10s infinite forwards;
@@ -761,9 +766,9 @@ cursor: pointer;
                             transition: all ease .5s;
                             @include flexCol();
                             cursor: pointer;
-                            background: white;
-                            opacity: 0;
+                            opacity: 1;
                             height: auto;
+                            width: 85% !important;
                         }
                     }
                     input,textarea{
@@ -830,7 +835,7 @@ cursor: pointer;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .iframe_container{
         h1{
             .siteTitle{
@@ -934,6 +939,94 @@ cursor: pointer;
 
 
     }
+
+    .about_section{
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        .section_split{
+            @include flexCol();
+            justify-content: space-evenly !important;
+            width: 100% !important;
+            text-align: center;
+            min-height: 40vh !important;
+            h1{
+                font-size: 2rem !important;
+            }
+            P{
+                min-height: auto !important;
+                width: 80%;
+                text-align: left;
+                font-size: 1rem !important;
+            }
+        }
+
+        .section_split.two{
+            min-height: 60vh !important;
+            form{
+                box-shadow: 0 -.5rem #7879F1 !important;
+                min-height: 35vh !important;
+                width: 80% !important;
+                padding-top: 1.75vw !important;
+                justify-content: space-evenly !important;
+                h1{
+                    font-size: 1rem !important;
+                }
+                .backnforth{
+                    @include flexRow();
+                    position: absolute;
+                    width: 30% !important;
+                    height: auto !important;
+                    border-radius: 1rem !important;
+                    bottom: 0;
+                    transform: translateY(50%);
+                    animation: backnf 10s infinite forwards;
+                    transition: all ease .5s;
+                    z-index: 0;
+                    input,textarea{
+                        transition: all ease .5s;
+                        @include flexCol();
+                        cursor: pointer;
+                        background: white;
+                        opacity: 1;
+                    }
+                }
+                input,textarea{
+                    text-align: center;
+                    width: 100%;
+                    background-color: $tertiarydpurple;
+                    padding: .75rem !important;
+                    border-radius: .5rem !important;
+                    border: none;
+                    font-weight: bolder;
+                    color: $keywords;
+                    font-size: .5rem !important;
+                    &::placeholder{
+                        transition: all ease .25s;
+                        font-size: .5rem !important;
+                        font-weight: bolder;
+                        color: white;
+
+                    }
+                    &:hover{
+                        &::placeholder{
+                            color: $keywords;
+                        }
+                    }
+                }
+                span{
+                    @include flexRow();
+                    width: 100%;
+                    justify-content: space-between;
+                    input{
+                        width: 45% !important;
+                    }
+                }
+
+            }
+        }
+
+    }
+
     .my_skills{
         flex-direction: column !important;
         .section_split{
@@ -941,7 +1034,7 @@ cursor: pointer;
             text-align: center;
             height:auto !important;
             h1{
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
                 margin:0rem 0rem !important;
                 margin-bottom: 1.5rem !important;
             }

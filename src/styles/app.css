@@ -694,6 +694,10 @@
   position: relative;
 }
 
+#root .App .portfolio_section h1 {
+  font-size: 2rem !important;
+}
+
 #root .App .portfolio_section .iframe_container, #root .App .portfolio_section .info_container {
   width: 0%;
   height: 0vh;
@@ -1247,11 +1251,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-top: .75%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background: #5D5FEF;
   position: absolute;
   width: 10vw;
   height: 10vh;
-  border-radius: 100%;
+  border-radius: 1rem;
   bottom: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -1279,9 +1287,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
-  background: white;
-  opacity: 0;
+  opacity: 1;
   height: auto;
+  width: 85% !important;
 }
 
 #root .App .about_section .section_split.two form input, #root .App .about_section .section_split.two form textarea {
@@ -1394,7 +1402,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .iframe_container h1 .siteTitle {
     font-size: 8vw !important;
   }
@@ -1497,6 +1505,181 @@
   .welcome_intro div:not(.greeting) p {
     font-size: 1rem !important;
   }
+  .about_section {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .about_section .section_split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+    width: 100% !important;
+    text-align: center;
+    min-height: 40vh !important;
+  }
+  .about_section .section_split h1 {
+    font-size: 2rem !important;
+  }
+  .about_section .section_split P {
+    min-height: auto !important;
+    width: 80%;
+    text-align: left;
+    font-size: 1rem !important;
+  }
+  .about_section .section_split.two {
+    min-height: 60vh !important;
+  }
+  .about_section .section_split.two form {
+    -webkit-box-shadow: 0 -.5rem #7879F1 !important;
+            box-shadow: 0 -.5rem #7879F1 !important;
+    min-height: 35vh !important;
+    width: 80% !important;
+    padding-top: 1.75vw !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .about_section .section_split.two form h1 {
+    font-size: 1rem !important;
+  }
+  .about_section .section_split.two form .backnforth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    width: 30% !important;
+    height: auto !important;
+    border-radius: 1rem !important;
+    bottom: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    -webkit-animation: backnf 10s infinite forwards;
+            animation: backnf 10s infinite forwards;
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s;
+    z-index: 0;
+  }
+  .about_section .section_split.two form .backnforth input, .about_section .section_split.two form .backnforth textarea {
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+    background: white;
+    opacity: 1;
+  }
+  .about_section .section_split.two form input, .about_section .section_split.two form textarea {
+    text-align: center;
+    width: 100%;
+    background-color: #230089;
+    padding: .75rem !important;
+    border-radius: .5rem !important;
+    border: none;
+    font-weight: bolder;
+    color: #ef5da8;
+    font-size: .5rem !important;
+  }
+  .about_section .section_split.two form input::-webkit-input-placeholder, .about_section .section_split.two form textarea::-webkit-input-placeholder {
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
+    font-size: .5rem !important;
+    font-weight: bolder;
+    color: white;
+  }
+  .about_section .section_split.two form input:-ms-input-placeholder, .about_section .section_split.two form textarea:-ms-input-placeholder {
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
+    font-size: .5rem !important;
+    font-weight: bolder;
+    color: white;
+  }
+  .about_section .section_split.two form input::-ms-input-placeholder, .about_section .section_split.two form textarea::-ms-input-placeholder {
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
+    font-size: .5rem !important;
+    font-weight: bolder;
+    color: white;
+  }
+  .about_section .section_split.two form input::placeholder, .about_section .section_split.two form textarea::placeholder {
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
+    font-size: .5rem !important;
+    font-weight: bolder;
+    color: white;
+  }
+  .about_section .section_split.two form input:hover::-webkit-input-placeholder, .about_section .section_split.two form textarea:hover::-webkit-input-placeholder {
+    color: #ef5da8;
+  }
+  .about_section .section_split.two form input:hover:-ms-input-placeholder, .about_section .section_split.two form textarea:hover:-ms-input-placeholder {
+    color: #ef5da8;
+  }
+  .about_section .section_split.two form input:hover::-ms-input-placeholder, .about_section .section_split.two form textarea:hover::-ms-input-placeholder {
+    color: #ef5da8;
+  }
+  .about_section .section_split.two form input:hover::placeholder, .about_section .section_split.two form textarea:hover::placeholder {
+    color: #ef5da8;
+  }
+  .about_section .section_split.two form span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about_section .section_split.two form span input {
+    width: 45% !important;
+  }
   .my_skills {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
@@ -1509,7 +1692,7 @@
     height: auto !important;
   }
   .my_skills .section_split h1 {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     margin: 0rem 0rem !important;
     margin-bottom: 1.5rem !important;
   }
