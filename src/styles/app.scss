@@ -129,6 +129,10 @@ cursor: pointer;
     }
 }
 
+.main_title,.main_desc{
+    text-shadow: none !important;
+}
+
 #root{
     background-color: $tertiarydpurple;
     .toggle_navigation{
@@ -204,9 +208,47 @@ cursor: pointer;
                 font-size: 2.5rem;
                 font-weight: lighter;
                 transition: all ease .25s;
+                display: none ;
                 &:hover{
                     color: $keywords;
                     cursor: pointer;
+                }
+            }
+            div{
+                ul{
+                    @include flexRow();
+                    list-style: none;
+                    a{
+                        margin: 0rem 1rem;
+                        transition: all ease .25s;
+                        position: relative;
+                        width: auto;
+                        font-weight: bolder;
+                        font-size: 1.75rem;
+                        font-family: 'Pattaya', sans-serif;
+                        text-decoration: none;
+                        text-shadow: 0 5px #4e4fc8;
+                        &::after{
+                            transition: all ease .25s;
+                            content: '';
+                            position: absolute;
+                            width: 0%;
+                            height: 10%;
+                            background: linear-gradient(to right,$darkpurple,$keywords);
+                            left: 0;
+                            top: 100%;
+                            border-radius: 1rem;
+                        }
+                        &:hover{
+                            &::after{
+                                width: 100%;
+                            }
+                            font-size: 1.8rem;
+                            color: $keywords;
+                            margin: 0rem .95rem;
+
+                        }
+                    }
                 }
             }
         }
@@ -228,10 +270,15 @@ cursor: pointer;
                     line-height: 1;
                     font-size: 2.5rem;
                     text-align: center;
+                    font-family: 'Pattaya', sans-serif;
                 }
                 h1:not(.welcome_description){
-                    font-size: 4rem;
+                    font-size: 5rem;
                     margin-bottom: 2rem;
+
+                }
+                span{
+                    font-family: 'Pattaya', sans-serif;
                 }
             }
             .welcome_intro{
@@ -242,6 +289,7 @@ cursor: pointer;
                     h1{
                         font-size: 3rem;
                         position: relative;
+
                     }
                 }
 
@@ -251,9 +299,8 @@ cursor: pointer;
                     background-color: $tertiarydpurple;
                     padding: 3rem 1rem;
                     p{
-                        width: 80% !important;
-                        font-size: 2rem;
-                        text-align: center !important;
+                        width: 99%;
+                        text-align: center;
                     }
                 }
                 .greeting{
@@ -268,6 +315,10 @@ cursor: pointer;
                     overflow: hidden;
                     position: relative;
                     z-index: 100;
+                    p{
+                        font-size: 2.28vw;
+                        text-align: left ;
+                    }
                 }
                 .bubble{
                     margin-bottom: -5vh;
@@ -293,9 +344,10 @@ cursor: pointer;
             background:  $tertiarydpurple ;
             .section_split{
                 h1{
-                    font-size: 3rem;
+                    font-size: 5rem;
                     margin: 3rem 0px;
-
+                    font-family: 'Pattaya', sans-serif;
+                    text-shadow: 0 10px #4e4fc8;
                 }
                 @include flexCol();
                 justify-content: flex-start;
@@ -304,46 +356,47 @@ cursor: pointer;
                 .project_container_outer{
                     min-height: 70vh;
                     @include flexCol();
-                }
-                .project_container{
-                    @include flexCol();
-                    justify-content: space-evenly;
-                    background-color: #5D5FEF;
-                    border-radius: 1rem;
-                    padding: 1rem;
-                    box-shadow: 0 -1.5rem #7879F1;
-                    width: 40vw;
-                    min-height: 60vh;
-
-                    .row{
-                        @include flexRow();
-                        transition: all ease .75s;
-                        width: 100%;
+                    .project_container{
+                        @include flexCol();
                         justify-content: space-evenly;
-                        .container{
+                        background: linear-gradient($tertiarydpurple,#5D5FEF);
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        box-shadow: 0 1.5rem #7879F1;
+                        width: 40vw;
+                        min-height: 60vh;
+    
+                        .row{
                             @include flexRow();
-                            margin: .5rem;
-                            border-radius: 50%;
-                            overflow: hidden;
-                            height: 20vh;
-                            width: 20vh;
-                            background-color: black;
                             transition: all ease .75s;
-
-                            img{
-                                width: 100%;
+                            width: 100%;
+                            justify-content: space-evenly;
+                            .container{
+                                @include flexRow();
+                                margin: .5rem;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                height: 20vh;
+                                width: 20vh;
+                                background-color: black;
+                                transition: all ease .75s;
+    
+                                img{
+                                    width: 100%;
+                                }
+    
                             }
-
+                            .currentlyActive{
+                                border: .25rem solid $keywords;
+                                cursor: pointer;
+                                transition: all ease .75s;
+                                box-shadow: 0 1rem 1rem black;
+                            }
+    
                         }
-                        .currentlyActive{
-                            border: .25rem solid $keywords;
-                            cursor: pointer;
-                            transition: all ease .75s;
-                            box-shadow: 0 1rem 1rem black;
-                        }
-
                     }
                 }
+
                 .select_skill_container{
                     @include flexCol();
                     justify-content: space-evenly;
@@ -435,9 +488,7 @@ cursor: pointer;
             background-size: cover;
             background-color: #230089;
             position: relative;
-            h1{
-                font-size: 2rem !important;
-            }
+
             .iframe_container,.info_container{
                 width: 0%;
                 height: 0vh;
@@ -577,8 +628,10 @@ cursor: pointer;
             }
 
             h1{
-                font-size: 3rem;
+                font-size: 5rem;
                 margin: 3rem 0px;
+                font-family: 'Pattaya', sans-serif;
+                text-shadow: 0 10px #4e4fc8;
             }
             .portfolio_project_selector{
                 width: 100%;
@@ -668,6 +721,7 @@ cursor: pointer;
                                 transform: translate(-50%,-65%);
                                 font-size: 0rem;
                                 color: black;
+                                text-shadow: none !important;
 
                             }
                             .main_desc{
@@ -712,8 +766,9 @@ cursor: pointer;
             @include fullScreener();
             @include flexRow();
             position: relative;
-            background: linear-gradient(#4319b4,$tertiarydpurple,$darkpurple);
-            border-bottom: 3vw solid #5D5FEF;
+            background: rgb(62, 36, 177);
+            border-bottom: 2rem solid #5D5FEF;
+            overflow:hidden !important;
 
             .section_split{
                 @include flexCol();
@@ -722,7 +777,9 @@ cursor: pointer;
                 text-align: center;
                 min-height: inherit;
                 h1{
-                    font-size: 3rem;
+                    font-size: 5rem;
+                    font-family: 'Pattaya', sans-serif;
+                    text-shadow: 0 10px #4e4fc8;
                 }
                 P{
                     min-height: 40vh;
@@ -758,13 +815,15 @@ cursor: pointer;
                         background: #5D5FEF;
                         position: absolute;
                         width: 10vw;
-                        height: 10vh;
+                        height: auto;
                         border-radius: 1rem;
                         bottom: 0;
-                        transform: translateY(50%);
                         animation: backnf 10s infinite forwards;
                         transition: all ease .5s;
                         z-index: 0;
+                        border-bottom-left-radius: 0rem !important ;
+                        border-bottom-right-radius: 0rem !important ;
+                        overflow:hidden;
                         input,textarea{
                             transition: all ease .5s;
                             @include flexCol();
@@ -772,7 +831,9 @@ cursor: pointer;
                             opacity: 1;
                             height: auto;
                             width: 85% !important;
+                            color: white !important;
                         }
+                        transform: translateY(100%);
                     }
                     input,textarea{
                         text-align: center;
@@ -784,6 +845,8 @@ cursor: pointer;
                         font-weight: bolder;
                         color: $keywords;
                         font-size: 1vw;
+                        resize: none !important;
+
                         &::placeholder{
                             transition: all ease .25s;
                             font-size: 1vw;
@@ -839,6 +902,16 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
+    .mainnav{
+        i{
+            display: flex !important;
+        }
+        div{
+            ul{
+                display: none !important;
+            }
+        }
+    }
     .iframe_container{
         h1{
             .siteTitle{
@@ -899,7 +972,7 @@ cursor: pointer;
         }
 
         .info_closer{
-            margin: 2.5 rem 0vw !important;
+            margin: 2.5rem 0vw !important;
         }
 
     }
@@ -916,10 +989,11 @@ cursor: pointer;
     }
     .welcome_text{
         h1{ 
-            font-size: 1.5rem !important;
+            font-size: 1.75rem !important;
         }
         h1:not(.welcome_description){
             font-size: 3.5rem !important;
+            padding: 0px 2rem;
         }
         .welcome_description{
             padding: 1rem;
@@ -938,14 +1012,13 @@ cursor: pointer;
             justify-content: center !important;
             align-items: center !important;
             p{
-                width: 100% !important;
+                width: 90% !important;
                 font-size: 1rem !important;
             }
         }
 
 
     }
-
     .about_section{
         flex-direction: column !important;
         justify-content: space-evenly !important;
@@ -1032,7 +1105,6 @@ cursor: pointer;
         }
 
     }
-
     .my_skills{
         flex-direction: column !important;
         .section_split{
@@ -1045,6 +1117,7 @@ cursor: pointer;
                 margin-bottom: 1.5rem !important;
             }
             .select_skill_container{
+                width: 95% !important;
                 div{
                     width: 100%;
                     p{
@@ -1083,9 +1156,9 @@ cursor: pointer;
         .section_split.one{
             h1{
                 margin:0rem 0rem !important;
-                margin-bottom: 10vh !important;
+                margin-bottom: 7vh !important;
             }
-            margin-bottom: 7vh !important;
+            margin-bottom: 10vh !important;
 
         }
         .section_split.two{
@@ -1119,8 +1192,17 @@ cursor: pointer;
                     }
 
                 }
-                
+                h1{
+                    span{
+                        font-size: 1.5rem !important;
+                    }
+                }
             }
+        }
+    }
+    .portfolio_section{
+        .recent_work_header{
+            font-size: 2rem !important;
         }
     }
 

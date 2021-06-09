@@ -99,6 +99,10 @@
   height: 2px;
 }
 
+.main_title, .main_desc {
+  text-shadow: none !important;
+}
+
 #root {
   background-color: #230089;
   display: -webkit-box;
@@ -251,11 +255,66 @@
   font-weight: lighter;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
+  display: none;
 }
 
 #root .App .mainnav i:hover {
   color: #ef5da8;
   cursor: pointer;
+}
+
+#root .App .mainnav div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+
+#root .App .mainnav div ul a {
+  margin: 0rem 1rem;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  position: relative;
+  width: auto;
+  font-weight: bolder;
+  font-size: 1.75rem;
+  font-family: 'Pattaya', sans-serif;
+  text-decoration: none;
+  text-shadow: 0 5px #4e4fc8;
+}
+
+#root .App .mainnav div ul a::after {
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 10%;
+  background: -webkit-gradient(linear, left top, right top, from(#0A0028), to(#ef5da8));
+  background: linear-gradient(to right, #0A0028, #ef5da8);
+  left: 0;
+  top: 100%;
+  border-radius: 1rem;
+}
+
+#root .App .mainnav div ul a:hover {
+  font-size: 1.8rem;
+  color: #ef5da8;
+  margin: 0rem .95rem;
+}
+
+#root .App .mainnav div ul a:hover::after {
+  width: 100%;
 }
 
 #root .App .welcome_section {
@@ -294,11 +353,16 @@
   line-height: 1;
   font-size: 2.5rem;
   text-align: center;
+  font-family: 'Pattaya', sans-serif;
 }
 
 #root .App .welcome_section .welcome_text h1:not(.welcome_description) {
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 2rem;
+}
+
+#root .App .welcome_section .welcome_text span {
+  font-family: 'Pattaya', sans-serif;
 }
 
 #root .App .welcome_section .welcome_intro {
@@ -335,9 +399,8 @@
 }
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) p {
-  width: 80% !important;
-  font-size: 2rem;
-  text-align: center !important;
+  width: 99%;
+  text-align: center;
 }
 
 #root .App .welcome_section .welcome_intro .greeting {
@@ -350,6 +413,11 @@
   overflow: hidden;
   position: relative;
   z-index: 100;
+}
+
+#root .App .welcome_section .welcome_intro .message p {
+  font-size: 2.28vw;
+  text-align: left;
 }
 
 #root .App .welcome_section .welcome_intro .bubble {
@@ -413,8 +481,10 @@
 }
 
 #root .App .my_skills .section_split h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 3rem 0px;
+  font-family: 'Pattaya', sans-serif;
+  text-shadow: 0 10px #4e4fc8;
 }
 
 #root .App .my_skills .section_split .project_container_outer {
@@ -434,7 +504,7 @@
           flex-direction: column;
 }
 
-#root .App .my_skills .section_split .project_container {
+#root .App .my_skills .section_split .project_container_outer .project_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,16 +521,17 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #5D5FEF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#230089), to(#5D5FEF));
+  background: linear-gradient(#230089, #5D5FEF);
   border-radius: 1rem;
   padding: 1rem;
-  -webkit-box-shadow: 0 -1.5rem #7879F1;
-          box-shadow: 0 -1.5rem #7879F1;
+  -webkit-box-shadow: 0 1.5rem #7879F1;
+          box-shadow: 0 1.5rem #7879F1;
   width: 40vw;
   min-height: 60vh;
 }
 
-#root .App .my_skills .section_split .project_container .row {
+#root .App .my_skills .section_split .project_container_outer .project_container .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -482,7 +553,7 @@
           justify-content: space-evenly;
 }
 
-#root .App .my_skills .section_split .project_container .row .container {
+#root .App .my_skills .section_split .project_container_outer .project_container .row .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,11 +577,11 @@
   transition: all ease .75s;
 }
 
-#root .App .my_skills .section_split .project_container .row .container img {
+#root .App .my_skills .section_split .project_container_outer .project_container .row .container img {
   width: 100%;
 }
 
-#root .App .my_skills .section_split .project_container .row .currentlyActive {
+#root .App .my_skills .section_split .project_container_outer .project_container .row .currentlyActive {
   border: 0.25rem solid #ef5da8;
   cursor: pointer;
   -webkit-transition: all ease .75s;
@@ -707,10 +778,6 @@
   background-size: cover;
   background-color: #230089;
   position: relative;
-}
-
-#root .App .portfolio_section h1 {
-  font-size: 2rem !important;
 }
 
 #root .App .portfolio_section .iframe_container, #root .App .portfolio_section .info_container {
@@ -945,8 +1012,10 @@
 }
 
 #root .App .portfolio_section h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 3rem 0px;
+  font-family: 'Pattaya', sans-serif;
+  text-shadow: 0 10px #4e4fc8;
 }
 
 #root .App .portfolio_section .portfolio_project_selector {
@@ -1128,6 +1197,7 @@
           transform: translate(-50%, -65%);
   font-size: 0rem;
   color: black;
+  text-shadow: none !important;
 }
 
 #root .App .portfolio_section .portfolio_project_selector .top_row .project_container_outer h1 .main_desc * {
@@ -1180,9 +1250,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4319b4), color-stop(#230089), to(#0A0028));
-  background: linear-gradient(#4319b4, #230089, #0A0028);
-  border-bottom: 3vw solid #5D5FEF;
+  background: #3e24b1;
+  border-bottom: 2rem solid #5D5FEF;
+  overflow: hidden !important;
 }
 
 #root .App .about_section .section_split {
@@ -1208,7 +1278,9 @@
 }
 
 #root .App .about_section .section_split h1 {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-family: 'Pattaya', sans-serif;
+  text-shadow: 0 10px #4e4fc8;
 }
 
 #root .App .about_section .section_split P {
@@ -1273,16 +1345,19 @@
   background: #5D5FEF;
   position: absolute;
   width: 10vw;
-  height: 10vh;
+  height: auto;
   border-radius: 1rem;
   bottom: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
   -webkit-animation: backnf 10s infinite forwards;
           animation: backnf 10s infinite forwards;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   z-index: 0;
+  border-bottom-left-radius: 0rem !important;
+  border-bottom-right-radius: 0rem !important;
+  overflow: hidden;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 #root .App .about_section .section_split.two form .backnforth input, #root .App .about_section .section_split.two form .backnforth textarea {
@@ -1305,6 +1380,7 @@
   opacity: 1;
   height: auto;
   width: 85% !important;
+  color: white !important;
 }
 
 #root .App .about_section .section_split.two form input, #root .App .about_section .section_split.two form textarea {
@@ -1317,6 +1393,7 @@
   font-weight: bolder;
   color: #ef5da8;
   font-size: 1vw;
+  resize: none !important;
 }
 
 #root .App .about_section .section_split.two form input::-webkit-input-placeholder, #root .App .about_section .section_split.two form textarea::-webkit-input-placeholder {
@@ -1418,6 +1495,14 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .mainnav i {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .mainnav div ul {
+    display: none !important;
+  }
   .iframe_container h1 .siteTitle {
     font-size: 8vw !important;
   }
@@ -1492,7 +1577,7 @@
     margin-top: 0vw !important;
   }
   .info_container .info_closer {
-    margin: 2.5 rem 0vw !important;
+    margin: 2.5rem 0vw !important;
   }
   .toggle_navigation {
     font-size: 3.5vw !important;
@@ -1504,10 +1589,11 @@
     height: 10vh;
   }
   .welcome_text h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.75rem !important;
   }
   .welcome_text h1:not(.welcome_description) {
     font-size: 3.5rem !important;
+    padding: 0px 2rem;
   }
   .welcome_text .welcome_description {
     padding: 1rem;
@@ -1526,7 +1612,7 @@
             align-items: center !important;
   }
   .welcome_intro div:not(.greeting) p {
-    width: 100% !important;
+    width: 90% !important;
     font-size: 1rem !important;
   }
   .about_section {
@@ -1720,6 +1806,9 @@
     margin: 0rem 0rem !important;
     margin-bottom: 1.5rem !important;
   }
+  .my_skills .section_split .select_skill_container {
+    width: 95% !important;
+  }
   .my_skills .section_split .select_skill_container div {
     width: 100%;
   }
@@ -1752,11 +1841,11 @@
     height: 5rem !important;
   }
   .my_skills .section_split.one {
-    margin-bottom: 7vh !important;
+    margin-bottom: 10vh !important;
   }
   .my_skills .section_split.one h1 {
     margin: 0rem 0rem !important;
-    margin-bottom: 10vh !important;
+    margin-bottom: 7vh !important;
   }
   .my_skills .section_split.two h1 {
     margin-bottom: 0rem !important;
@@ -1789,6 +1878,12 @@
   }
   .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview {
     min-height: 13vh !important;
+  }
+  .portfolio_project_selector .top_row .project_container_outer h1 span {
+    font-size: 1.5rem !important;
+  }
+  .portfolio_section .recent_work_header {
+    font-size: 2rem !important;
   }
 }
 /*# sourceMappingURL=app.css.map */

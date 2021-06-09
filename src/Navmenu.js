@@ -16,6 +16,7 @@ export default function Navmenu() {
 
     return (
         <nav className='toggle_navigation'>
+
             <Misclink 
                 untrigger ={untriggerNav}
                 link='#welcome_section'  
@@ -34,7 +35,7 @@ export default function Navmenu() {
             />
             <Misclink 
                 untrigger ={untriggerNav}
-                link='#'  
+                link='#about_section'  
                 title='CONTACT'
             />
         </nav>

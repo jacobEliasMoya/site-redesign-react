@@ -1,5 +1,5 @@
 import React from 'react';
-// mainlogo for header
+import Misclink from './Misclink';
 import Logo from './images/logo.png';
 
 export default function Mainnav() {
@@ -17,9 +17,35 @@ export default function Mainnav() {
 
   return (
       <nav className='mainnav'>
-        <img src={Logo} alt="jmoya_logo"/>
+        <a href="#welcome_section"><img src={Logo} alt="jmoya_logo"/></a>
         <div>
           <i onClick={triggerNav} className="fa fa-bars triggeroverlay"></i>
+          <ul>
+              <li>
+                <Misclink
+                  link='#welcome_section'  
+                  title='Home'
+                />
+              </li>
+              <li>
+                <Misclink
+                  link='#my_skills'  
+                  title='Skills'
+                />              
+              </li>
+              <li>
+                <Misclink
+                  link='#my_portfolio'  
+                  title='Portfolio'
+                />              
+              </li>
+              <li>
+                <Misclink
+                  link='#about_section'  
+                  title='Contact'
+                />              
+              </li>
+          </ul>
         </div>
       </nav>
   )

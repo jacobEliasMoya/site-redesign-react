@@ -1,59 +1,65 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import emailjs from "emailjs-com";
 
 export default function AboutSection() {
 
     const [isSubmitted,setSubmitted] = useState(null); 
-    const [fname,setfname] = useState('');
-    const [lname,setlname] = useState('');
-    const [emaila,setEmail] = useState('');
-    const [subj,setSubj] = useState('');
-    const [messageCont,setMesCont] = useState('');
+    const [fname,setfname] = useState();
+    const [lname,setlname] = useState();
+    const [emaila,setEmail] = useState();
+    const [subj,setSubj] = useState();
+    const [messageCont,setMesCont] = useState();
     
     const handleChange = (e) => {
+        displaySend();
         if(e.target.classList.contains('fname')){
             if(e.target.value !== ''){
-                setfname(e.target.value);
+                setfname(true);
+            } else {
+                setfname(false);
             }
         }
         if(e.target.classList.contains('lname')){
             if(e.target.value !== ''){
-                setlname(e.target.value);
+                setlname(true);
+            } else {
+                setlname(false);
             }
         }
         if(e.target.classList.contains('email')){
             if(e.target.value !== ''){
-                setEmail(e.target.value);
+                setEmail(true);
+            } else {
+                setEmail(false);
             }
         }
         if(e.target.classList.contains('subject')){
             if(e.target.value !== ''){
-                setSubj(e.target.value);
+                setSubj(true);
+            } else {
+                setSubj(false);
             }
         }
         if(e.target.classList.contains('message')){
             if(e.target.value !== ''){
-                setMesCont(e.target.value);
+                setMesCont(true);
+            } else {
+                setMesCont(false);
             }
         }
+
     }
 
-    const clearFormValues = () => {
-        let inputs = document.querySelectorAll('input');
-        let message = document.querySelector('textarea');
-
-        if(isSubmitted){
-            message.value='';
-            inputs.forEach(inp=>{
-                inp.value='';
-            })
-            window.location = '/#form_area';
+    const displaySend = () => {
+        if(fname && lname && emaila && subj && messageCont){
+            document.querySelector('.backnforth').style= 'transform: translateY(0%) !important;'
+        } else{
+            document.querySelector('.backnforth').style= 'transform: translateY(100%) !important;'
         }
     }
 
     const handleSubmit = (e) => {
-        if(fname !== '' && lname !== '' && emaila !== '' && subj !== '' && messageCont !== ''){
-
+        if(fname && lname && emaila && subj && messageCont){
             setSubmitted(true);
             e.preventDefault();
             emailjs.sendForm('service_zjmd6go', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
@@ -63,15 +69,11 @@ export default function AboutSection() {
                 console.log(error.text);
             });
             e.target.reset();
-
         } else {
             setSubmitted(false);
+            console.log(isSubmitted);
         }
     }
-
-    useEffect(()=>{
-        clearFormValues();
-    },[isSubmitted])
 
     return (
         <section id="about_section" className="about_section">
@@ -85,7 +87,7 @@ export default function AboutSection() {
             </div>
             <div className="section_split two">
                 <h1>
-                    Want to Get in Touch? 
+                    Lets Get in Touch! 
                 </h1>
                 <form id="form_area" onSubmit={handleSubmit}>
 
@@ -106,7 +108,6 @@ export default function AboutSection() {
 
                 </form>
             </div>
-
         </section>
     )
 }

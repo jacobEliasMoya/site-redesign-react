@@ -226,8 +226,8 @@ export default function PortfolioSection() {
         <section id="my_portfolio" className="portfolio_section">
             <CustomEmbed projectName={"projectname"} untriglb={untriggerLB} />
             <ProjectInfo onClick={untriggerInfo} />
-            <h1>
-                Portfolio
+            <h1 className='recent_work_header'>
+                My Recent Work
             </h1>
             <div className="portfolio_project_selector">
                 <div className="top_row">
