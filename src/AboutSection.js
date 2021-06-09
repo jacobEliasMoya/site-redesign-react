@@ -116,7 +116,6 @@ export default function AboutSection() {
                         <input type="submit" placeholder="Send it!"></input>
                     </span>
 
-
                 </form>
             </div>
         </section>

@@ -243,7 +243,8 @@
   z-index: 1000 !important;
   top: 0;
   width: 100%;
-  padding: 1rem;
+  padding: .5rem 1rem;
+  background-color: #0a0028a9;
 }
 
 #root .App .mainnav img {
@@ -949,9 +950,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 2rem;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1483,6 +1481,7 @@
   font-size: 1rem;
   text-align: center;
   display: none;
+  font-weight: bolder;
 }
 
 @-webkit-keyframes goup {
@@ -1512,6 +1511,9 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .mainnav {
+    background: none !important;
+  }
   .mainnav i {
     display: -webkit-box !important;
     display: -ms-flexbox !important;

@@ -168,7 +168,6 @@ cursor: pointer;
             width: 100%;
             padding: .7rem 1rem 0rem 1rem;
             margin-bottom: 5rem;
-    
             img{
                 width: 5rem;
             }
@@ -200,7 +199,8 @@ cursor: pointer;
             z-index: 1000 !important;
             top: 0;
             width: 100%;
-            padding: 1rem;
+            padding: .5rem 1rem;
+            background-color: #0a0028a9;
             img{
                 width: 5rem;
             }
@@ -573,7 +573,6 @@ cursor: pointer;
                     .proj_information{
                         @include flexCol();
                         border-radius: 2rem;
-                        justify-content: flex-start;
                         align-items: flex-start;
                         min-height: 50vh;
                         width: 40%;
@@ -878,6 +877,7 @@ cursor: pointer;
                         font-size: 1rem;
                         text-align: center;  
                         display: none;
+                        font-weight: bolder;
                     }
 
                 }
@@ -902,6 +902,7 @@ cursor: pointer;
 
 @media screen and (max-width: 1000px) {
     .mainnav{
+        background: none !important;
         i{
             display: flex !important;
         }
