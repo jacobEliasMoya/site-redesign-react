@@ -316,12 +316,26 @@
 }
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 1;
   background-color: #230089;
   padding: 3rem 1rem;
 }
 
 #root .App .welcome_section .welcome_intro div:not(.greeting) p {
+  width: 85% !important;
   font-size: 2rem;
 }
 
@@ -1502,7 +1516,16 @@
     position: relative;
     text-align: center;
   }
+  .welcome_intro div:not(.greeting) {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
   .welcome_intro div:not(.greeting) p {
+    width: 100% !important;
     font-size: 1rem !important;
   }
   .about_section {
@@ -1576,7 +1599,7 @@
             flex-direction: row;
     position: absolute;
     width: 30% !important;
-    height: auto !important;
+    height: 7vh !important;
     border-radius: 1rem !important;
     bottom: 0;
     -webkit-transform: translateY(50%);

@@ -246,10 +246,12 @@ cursor: pointer;
                 }
 
                 div:not(.greeting){
+                    @include flexCol();
                     z-index: 1;
                     background-color: $tertiarydpurple;
                     padding: 3rem 1rem;
                     p{
+                        width: 85% !important;
                         font-size: 2rem;
                     }
                 }
@@ -932,7 +934,10 @@ cursor: pointer;
         }
 
         div:not(.greeting){
+            justify-content: center !important;
+            align-items: center !important;
             p{
+                width: 100% !important;
                 font-size: 1rem !important;
             }
         }
@@ -975,7 +980,7 @@ cursor: pointer;
                     @include flexRow();
                     position: absolute;
                     width: 30% !important;
-                    height: auto !important;
+                    height: 7vh !important;
                     border-radius: 1rem !important;
                     bottom: 0;
                     transform: translateY(50%);
