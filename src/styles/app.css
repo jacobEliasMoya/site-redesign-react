@@ -1475,15 +1475,14 @@
 }
 
 #root .App .about_section .section_split.two form p {
-  position: absolute;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  margin-left: 15%;
+  position: relative;
   color: #ef5da8;
-  visibility: hidden;
+  min-height: auto !important;
+  width: 100%;
+  line-height: 0;
+  font-size: 1rem;
+  text-align: center;
+  display: none;
 }
 
 @-webkit-keyframes goup {

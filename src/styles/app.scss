@@ -870,11 +870,14 @@ cursor: pointer;
                         }
                     }
                     p{
-                        position: absolute;
-                        @include absCentered();
-                        margin-left: 15%;
+                        position: relative;
                         color: $keywords;
-                        visibility: hidden;
+                        min-height: auto !important;
+                        width: 100%;
+                        line-height: 0;      
+                        font-size: 1rem;
+                        text-align: center;  
+                        display: none;
                     }
 
                 }

@@ -77,9 +77,11 @@ export default function AboutSection() {
 
     const checkValidEmail = () => {
         let emailVal = document.querySelector('.email');
-        if(emailVal.value.includes('@')){
+        if(emailVal.value.includes('@' && '.') ){
             setEmail(true);
+            document.querySelector('.emailerr').style='display:none'
         } else {
+            document.querySelector('.emailerr').style='display:inline'
         }
     }
 
@@ -105,7 +107,7 @@ export default function AboutSection() {
                         <input className='fname' onChange={handleChange} placeholder="First Name" name='fname'></input>
                         <input className='lname' onChange={handleChange} placeholder="Last Name" name='lname'></input>
                     </span>
-
+                    <p className="emailerr">*Please enter a valid email</p>
                     <input className='email' onChange={handleChange} placeholder="Email Address" name='email'></input>
                     <input className='subject' onChange={handleChange} placeholder="Subject" name='subject'></input>
                     <textarea className='message' onChange={handleChange} placeholder="Message" name='message'></textarea>
@@ -114,7 +116,6 @@ export default function AboutSection() {
                         <input type="submit" placeholder="Send it!"></input>
                     </span>
 
-                    <p>*Please enter a valid email</p>
 
                 </form>
             </div>
