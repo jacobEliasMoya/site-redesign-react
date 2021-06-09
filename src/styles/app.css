@@ -307,9 +307,7 @@
 }
 
 #root .App .mainnav div ul a:hover {
-  font-size: 1.8rem;
   color: #ef5da8;
-  margin: 0rem .95rem;
 }
 
 #root .App .mainnav div ul a:hover::after {

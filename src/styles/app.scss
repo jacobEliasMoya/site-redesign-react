@@ -243,10 +243,7 @@ cursor: pointer;
                             &::after{
                                 width: 100%;
                             }
-                            font-size: 1.8rem;
                             color: $keywords;
-                            margin: 0rem .95rem;
-
                         }
                     }
                 }
@@ -886,18 +883,6 @@ cursor: pointer;
         }
     }
 }
-
-// @keyframes backnf {
-//     0%{
-//         left: 0%;
-//     }
-//     50%{
-//         left: 90%;
-//     }
-//     100%{
-//         left: 0%;
-//     }
-// }
 
 @keyframes goup {
     0%{
