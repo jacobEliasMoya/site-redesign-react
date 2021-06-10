@@ -9,6 +9,7 @@ import skill3 from './images/rjs.png';
 import skill4 from './images/css.png';
 import skill5 from './images/scss.png';
 import skill6 from './images/html.png';
+import VisibilitySensor from 'react-visibility-sensor';
 
 let keyMain = 0;
 
@@ -134,6 +135,33 @@ export default function SkillsSection() {
     }
 
 
+
+    const projTxtAnimationm = isVisible => {
+        if(isVisible){
+            document.querySelector('.mytech').style = "opacity: 1;margin-left:0% !important";;
+        }
+    }
+
+    const projTxtAnimationm2 = isVisible => {
+        if(isVisible){
+            document.querySelector('.howtech').style = "opacity: 1;margin-left:0% !important";;
+        }
+    }
+
+    const projAnimation = (isVisible) => {
+        if(isVisible){
+            document.querySelectorAll('.pcontainanim').forEach(elm=>{
+                elm.style = "transform: rotate3d(0, 0, 0, 90deg);opacity: 1;";
+            })
+        }
+    }
+
+    const projAnimationm2 = (isVisible) => {
+        if(isVisible){
+            document.querySelector('.select_skill_container').style = "opacity: 1;";
+        }
+    }
+
     useEffect(() => {
         assignNewArray();
     },[currentSkillInd])
@@ -141,11 +169,20 @@ export default function SkillsSection() {
 
     return (
         <section className="my_skills" id="my_skills">
-            <div className="section_split one">
-                <h1>Technology I Use</h1>
 
+            <div className="section_split one">
+            <VisibilitySensor 
+                onChange={projTxtAnimationm}
+            >
+            <h1 className="mytech">Technology I Use</h1>
+            </VisibilitySensor>
+                
+  
                 <div className="project_container_outer">
-                    <div className="project_container">
+                    <VisibilitySensor
+                        onChange={projAnimation}
+                    >
+                        <div className="project_container pcontainanim">
                         <div className="row one">
                             <div className="p1select container">
                                 <ImgSelector desc="wordpress_img_logo_white" skill={skill1}/>
@@ -170,40 +207,50 @@ export default function SkillsSection() {
                             </div>
                         </div>
                     </div>
+                    </VisibilitySensor>
                 </div>
 
 
             </div>
 
             <div className="section_split two">
-                <h1>How I use it</h1>
-                <div className="select_skill_container">
-                    <div className="toggle_area">
-                        <Iconcontainer 
-                            iconclass="fa fa-caret-left"
-                            onClick={decrementSkillInd}
-                        />
-                        <div className="p6 container current">
-                            <ImgSelector 
-                                desc={skillAltDesc[currentSkillInd]} 
-                                skill={skillImgs[currentSkillInd]}
+                <VisibilitySensor 
+                    onChange={projTxtAnimationm2}
+                >
+                <h1 className="howtech">How I use it</h1>
+                </VisibilitySensor>
+                
+                <VisibilitySensor
+                    onChange={projAnimationm2}
+                >
+                    <div className="select_skill_container">
+                        <div className="toggle_area">
+                            <Iconcontainer 
+                                iconclass="fa fa-caret-left"
+                                onClick={decrementSkillInd}
+                            />
+                            <div className="p6 container current">
+                                <ImgSelector 
+                                    desc={skillAltDesc[currentSkillInd]} 
+                                    skill={skillImgs[currentSkillInd]}
+                                />
+                            </div>
+                            <Iconcontainer 
+                                onClick={incremementSkillInd}
+                                iconclass="fa fa-caret-right"
                             />
                         </div>
-                        <Iconcontainer 
-                            onClick={incremementSkillInd}
-                            iconclass="fa fa-caret-right"
-                        />
+                        <div className="name">
+                            {skillsArr[currentSkillInd]}
+                        </div>
+                        <div className="skill_subskills">
+                            {currentSkillArray.map((desc)=>{
+                                keyMain++
+                                return (<Subskills key={keyMain} skilldesc={desc} />)
+                            })}
+                        </div>
                     </div>
-                    <div className="name">
-                        {skillsArr[currentSkillInd]}
-                    </div>
-                    <div className="skill_subskills">
-                        {currentSkillArray.map((desc)=>{
-                            keyMain++
-                            return (<Subskills key={keyMain} skilldesc={desc} />)
-                        })}
-                    </div>
-                </div>
+                    </VisibilitySensor>
             </div>
         </section>
     )

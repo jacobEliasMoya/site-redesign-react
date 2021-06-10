@@ -51,6 +51,9 @@ export default function WelcomeSec() {
         },10000)
       }
       
+      
+
+
       useEffect(() => {
         lightbubbler();
         colorKeywords();

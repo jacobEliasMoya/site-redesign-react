@@ -2,12 +2,12 @@ import React from 'react';
 import PortfolioProjectContainer from './PortfolioProjectContainer';
 import CustomEmbed from './CustomEmbed';
 import ProjectInfo from './ProjectInfo';
+import VisibilitySensor from 'react-visibility-sensor';
 
 import proj1 from './images/preview1.webp';
 import proj2 from './images/preview2.webp';
 import proj3 from './images/preview3.webp';
 import proj4 from './images/preview4.webp';
-
 
 export default function PortfolioSection() {
 
@@ -222,13 +222,24 @@ export default function PortfolioSection() {
 
     }
 
+    const projTxtAnimation = isVisible =>{
+        if(isVisible){
+            document.querySelectorAll('.recent_work_header').forEach(elm=>{
+                elm.style = "opacity: 1;margin-left:0% !important";
+            })
+        }   
+    }
     return (
         <section id="my_portfolio" className="portfolio_section">
             <CustomEmbed projectName={"projectname"} untriglb={untriggerLB} />
             <ProjectInfo onClick={untriggerInfo} />
-            <h1 className='recent_work_header'>
-                My Recent Work
-            </h1>
+            <VisibilitySensor
+                onChange={projTxtAnimation}
+            >
+                <h1 className='recent_work_header'>
+                    My Recent Work
+                </h1>
+            </VisibilitySensor>
             <div className="portfolio_project_selector">
                 <div className="top_row">
                     {previews.map(key=>{

@@ -4,9 +4,9 @@ import Navmenu from './Navmenu';
 import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <span>
     <Navmenu />
     <App />
-  </React.StrictMode>,
+  </span>,
   document.getElementById('root')
 );

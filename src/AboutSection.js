@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import emailjs from "emailjs-com";
+import VisibilitySensor from 'react-visibility-sensor';
 
 export default function AboutSection() {
 
@@ -11,9 +12,8 @@ export default function AboutSection() {
     const [messageCont,setMesCont] = useState();
     
     const handleChange = (e) => {
-        displaySend();
         if(e.target.classList.contains('fname')){
-            if(e.target.value !== ''){
+            if(e.target.value !== '' ){
                 setfname(true);
             } else {
                 setfname(false);
@@ -47,14 +47,14 @@ export default function AboutSection() {
                 setMesCont(false);
             }
         }
-
+        displaySend();
     }
 
     const displaySend = () => {
         if(fname && lname && emaila && subj && messageCont){
-            document.querySelector('.backnforth').style= 'transform: translateY(0%) !important;'
+            document.querySelector('.backnforth').style= 'transform: translateY(125%) !important;opacity:1 !important;'
         } else{
-            document.querySelector('.backnforth').style= 'transform: translateY(100%) !important;'
+            document.querySelector('.backnforth').style= 'transform: translateY(200%) !important;'
         }
     }
 
@@ -85,20 +85,60 @@ export default function AboutSection() {
         }
     }
 
+    const projAnimationm2 = (isVisible) => {
+        if(isVisible){
+            document.querySelector('.section_split form').style = "transform: rotate3d(0, 0, 0, 90deg);opacity: 1;";
+        }
+    }
+
+    const projAnimationm3 = (isVisible) => {
+        if(isVisible){
+            document.querySelector('.aboutp').style = "opacity: 1;";
+        }
+    }
+
+    const projTxtAnimationm2 = isVisible => {
+        if(isVisible){
+            document.querySelector('.littleabout').style = "opacity: 1;margin-left:0% !important";
+        }
+    }
+
+    const projTxtAnimationm3 = isVisible => {
+        if(isVisible){
+            document.querySelector('.letstalk').style = "opacity: 1;margin-left:0% !important";
+        }
+    }
+
     return (
         <section id="about_section" className="about_section">
             <div className="section_split one">
-                <h1>
-                    A Little About Me
-                </h1>
-                <p>
-                    I am based in the <span className="keyword changing_text">Inland Empire</span> and am a happily married <span className="keyword changing_text">father of three</span>! I <span className="keyword changing_text">love hobbies</span> like guitar & tech, which led me to find code, get my degree, and get my dream job as a front end web developer! I <span className="keyword changing_text">love to learn</span> new technologies on my free time to strengthen my <span className="keyword changing_text">development & design</span> skills! 
-                </p>
+                <VisibilitySensor
+                    onChange={projTxtAnimationm2}
+                >
+                    <h1 className="littleabout">
+                        A Little About Me
+                    </h1>
+                </VisibilitySensor>
+                <VisibilitySensor
+                    onChange={projAnimationm3}
+                >
+                    <p className="aboutp">
+                        I am based in the <span className="keyword changing_text">Inland Empire</span> and am a happily married <span className="keyword changing_text">father of three</span>! I <span className="keyword changing_text">love hobbies</span> like guitar & tech, which led me to find code, get my degree, and get my dream job as a front end web developer! I <span className="keyword changing_text">love to learn</span> new technologies on my free time to strengthen my <span className="keyword changing_text">development & design</span> skills! 
+                    </p>
+                </VisibilitySensor>
+
             </div>
             <div className="section_split two">
-                <h1>
-                    Lets Get in Touch! 
-                </h1>
+                <VisibilitySensor
+                    onChange={projTxtAnimationm3}
+                >
+                    <h1 className="letstalk">
+                        Lets Get in Touch! 
+                    </h1>
+                </VisibilitySensor>
+                <VisibilitySensor
+                    onChange={projAnimationm2}
+                >
                 <form id="form_area" onSubmit={handleSubmit}>
 
                     <h1>Lets Chat!</h1>
@@ -117,6 +157,8 @@ export default function AboutSection() {
                     </span>
 
                 </form>
+                </VisibilitySensor>
+
             </div>
         </section>
     )

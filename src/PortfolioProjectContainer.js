@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import Iconcontainer from './Iconcontainer';
 import Infobubble from './Infobubble';
 
@@ -44,27 +45,53 @@ export default function PortfolioProjectContainer(props) {
     }
 
 
-    return (
-       
-        <div className="project_container_outer">
+    const projAnimation = (isVisible) => {
+        if(isVisible){
+            document.querySelectorAll('.portfolio_project_selector div div .project_container').forEach(elm=>{
+                elm.style = "transform: rotate3d(0, 0, 0, 90deg);opacity: 1;";
+            })
+        }
+    }
 
-            <div className="project_container" >
-                <div className={props.newclass} id="project_preview"></div>
-                <button onClick={props.lbtrig} className="project_view">VIEW PAGE</button>
-                <button onClick={props.infotrig} className="project_info">TECH INFO</button>
+    const projTxtAnimation = isVisible =>{
+        if(isVisible){
+            document.querySelectorAll('.animateproj').forEach(elm=>{
+                elm.style = "opacity: 1;margin-left:0% !important";
+            })
+        }   
+    }
+
+    return (
+
+            <div className="project_container_outer">
+                <VisibilitySensor
+                onChange={projAnimation}
+                >
+                    <div className="project_container" id={props.newclass} >
+                        <div className={props.newclass} id="project_preview"></div>
+                        <button onClick={props.lbtrig} className="project_view">VIEW PAGE</button>
+                        <button onClick={props.infotrig} className="project_info">TECH INFO</button>
+                    </div>
+                </VisibilitySensor>
+
+                <VisibilitySensor
+                onChange={projTxtAnimation}
+                >
+                    <h1 id={props.newclass} className="animateproj">
+                        <Infobubble onClick={unDisplayBubble} onleave={unDisplayBubble} description/>
+
+                            <span className='main_title projtxt'>
+                                {props.maintitle}
+                                <Iconcontainer onClick={displayBubble} iconclass="fa fa-info-circle"/>
+                            </span>
+                        <br/>
+                        <span className="main_desc projtxt">
+                            {props.description}
+                        </span>
+                    </h1>
+                </VisibilitySensor>
+
             </div>
 
-            <h1 >
-                <Infobubble onClick={unDisplayBubble} onleave={unDisplayBubble} description/>
-                <span className='main_title'>
-                    {props.maintitle}
-                    <Iconcontainer onClick={displayBubble} iconclass="fa fa-info-circle"/>
-                </span>
-                <br/>
-                <span className="main_desc">
-                    {props.description}
-                </span>
-            </h1>
-        </div>
     )
 }
