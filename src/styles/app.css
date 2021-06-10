@@ -76,27 +76,9 @@
 }
 
 .spacer {
-  width: 100%;
+  min-height: 20vh;
+  width: .25%;
   background-color: #230089;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.spacer .innerSpacer {
-  width: 90%;
-  background-color: white;
-  height: 2px;
 }
 
 .main_title, .main_desc {
@@ -1548,6 +1530,91 @@
   text-align: center;
   display: none;
   font-weight: bolder;
+}
+
+#root .App footer {
+  background: #110042;
+  width: 100%;
+  min-height: 20vh;
+  border-top: 3rem solid #5D5FEF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#root .App footer ul:not(.quickconnect) {
+  margin-left: 5%;
+}
+
+#root .App footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+#root .App footer ul li {
+  width: 100%;
+  margin: .5rem 1rem;
+  position: relative;
+}
+
+#root .App footer ul a {
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  position: relative;
+  width: auto;
+  font-weight: bolder;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-shadow: 0 5px #4e4fc8;
+}
+
+#root .App footer ul a:hover {
+  color: #ef5da8;
+}
+
+#root .App footer ul i {
+  font-size: 1.75rem;
+  position: absolute;
+  left: -40%;
+  top: -20%;
+}
+
+#root .App footer .quickconnect {
+  margin-left: 7.5%;
+}
+
+#root .App footer .quickconnect li {
+  width: 150%;
+  margin: .5rem 0rem;
 }
 
 @-webkit-keyframes goup {

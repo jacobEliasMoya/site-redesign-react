@@ -1,12 +1,13 @@
 import './styles/app.css';
+// import Spacer from './Spacer';
+import React from 'react';
 import WelcomeSec from './WelcomeSec';
 import PortfolioSection from './PortfolioSection';
 import MainNav from './Mainnav';
 import SkillsSection from './SkillsSection';
 import AboutSection from './AboutSection';
+import MainFooter from './MainFooter';
 
-// import Spacer from './Spacer';
-import React from 'react';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
       <SkillsSection />
       <PortfolioSection />
       <AboutSection />
+      <MainFooter />
     </div>
   );
 }
