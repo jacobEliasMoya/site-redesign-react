@@ -5,7 +5,7 @@ export default function Overlay() {
     return (
         <div className='onloadoverlay'>
             <div className="outer1">
-                <img src={Logo}/>            
+                <img alt="overlay logo" src={Logo}/>            
             </div>
         </div>
     )
