@@ -10,7 +10,7 @@ export default function MainFooter() {
             <NavmenuUL />
             <div>
                 <span className="mainspanfoot">
-                    <a href="welcome_section"><img src={Logo} /></a>
+                    <a href="welcome_section"><img alt='logo' src={Logo} /></a>
                     </span>
                 <p> &copy; Jacobmoya.com 2021 </p>
             </div>
