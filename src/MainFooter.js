@@ -1,7 +1,7 @@
 import React from 'react';
 import NavmenuUL from './NavmenuUL';
 import QuickContact from './QuickContact';
-import Logo from './images/logo.png'
+import Logo from './images/logo.png';
 
 export default function MainFooter() {
     return (
@@ -9,7 +9,7 @@ export default function MainFooter() {
             <QuickContact />
             <NavmenuUL />
             <div>
-                <span>
+                <span className="mainspanfoot">
                     <a href="welcome_section"><img src={Logo} /></a>
                     </span>
                 <p> &copy; Jacobmoya.com 2021 </p>
