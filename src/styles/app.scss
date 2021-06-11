@@ -344,6 +344,7 @@ cursor: pointer;
             min-height: 50vh;
             padding-top: 2rem;
             background:  $tertiarydpurple ;
+            overflow: visible !important;
             .section_split{
                 h1{
 
@@ -364,7 +365,7 @@ cursor: pointer;
                 @include flexCol();
                 justify-content: flex-start;
                 width: 50%;
-                height: 90vh;
+                height: 95vh;
                 .project_container_outer{
                     min-height: 60vh;
                     @include flexCol();
@@ -420,6 +421,7 @@ cursor: pointer;
                     overflow: hidden;
                     opacity: 0;
                     transition: all ease 1s;
+                    overflow: visible;
                     *{
                         overflow: visible;
                     }
@@ -809,8 +811,8 @@ cursor: pointer;
             @include flexRow();
             min-height: 90vh;
             position: relative;
-            background: rgb(62, 36, 177);
-            border-bottom: 4rem solid #5D5FEF;
+            background: #4117B7;
+            border-bottom: 3rem solid #5D5FEF;
             overflow:hidden !important;
 
             .section_split{
@@ -953,7 +955,7 @@ cursor: pointer;
             justify-content: flex-start;
             align-items: flex-start;
             ul:not(.quickconnect){
-                margin-left: 5%;
+                margin-left: 8%;
             }
             ul{
                 @include flexCol();
@@ -968,9 +970,9 @@ cursor: pointer;
                     position: relative;
                     width: auto;
                     font-weight: bolder;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     text-decoration: none;
-                    text-shadow: 0 5px #4e4fc8;
+                    text-shadow: none;
 
                     &:hover{
 
@@ -985,7 +987,7 @@ cursor: pointer;
                 }
             }
             .quickconnect{
-                margin-left: 7.5%;
+                margin-left: 9%;
                 li{
                     width: 150%;
                     margin: .5rem 0rem;

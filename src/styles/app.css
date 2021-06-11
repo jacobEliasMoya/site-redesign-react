@@ -451,6 +451,7 @@
   min-height: 50vh;
   padding-top: 2rem;
   background: #230089;
+  overflow: visible !important;
 }
 
 #root .App .my_skills .section_split {
@@ -471,7 +472,7 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 50%;
-  height: 90vh;
+  height: 95vh;
 }
 
 #root .App .my_skills .section_split h1 {
@@ -624,6 +625,7 @@
   opacity: 0;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
+  overflow: visible;
 }
 
 #root .App .my_skills .section_split .select_skill_container * {
@@ -1291,8 +1293,8 @@
           flex-direction: row;
   min-height: 90vh;
   position: relative;
-  background: #3e24b1;
-  border-bottom: 4rem solid #5D5FEF;
+  background: #4117B7;
+  border-bottom: 3rem solid #5D5FEF;
   overflow: hidden !important;
 }
 
@@ -1560,7 +1562,7 @@
 }
 
 #root .App footer ul:not(.quickconnect) {
-  margin-left: 5%;
+  margin-left: 8%;
 }
 
 #root .App footer ul {
@@ -1592,9 +1594,9 @@
   position: relative;
   width: auto;
   font-weight: bolder;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-decoration: none;
-  text-shadow: 0 5px #4e4fc8;
+  text-shadow: none;
 }
 
 #root .App footer ul a:hover {
@@ -1609,7 +1611,7 @@
 }
 
 #root .App footer .quickconnect {
-  margin-left: 7.5%;
+  margin-left: 9%;
 }
 
 #root .App footer .quickconnect li {
