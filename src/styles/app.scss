@@ -119,7 +119,6 @@ cursor: pointer;
 }
 
 
-
 .main_title,.main_desc{
     transition: all ease 1.5s;
     text-shadow: none !important;
@@ -1018,6 +1017,72 @@ cursor: pointer;
     }
 }
 
+.onloadoverlay{
+    @include fullScreener();
+    @include flexRow();
+    position: fixed;
+    top: 0;
+    background:$darkpurple;
+    z-index: 1000;
+    opacity: 1;
+    animation: overlaydisappear 1s 2s 1 forwards;
+    // animation: overlaydisappear 1s .5s 1 forwards;
+
+    
+    .outer1{
+        @include flexRow();
+        height: 0vh;
+        width: 0vw;
+        overflow:hidden;
+        background:$darkpurple;
+        animation: overlayappear 2s 1 forwards;
+        opacity: 0;
+        img{
+            transform: translate(5%,0%);
+            // set width to 40%
+            width: 30%;
+        }
+    }
+
+}
+
+@keyframes overlaydisappear {
+    0%{
+        min-height: 100vh;
+        min-width: 100vw;
+        opacity: 1;
+        z-index: 1000;
+
+    }
+
+    100%{
+        height: 0vh;
+        width: 0vw;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+@keyframes overlayappear {
+    0%{
+        height: 0vh;
+        width: 0vw;
+        border-radius: 50%;
+        opacity: 0;
+
+    }
+
+    100%{
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0%;
+        opacity: 1;
+
+
+    }
+}
+
 @keyframes goup {
     0%{
         bottom: 13vh;
@@ -1032,6 +1097,18 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
+
+    .onloadoverlay{
+        .outer1{
+            img{
+                // set width to 40%
+                width: 50% !important;
+            }
+        }
+    
+    }
+    
+
     footer{
         flex-direction: column !important;
         ul{

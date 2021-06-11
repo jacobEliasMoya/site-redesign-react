@@ -7,6 +7,7 @@ import MainNav from './Mainnav';
 import SkillsSection from './SkillsSection';
 import AboutSection from './AboutSection';
 import MainFooter from './MainFooter';
+import Overlay from './Overlay';
 
 
 
@@ -20,6 +21,8 @@ const App = () => {
       <PortfolioSection />
       <AboutSection />
       <MainFooter />
+      <Overlay />
+
     </div>
   );
 }

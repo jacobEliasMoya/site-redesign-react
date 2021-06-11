@@ -1686,6 +1686,120 @@
   font-size: 1rem;
 }
 
+.onloadoverlay {
+  min-height: 100vh;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  top: 0;
+  background: #0A0028;
+  z-index: 1000;
+  opacity: 1;
+  -webkit-animation: overlaydisappear 1s 2s 1 forwards;
+          animation: overlaydisappear 1s 2s 1 forwards;
+}
+
+.onloadoverlay .outer1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 0vh;
+  width: 0vw;
+  overflow: hidden;
+  background: #0A0028;
+  -webkit-animation: overlayappear 2s 1 forwards;
+          animation: overlayappear 2s 1 forwards;
+  opacity: 0;
+}
+
+.onloadoverlay .outer1 img {
+  -webkit-transform: translate(5%, 0%);
+          transform: translate(5%, 0%);
+  width: 30%;
+}
+
+@-webkit-keyframes overlaydisappear {
+  0% {
+    min-height: 100vh;
+    min-width: 100vw;
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    height: 0vh;
+    width: 0vw;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes overlaydisappear {
+  0% {
+    min-height: 100vh;
+    min-width: 100vw;
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    height: 0vh;
+    width: 0vw;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@-webkit-keyframes overlayappear {
+  0% {
+    height: 0vh;
+    width: 0vw;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  100% {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes overlayappear {
+  0% {
+    height: 0vh;
+    width: 0vw;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  100% {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0%;
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes goup {
   0% {
     bottom: 13vh;
@@ -1713,6 +1827,9 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .onloadoverlay .outer1 img {
+    width: 50% !important;
+  }
   footer {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
