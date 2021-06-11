@@ -949,19 +949,18 @@ cursor: pointer;
             padding: 1rem;
             @include flexRow();
             justify-content: space-between;
-            ul:not(.quickconnect){
-                margin-left: 5%;
-            }
             ul{
+                border-radius: 1rem;
                 background-color: $tertiarydpurple;
                 @include flexRow();
                 justify-content: space-evenly;
                 list-style: none;
                 min-height: inherit;
-                border-radius: 1rem;
+                min-width: 35%;
                 li{
-                    margin: .5rem 2rem;
+                    @include flexRow();
                     position: relative;
+                    width: 100%;
                 }
                 a{
                     transition: all ease .25s;
@@ -979,26 +978,29 @@ cursor: pointer;
                 }
                 i{
                     font-size: 1.25rem;
-                    margin-right: 1rem;
+                    margin-right: 5%;
                 }
             }
-            .quickconnect{
-                margin-left: 5%;
 
+            .quickconnect{
+                min-width: 20%;
             }
+
             div{
                 border-radius: 1rem;
-                width: 20%;
+                background-color: $tertiarydpurple;
+                border-radius: 1rem;
                 min-height: inherit;
                 @include flexCol();
-                justify-content: space-evenly;
+                width: 20%;
+
                 span{
                     @include flexRow();
                     a{
                         text-align: center;
                         width: auto;
                         img{
-                            width: 30%;
+                            width: 25%;
                         }
                     }
 
@@ -1030,6 +1032,22 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
+    footer{
+        flex-direction: column !important;
+        ul{
+            min-height: 7vh !important;
+            width: 100% ;
+            margin-bottom: 1rem;
+            li{
+                a{
+                    font-size: .75rem !important;
+                }
+            }
+        }
+        div{
+            width: 100%  !important;
+        }
+    }
     .mainnav{
         background: none !important;
         i{
@@ -1142,7 +1160,7 @@ cursor: pointer;
             align-items: center !important;
             p{
                 width: 90% !important;
-                font-size: 1rem !important;
+                font-size: 1.25rem !important;
             }
         }
 
@@ -1164,7 +1182,10 @@ cursor: pointer;
                 min-height: auto !important;
                 width: 80%;
                 text-align: left;
-                font-size: 1rem !important;
+                font-size: 1.25rem !important;
+                margin-bottom: -2rem !important;
+                margin-top: 1rem !important;
+
             }
         }
 
