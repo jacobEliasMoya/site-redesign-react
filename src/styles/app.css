@@ -1829,6 +1829,8 @@
 @media screen and (max-width: 1000px) {
   .onloadoverlay .outer1 img {
     width: 50% !important;
+    -webkit-transform: translate(5%, -50%);
+            transform: translate(5%, -50%);
   }
   footer {
     -webkit-box-orient: vertical !important;
