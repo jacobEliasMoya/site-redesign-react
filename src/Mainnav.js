@@ -20,7 +20,7 @@ export default function Mainnav() {
       <nav className='mainnav'>
         <a href="#welcome_section"><img src={Logo} alt="jmoya_logo"/></a>
         <div>
-          <i onClick={triggerNav} className="fa fa-bars triggeroverlay"></i>
+          <i onClick={triggerNav} className="	fa fa-reorder triggeroverlay"></i>
           <NavmenuUL />
         </div>
       </nav>

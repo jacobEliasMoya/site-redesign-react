@@ -16,7 +16,7 @@ export default function NavmenuUL() {
         </li>
         <li>
           <Iconcontainer
-            iconclass={'fa fa-laptop-code'}
+            iconclass={'	fa fa-laptop'}
           />
           <Misclink
             link='#my_skills'  
