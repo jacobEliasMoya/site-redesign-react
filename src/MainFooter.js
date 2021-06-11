@@ -1,8 +1,7 @@
 import React from 'react';
 import NavmenuUL from './NavmenuUL';
 import QuickContact from './QuickContact';
-import Spacer from './Spacer';
-import Logo from './images/logo.png';
+import Logo from './images/logo.png'
 
 export default function MainFooter() {
     return (
