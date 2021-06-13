@@ -81,7 +81,7 @@ export default function WelcomeSec() {
             <p>
               I am a passionate Front-End developer! 
               From a wireframe all the way to launch, 
-              I diligintly build beautiful sites with 
+              I dilgently build beautiful sites with 
               a variety of different toolsets... Read
               more about the tech I use <span className='keyword changing_text'>below</span>. 
             </p>

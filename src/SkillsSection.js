@@ -220,15 +220,18 @@ export default function SkillsSection() {
                 <h1 className="howtech">How I use it</h1>
                 </VisibilitySensor>
                 
-                <VisibilitySensor
-                    onChange={projAnimationm2}
-                >
+
                     <div className="select_skill_container">
                         <div className="toggle_area">
+                        <VisibilitySensor
+                        onChange={projAnimationm2}
+                        >
                             <Iconcontainer 
                                 iconclass="fa fa-caret-left"
                                 onClick={decrementSkillInd}
                             />
+                        </VisibilitySensor>
+
                             <div className="p6 container current">
                                 <ImgSelector 
                                     desc={skillAltDesc[currentSkillInd]} 
@@ -250,7 +253,6 @@ export default function SkillsSection() {
                             })}
                         </div>
                     </div>
-                    </VisibilitySensor>
             </div>
         </section>
     )

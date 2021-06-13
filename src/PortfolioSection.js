@@ -16,24 +16,24 @@ export default function PortfolioSection() {
 
     const projectInfo = {
         varepSite:{
-            siteName : 'Varep Business',
+            siteName : 'Business',
             siteTools : ['Wordpress','HTML','CSS','JavaScript'],
-            projInformation: 'This website was built with Wordpress, and was completely redesigned from the ground up.This project uses multiple plugins, each of which was thouroughly researched and compatible with one another. The project was created in a different directory from the homesite, and from there we migrated the site over. This site has a fully functional membership section with a robust networking section for all members! I was able to use my expertise with custom HTML, custom CSS, and custom Javascript to accomplish some of the more complex pages!'
+            projInformation: 'This website was built with WordPress, and was completely redesigned from the ground up. This project uses multiple plugins, each of which was thoroughly  researched and compatible with one another. The project was created in a different directory from the homesite, and from there we migrated the site over. This site has a fully functional membership section with a robust networking section for all members! I was able to use my expertise with custom HTML, custom CSS, and custom JavaScript to accomplish some of the more complex pages!'
         },
         varepConference:{
-            siteName : 'Varep Conference',
+            siteName : 'Conference',
             siteTools : ['Wordpress','HTML','CSS','JavaScript'],
-            projInformation:'This is information to project two'
+            projInformation:'This subdirectory is built with a fresh WordPress installation separate from our main VAREP website. We host a live streamed conference which will go all day long. We are using plugins to enable the livestreaming as well as a registration page for users to access the live event after creating the live registration page. This page was built in a very short timeframe yet uses custom code to ensure the live page met the standards of the graphic design team.'
         },
         funpersonalSite:{
             siteName : 'Interactive Site',
             siteTools : ['HTML','CSS','SCSS','PHP','JavaScript'],
-            projInformation:'This is information to project three'
+            projInformation:'I have always been a creative mind and someone who challenges himself in every possible way. This site has been the most challenge custom site I have worked on. This project was built using 100% custom code I built myself! I pushed myself to my limits at the time I created this site, I wanted to have a site which showed what I am capable of doing with the most modern web technologies possible! It is responsive and nice on the eyes! I created all the graphics for the site and would love to create more sites like this in the future!'
         },
         personalProj:{
             siteName : 'Personal Project',
             siteTools : ['HTML','CSS','SCSS','JavaScript'],
-            projInformation:'This is information to project four'
+            projInformation:'This has to be one of the most interesting games I have made to date! I used a whole lot of asynchronous programming here and incorporated an increasing difficulty level off of the total score! I made this project to piggy back my interactive website, which can be seen as well in my portfolio of recent works. It is a fun test of fast you can click your mouse, have fun and give it a try!'
         },
     }
 
@@ -141,8 +141,11 @@ export default function PortfolioSection() {
             }
             if(chldclass.classList.contains("CONFERENCE")){
                 document.querySelector('.proj_information h1').innerHTML=projectInfo.varepConference.siteName;
+                document.querySelector('.info_container p').innerHTML=projectInfo.varepConference.projInformation;
+
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj3});background-size:100% 100%;`;
+                    document.querySelector('.info_container p').style='opacity:1 !important;';
                     document.querySelector('.proj_information h1').style='opacity:1 !important;';
                     document.querySelector('.proj_information h2').style='opacity:1 !important;';
                     document.querySelector('.proj_information ul').style='opacity:1 !important;';
@@ -153,8 +156,11 @@ export default function PortfolioSection() {
             }
             if(chldclass.classList.contains("JAKESPACE")){
                 document.querySelector('.proj_information h1').innerHTML=projectInfo.funpersonalSite.siteName;
+                document.querySelector('.info_container p').innerHTML=projectInfo.funpersonalSite.projInformation;
+
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj2});background-size:100% 100%;`;
+                    document.querySelector('.info_container p').style='opacity:1 !important;';
                     document.querySelector('.proj_information h1').style='opacity:1 !important;';
                     document.querySelector('.proj_information h2').style='opacity:1 !important;';
                     document.querySelector('.proj_information ul').style='opacity:1 !important;';
@@ -165,8 +171,10 @@ export default function PortfolioSection() {
             }
             if(chldclass.classList.contains("PROJECT")){
                 document.querySelector('.proj_information h1').innerHTML=projectInfo.personalProj.siteName;
+                document.querySelector('.info_container p').innerHTML=projectInfo.personalProj.projInformation;
                 setTimeout(()=>{
                     document.querySelector('.proj_img').style=`background-image: url(${proj4});background-size:100% 100%;`;
+                    document.querySelector('.info_container p').style='opacity:1 !important;';
                     document.querySelector('.proj_information h1').style='opacity:1 !important;';
                     document.querySelector('.proj_information h2').style='opacity:1 !important;';
                     document.querySelector('.proj_information ul').style='opacity:1 !important;';

@@ -123,7 +123,7 @@ export default function AboutSection() {
                     onChange={projAnimationm3}
                 >
                     <p className="aboutp">
-                        I am based in the <span className="keyword changing_text">Inland Empire</span> and am a happily married <span className="keyword changing_text">father of three</span>! I <span className="keyword changing_text">love hobbies</span> like guitar & tech, which led me to find code, get my degree, and get my dream job as a front end web developer! I <span className="keyword changing_text">love to learn</span> new technologies on my free time to strengthen my <span className="keyword changing_text">development & design</span> skills! 
+                        I am based in the <span className="keyword changing_text">Inland Empire</span> & am a happily married <span className="keyword changing_text">father of three</span>! I <span className="keyword changing_text">love hobbies</span> like guitar & tech, which led me to find code, get my degree, & get my dream job as a front end web developer! I <span className="keyword changing_text">love to learn</span> new technologies on my free time to strengthen my <span className="keyword changing_text">development & design</span> skills! 
                     </p>
                 </VisibilitySensor>
 

@@ -1826,6 +1826,50 @@
   }
 }
 
+@media screen and (max-height: 600px) {
+  .welcome_section {
+    min-height: 200vh !important;
+  }
+  .my_skills {
+    min-height: 200vh !important;
+  }
+  .my_skills .section_split .select_skill_container div div img {
+    padding: 0% 25% !important;
+  }
+  .portfolio_section {
+    min-height: 200vh !important;
+  }
+  .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container {
+    min-height: 80vh !important;
+  }
+  .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview {
+    min-height: 40vh !important;
+  }
+  .portfolio_section .portfolio_project_selector .top_row .project_container_outer .project_container #project_preview div {
+    margin: 1rem 0rem !important;
+  }
+  .about_section {
+    min-height: 200vh !important;
+  }
+  .about_section .section_split .letstalk {
+    margin-bottom: 2rem !important;
+  }
+  .about_section .section_split form span input, .about_section .section_split form span textarea {
+    margin: 1rem;
+  }
+  .about_section .section_split form input, .about_section .section_split form textarea {
+    margin: 1rem;
+  }
+  footer {
+    min-height: 20vh !important;
+  }
+  .onloadoverlay .outer1 img {
+    width: 50% !important;
+    -webkit-transform: translate(5%, 0%) !important;
+            transform: translate(5%, 0%) !important;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .onloadoverlay .outer1 img {
     width: 50% !important;
@@ -1934,6 +1978,7 @@
     margin-top: 0vw !important;
   }
   .info_container .info_closer {
+    font-size: 2rem !important;
     margin: 2.5rem 0vw !important;
   }
   .toggle_navigation {

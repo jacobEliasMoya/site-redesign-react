@@ -8,7 +8,6 @@ export default function PortfolioProjectContainer(props) {
 
     const [bubbleToggled,setToggle] = useState(false);
 
-
     const displayInfo = (retTxt,elm) => {
         if(retTxt.classList.contains("PROJECT")){
             elm.innerHTML = 'This was developed to practice asynchronous programming, and to have fun while doing it!'
@@ -62,7 +61,6 @@ export default function PortfolioProjectContainer(props) {
     }
 
     return (
-
             <div className="project_container_outer">
                 <VisibilitySensor
                 onChange={projAnimation}
@@ -92,6 +90,5 @@ export default function PortfolioProjectContainer(props) {
                 </VisibilitySensor>
 
             </div>
-
     )
 }

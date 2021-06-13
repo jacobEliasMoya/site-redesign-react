@@ -1064,7 +1064,6 @@ cursor: pointer;
     }
 }
 
-
 @keyframes overlayappear {
     0%{
         height: 0vh;
@@ -1096,6 +1095,85 @@ cursor: pointer;
         opacity: 0;
     }
 }
+
+@media screen and (max-height: 600px) {
+    .welcome_section{
+        min-height: 200vh !important;
+    }
+    .my_skills{
+        min-height: 200vh !important;
+        .section_split{
+            .select_skill_container{
+                div{
+                    div{
+                        img{
+                            padding:0% 25% !important;
+                        }
+                    }
+                }
+            } 
+                
+        } 
+
+    }
+    .portfolio_section{
+        min-height: 200vh !important;
+        .portfolio_project_selector{
+            .top_row{
+                .project_container_outer{
+                    .project_container{
+                        min-height: 80vh !important;
+                        #project_preview{
+                            min-height: 40vh !important;
+                            div{
+                                margin: 1rem 0rem!important ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about_section{
+        min-height: 200vh !important;
+        .section_split{
+            .letstalk{
+                margin-bottom: 2rem !important;
+            }
+            form{
+                span{
+                    input,textarea{
+                        margin: 1rem;
+                    }
+                }
+                input,textarea{
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+
+    footer{
+        min-height: 20vh !important;
+
+    }
+
+    .onloadoverlay{
+        .outer1{
+            img{
+                // set width to 40%
+                width: 50% !important;
+                transform: translate(5%,0%) !important;
+
+            }
+        }
+    
+    }
+
+
+}
+
 
 @media screen and (max-width: 1000px) {
 
@@ -1200,6 +1278,7 @@ cursor: pointer;
         }
 
         .info_closer{
+        font-size: 2rem !important;
             margin: 2.5rem 0vw !important;
         }
 
