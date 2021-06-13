@@ -80,45 +80,71 @@ export default function PortfolioSection() {
 
     const changeLBInfo = (frme,chldclass) => {
         // clearing src then adding for a clean looking load screen :)
+
         frme.src = '';
         setTimeout(()=>{
             if(chldclass.classList.contains("VAREP")){
-                setTimeout(()=>{
-                    let siteTitle = chldclass.classList[0];
-                    document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
-                    document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+                if(window.innerWidth<1000){
+                    untriggerLB();
+                    window.open("https://www.varep.net","_blank")
+                } else{
+                    setTimeout(()=>{
+                        let siteTitle = chldclass.classList[0];
+                        document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
+                        document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+    
+                    },10);
+                    frme.src=lbsrcs[0];
+                }
 
-                },10);
-                frme.src=lbsrcs[0];
             }
             if(chldclass.classList.contains("CONFERENCE")){
-                setTimeout(()=>{
-                    let siteTitle = chldclass.classList[0];
-                    document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
-                    document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+                if(window.innerWidth<1000){
+                    untriggerLB();
+                    window.open("https://www.varep.net/policyconference","_blank")
+                } else{
+                    setTimeout(()=>{
+                    
+                        let siteTitle = chldclass.classList[0];
+                        document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
+                        document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+    
+                    },10);
+                    frme.src=lbsrcs[1];
+                }
 
-                },10);
-                frme.src=lbsrcs[1];
 
             }
             if(chldclass.classList.contains("JAKESPACE")){
-                setTimeout(()=>{
-                    let siteTitle = chldclass.classList[0];
-                    document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
-                    document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+                if(window.innerWidth<1000){
+                    untriggerLB();
+                    window.open("https://www.jacobmoya.com","_blank")
+                } else{
+                    setTimeout(()=>{
+                        let siteTitle = chldclass.classList[0];
+                        document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
+                        document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+    
+                    },10);
+                    frme.src=lbsrcs[2];
+                }
 
-                },10);
-                frme.src=lbsrcs[2];
 
             }
             if(chldclass.classList.contains("PROJECT")){
-                setTimeout(()=>{
-                    let siteTitle = chldclass.classList[0];
-                    document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
-                    document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+                if(window.innerWidth<1000){
+                    untriggerLB();
+                    window.open("https://www.jacobmoya.com/gametime.html","_blank")
+                } else{
+                    setTimeout(()=>{
+                        let siteTitle = chldclass.classList[0];
+                        document.querySelector('.iframe_container h1 .siteTitle').innerHTML=siteTitle;
+                        document.querySelector('.iframe_container h1 .siteTitle').style.fontSize='2vw';
+    
+                    },10);
+                    frme.src=lbsrcs[3];
+                }
 
-                },10);
-                frme.src=lbsrcs[3];
             }
         },500)
     }
