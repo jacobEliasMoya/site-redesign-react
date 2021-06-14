@@ -1530,6 +1530,8 @@
 
 #root .App .about_section .section_split.two form .emailerr {
   opacity: 1 !important;
+  margin-bottom: 0rem !important;
+  margin-top: 0rem !important;
 }
 
 #root .App footer {
