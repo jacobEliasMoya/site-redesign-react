@@ -118,7 +118,7 @@ export default function PortfolioSection() {
             if(chldclass.classList.contains("JAKESPACE")){
                 if(window.innerWidth<1000){
                     untriggerLB();
-                    window.open("http://.interactive.jacobmoya.com/","_blank")
+                    window.open("http://interactive.jacobmoya.com/","_blank")
                 } else{
                     setTimeout(()=>{
                         let siteTitle = chldclass.classList[0];
@@ -134,7 +134,7 @@ export default function PortfolioSection() {
             if(chldclass.classList.contains("PROJECT")){
                 if(window.innerWidth<1000){
                     untriggerLB();
-                    window.open("http://interactive.jacobmoya.com/gametime.html/","_blank")
+                    window.open("http://interactive.jacobmoya.com/gametime.html","_blank")
                 } else{
                     setTimeout(()=>{
                         let siteTitle = chldclass.classList[0];
