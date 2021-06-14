@@ -1528,6 +1528,10 @@
   font-weight: bolder;
 }
 
+#root .App .about_section .section_split.two form .emailerr {
+  opacity: 1 !important;
+}
+
 #root .App footer {
   background: #110042;
   width: 100%;
