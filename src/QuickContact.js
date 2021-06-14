@@ -11,7 +11,7 @@ export default function QuickContact() {
             
             <li>
                 <Iconcontainer iconclass={'fa fa-phone'}/>
-                <a href="tel:9096446073">Call me </a>
+                <a href="tel:9096446073">Call me</a>
             </li>
         </ul>
     )
