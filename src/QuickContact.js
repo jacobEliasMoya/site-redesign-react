@@ -6,7 +6,7 @@ export default function QuickContact() {
         <ul className="quickconnect">
             <li>
                 <Iconcontainer iconclass={'fa fa-envelope'}/>
-                <a href="mailto:jemoya1994@gmail.com">Email Me</a>
+                <a href="mailto:jmoya@jacobmoya.com">Email Me</a>
             </li>
             
             <li>
