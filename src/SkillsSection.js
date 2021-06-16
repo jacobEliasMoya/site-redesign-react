@@ -223,15 +223,11 @@ export default function SkillsSection() {
 
                     <div className="select_skill_container">
                         <div className="toggle_area">
-                        <VisibilitySensor
-                        onChange={projAnimationm2}
-                        >
+
                             <Iconcontainer 
                                 iconclass="fa fa-caret-left"
                                 onClick={decrementSkillInd}
                             />
-                        </VisibilitySensor>
-
                             <div className="p6 container current">
                                 <ImgSelector 
                                     desc={skillAltDesc[currentSkillInd]} 
@@ -243,9 +239,14 @@ export default function SkillsSection() {
                                 iconclass="fa fa-caret-right"
                             />
                         </div>
-                        <div className="name">
-                            {skillsArr[currentSkillInd]}
-                        </div>
+                        <VisibilitySensor
+                            onChange={projAnimationm2}
+                            >
+                            <div className="name">
+                                {skillsArr[currentSkillInd]}
+                            </div>
+                        </VisibilitySensor> 
+
                         <div className="skill_subskills">
                             {currentSkillArray.map((desc)=>{
                                 keyMain++
