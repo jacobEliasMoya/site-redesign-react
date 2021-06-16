@@ -542,6 +542,7 @@ cursor: pointer;
                         cursor: pointer;
                         transition: all ease .25s;
                         font-weight: bolder;
+                        font-size: 3rem;
                         &:hover{
                             color: red;
                             text-shadow: 0 0 1.5rem black;
@@ -1019,6 +1020,21 @@ cursor: pointer;
                 }
             }
 
+        }
+    }
+}
+
+.gitlink{
+    text-shadow: 0 0 .5rem black;
+    position: absolute;
+    left: 5%;
+    i{
+        color: pink;
+        transition: all ease .5s;
+        font-size: 3rem;
+        &:hover{
+            color: red;
+            text-shadow: 0 0 1.5rem black;
         }
     }
 }

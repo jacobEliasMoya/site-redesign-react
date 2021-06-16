@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Iconcontainer from './Iconcontainer';
 
 export default function ProjectInfo(props) {
     return (
@@ -18,6 +19,8 @@ export default function ProjectInfo(props) {
             <h1 className="info_closer">
                 <span className="siteTitle">Project/ Site Name</span>
                 <span onClick={props.onClick} className="floater_close">X</span>
+                <a href='https://github.com/jacobEliasMoya?tab=repositories' target='_blank' rel="noopener noreferrer" className="gitlink"><Iconcontainer iconclass='fa fa-github'/></a>
+
             </h1>
         </div>
     )

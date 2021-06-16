@@ -867,6 +867,7 @@
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   font-weight: bolder;
+  font-size: 3rem;
 }
 
 #root .App .portfolio_section .iframe_container h1 .floater_close:hover, #root .App .portfolio_section .info_container h1 .floater_close:hover {
@@ -1692,6 +1693,24 @@
           justify-content: flex-end;
   text-align: right;
   font-size: 1rem;
+}
+
+.gitlink {
+  text-shadow: 0 0 .5rem black;
+  position: absolute;
+  left: 5%;
+}
+
+.gitlink i {
+  color: pink;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  font-size: 3rem;
+}
+
+.gitlink i:hover {
+  color: red;
+  text-shadow: 0 0 1.5rem black;
 }
 
 .onloadoverlay {
