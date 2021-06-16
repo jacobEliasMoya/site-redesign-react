@@ -21,7 +21,7 @@ export default function SkillsSection() {
 
     const wpInfo = ["Theme Customization","Custom HTML & CSS","Site Building Tools","SEO Knowledge","HTTP redirects","Site Migrations","Plugin Expert"];
     const jsInfo = ["Object Oriented Programming","Functional Programming","Cross Browser Code","Version Control","Command Line","ES6 Scripting","Modular Code","REST API","DRY Code"];
-    const reactInfo = ["Class Based Components","Functional Components","Modular Code","ES6 Scripting","React Hooks","REST API","DRY Code","Redux"];
+    const reactInfo = ["Class Based Components","Functional Components","Modular Code","ES6 Scripting","React Hooks","REST API","DRY Code","Redux","Thunk"];
     const cssInfo = ["Cross Browser Compatibility","Cross Platform Compatibility","Keyframe Animations","Mobile First Design","Psuedo Classes","Media Queries","FlexBox","Grid",];
     const scssInfo = ["Variables For DRY Code","Importing Stylesheets","Nesting Styles","Mixin Usage"];
     const htmlInfo = ["Video & Audio Support","Forms and Validation","Semantic HTML","Email Inputs","Placeholders","Downloads","Emdedding","Tables"];
