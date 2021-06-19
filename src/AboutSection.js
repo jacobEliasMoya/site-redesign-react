@@ -63,12 +63,15 @@ export default function AboutSection() {
             setSubmitted(true);
             e.preventDefault();
             emailjs.sendForm('service_zjmd6go', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
-            .then((result) => {
+            .then((result) => { 
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
             e.target.reset();
+            setTimeout(()=>{
+                window.location.reload();
+            },1)
         } else {
             setSubmitted(false);
             console.log(isSubmitted);
