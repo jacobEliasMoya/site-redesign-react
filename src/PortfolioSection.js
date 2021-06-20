@@ -31,7 +31,7 @@ export default function PortfolioSection() {
             projInformation:'I have always been a creative mind and someone who challenges himself in every possible way. This site has been the most challenge custom site I have worked on. This project was built using 100% custom code I built myself! I pushed myself to my limits at the time I created this site, I wanted to have a site which showed what I am capable of doing with the most modern web technologies possible! It is responsive and nice on the eyes! I created all the graphics for the site and would love to create more sites like this in the future!'
         },
         personalProj:{
-            siteName : 'Personal Project',
+            siteName : 'Asteroids!',
             siteTools : ['HTML','CSS','SCSS','JavaScript'],
             projInformation:'This has to be one of the most interesting games I have made to date! I used a whole lot of asynchronous programming here and incorporated an increasing difficulty level off of the total score! I made this project to piggy back my interactive website, which can be seen as well in my portfolio of recent works. It is a fun test of fast you can click your mouse, have fun and give it a try!'
         },

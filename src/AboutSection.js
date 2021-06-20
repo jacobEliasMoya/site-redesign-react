@@ -71,7 +71,7 @@ export default function AboutSection() {
             e.target.reset();
             setTimeout(()=>{
                 window.location.reload();
-            },10)
+            },100)
         } else {
             setSubmitted(false);
             console.log(isSubmitted);
