@@ -52,9 +52,7 @@ export default function AboutSection() {
 
     const displaySend = () => {
         if(fname && lname && emaila && subj && messageCont){
-            document.querySelector('.backnforth').style= 'transform: translateY(125%) !important;opacity:1 !important;'
-        } else{
-            document.querySelector('.backnforth').style= 'transform: translateY(200%) !important;'
+            document.querySelector('.backnforth').style= 'opacity:1 !important;'
         }
     }
 
