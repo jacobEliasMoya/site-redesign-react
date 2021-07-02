@@ -53,7 +53,7 @@ export default function AboutSection() {
     const displaySend = () => {
         if(fname && lname && emaila && subj && messageCont){
             document.querySelector('.backnforth').style= 'opacity:1 !important;'
-        }
+        } 
     }
 
     const handleSubmit = (e) => {
