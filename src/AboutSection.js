@@ -60,7 +60,7 @@ export default function AboutSection() {
         if(fname && lname && emaila && subj && messageCont){
             setSubmitted(true);
             e.preventDefault();
-            emailjs.sendForm('service_zjmd6go', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
+            emailjs.sendForm('service_df732ps', 'template_txv4cip', e.target, 'user_ry783XREfihZmDcU6BaDw')
             .then((result) => { 
                 console.log(result.text);
             }, (error) => {
