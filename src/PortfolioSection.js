@@ -37,7 +37,7 @@ export default function PortfolioSection() {
         },
     }
 
-    const lbsrcs = ["https://varep.net","https://varep.net/policyconference","http://interactive.jacobmoya.com","http://interactive.jacobmoya.com/gametime.html"];
+    const lbsrcs = ["https://varep.net","https://varep.net/policyconference","https://jacobmoya.com/interactive/","https://jacobmoya.com/interactive/gametime.html"];
 
     const addDynamicLI = arr => {
         document.querySelector('.proj_information ul').innerHTML='';
